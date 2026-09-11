@@ -1,0 +1,1085 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="काठमाडौँमा साइकोथेरापी क्लिनिक तथा तालिम केन्द्र"
+  description="नेपाल हिप्नोसिस सन् २०१२ देखि काठमाडौँमा सञ्चालित मनोपरामर्श, साइकोथेरापी क्लिनिक तथा तालिम केन्द्र हो।"
+  lang="np"
+>
+
+<!-- 1. COMPACT HERO SECTION -->
+  <section class="relative bg-gradient-to-b from-[#F5F1EA] to-[#FAF8F5] pt-10 pb-12">
+    <div class="container-nh max-w-4xl mx-auto text-center">
+
+      <!-- FIX 1: Removed tracking-[0.2em] and uppercase so Shirorekha stays connected -->
+      <span class="text-[12px] font-extrabold tracking-normal text-[#D84315]">
+        गोपनीय साइकोथेरापी तथा मनोविमर्श
+      </span>
+
+      <!-- FIX 2: Increased line-height to leading-[1.55] for Devanagari matra clearance -->
+      <h1 class="mt-4 font-[Poppins] text-4xl font-extrabold leading-[1.55] tracking-normal text-[#173A7A] sm:text-5xl lg:text-6xl text-balance">
+        मनमा गुजुल्टिएको पहाड एक्लै बोकिरहनु पर्दैन।
+      </h1>
+
+      <p class="mt-4 text-base text-[#475569] sm:text-lg max-w-2xl mx-auto leading-relaxed">
+        जब मनमा कुनै कुरा अति नै गह्रौँ लाग्छ, लामो समयदेखि सताइरहन्छ वा बुझ्नै कठिन हुन्छ, तब थेरापी ले ती भावनाहरूलाई सुरक्षित वातावरणमा बुझ्न र निकासको बाटो पहिल्याउन मद्दत गर्छ।
+      </p>
+
+      <!-- Reassurance Badges -->
+      <div class="mt-5 flex flex-wrap justify-center gap-6 text-sm font-bold text-[#173A7A]">
+
+        <span class="flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D84315" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          गोपनीयता मापदण्ड अनुसार
+        </span>
+
+        <span class="flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D84315" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          व्यक्तिगत आवश्यकता अनुसार
+        </span>
+
+        <span class="flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D84315" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+          प्रत्यक्ष (क्लिनिकमा) वा अनलाइन
+        </span>
+
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="mt-7 flex flex-col items-center justify-center gap-4 sm:flex-row">
+
+        <a href="https://portal.nepalhypnosis.com" target="_blank" rel="noopener noreferrer" class="rounded-xl bg-[#D84315] px-8 py-3.5 text-[15px] font-bold text-white shadow-md hover:bg-[#b93812] transition">
+          परामर्शका लागि समय लिनुहोस्
+        </a>
+
+        <a href="#how-it-works" class="rounded-xl border border-[#cbd5e1] bg-white px-8 py-3.5 text-[15px] font-bold text-[#173A7A] hover:bg-[#f1f5f9] transition">
+          थेरापी प्रक्रिया कसरी सुरु हुन्छ हेर्नुहोस् ↓
+        </a>
+
+      </div>
+
+      <!-- HORIZONTAL GRAPHIC BANNER -->
+      <div class="mt-10 relative overflow-hidden rounded-2xl border border-[#e2e8f0] shadow-sm max-w-3xl mx-auto h-[120px] sm:h-[150px]">
+
+        <img
+          src="/images/therapy_session.jpg"
+          alt="नेपाल हिप्नोसिसको थेरापी वातावरण"
+          width="768"
+          height="150"
+          class="w-full h-full object-cover object-top"
+        />
+
+        <div class="absolute inset-0 bg-gradient-to-r from-[#173A7A]/80 via-transparent to-[#173A7A]/60 flex items-center justify-between px-6 text-white">
+
+          <div class="text-left">
+            <span class="text-xs font-bold uppercase tracking-widest text-blue-200">
+              सन् २०१२ देखि निरन्तर
+            </span>
+
+            <div class="text-lg font-bold">
+              आत्मीय उपचार र व्यक्तिगत रूपान्तरणको सुरक्षित थलो
+            </div>
+          </div>
+
+          <span class="hidden sm:inline-block rounded-full bg-white/20 backdrop-blur-md px-4 py-1.5 text-xs font-bold">
+            काठमाडौँ क्लिनिक
+          </span>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 2. AUDIENCE TRIAGE PANELS -->
+  <section class="py-12 bg-[#FAF8F5]">
+    <div class="container-nh">
+
+      <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+
+        <!-- Therapy Pathway -->
+        <a href="#conditions" class="group block rounded-[2rem] bg-white p-8 shadow-sm border border-[#e2e8f0] transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-[#173A7A] flex flex-col justify-between">
+
+          <div>
+
+            <div class="w-12 h-12 bg-[#F5F1EA] rounded-full flex items-center justify-center text-[#D84315] mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </div>
+
+            <h2 class="text-2xl font-extrabold text-[#173A7A]">
+              म परामर्श वा सहयोग चाहन्छु
+            </h2>
+
+            <p class="mt-2 text-[#475569] leading-relaxed">
+              तपाईंका भावनात्मक आवश्यकता र जीवनका अनुभवअनुसार तयार गरिने पूर्ण गोपनीय साइकोथेरापी, मनोविमर्श तथा हिप्नोथेरापी।
+            </p>
+
+          </div>
+
+          <span class="inline-flex items-center gap-2 mt-6 font-bold text-[#D84315] group-hover:text-[#b93812] transition-transform group-hover:translate-x-1">
+            थेरापीले के-कस्ता विषयमा सहयोग पुऱ्याउँछ? →
+          </span>
+
+        </a>
+
+
+        <!-- Training Pathway -->
+        <a href="#training" class="group block rounded-[2rem] bg-white p-8 shadow-sm border border-[#e2e8f0] transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-[#173A7A] flex flex-col justify-between">
+
+          <div>
+
+            <div class="w-12 h-12 bg-[#F5F1EA] rounded-full flex items-center justify-center text-[#D84315] mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+
+            <h2 class="text-2xl font-extrabold text-[#173A7A]">
+              म तालिम वा कोर्स गर्न चाहन्छु
+            </h2>
+
+            <p class="mt-2 text-[#475569] leading-relaxed">
+              मनोविमर्श र साइकोथेरापी सम्बन्धी व्यावसायिक तालिमका साथै व्यावहारिक आत्म-विकास कार्यशाला तथा वेलनेस कार्यक्रमहरूबारे जान्नुहोस्।
+            </p>
+
+          </div>
+
+          <span class="inline-flex items-center gap-2 mt-6 font-bold text-[#173A7A] group-hover:text-[#102f64] transition-transform group-hover:translate-x-1">
+            एकेडेमीका तालिम कार्यक्रमहरू हेर्नुहोस् →
+          </span>
+
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- 3. HOW THERAPY BEGINS -->
+  <section id="how-it-works" class="py-16 bg-white border-y border-[#e2e8f0]">
+
+    <div class="container-nh max-w-5xl">
+
+      <div class="text-center mb-14">
+
+        <h2 class="text-3xl font-extrabold text-[#173A7A]">
+          थेरापी यात्रा कसरी सुरु हुन्छ?
+        </h2>
+
+        <p class="mt-3 text-base text-[#475569]">
+          पहिलो कदम चाल्न केही अप्ठ्यारो लाग्न सक्छ। यहाँ परामर्श प्रक्रियाका मुख्य चरणहरू प्रस्तुत गरिएको छ:
+        </p>
+
+      </div>
+
+      <div class="relative">
+
+        <div class="hidden lg:block absolute top-[28px] left-[10%] right-[10%] h-0.5 bg-[#f1f5f9] -z-10"></div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative">
+
+          <div class="relative bg-white pt-2">
+
+            <div class="w-14 h-14 rounded-full bg-[#FAF8F5] border-2 border-[#D84315] flex items-center justify-center text-[#173A7A] font-black text-xl mb-5 mx-auto lg:mx-0 shadow-sm">
+              ०१
+            </div>
+
+            <h3 class="font-bold text-[#173A7A] text-lg text-center lg:text-left">
+              सम्पर्क गर्नुहोस्
+            </h3>
+
+            <p class="mt-2 text-sm text-[#475569] text-center lg:text-left leading-relaxed">
+              सुरक्षित पोर्टल मार्फत प्रारम्भिक परामर्शका लागि समय लिनुहोस्।
+            </p>
+
+          </div>
+
+
+          <div class="relative bg-white pt-2">
+
+            <div class="w-14 h-14 rounded-full bg-[#FAF8F5] border-2 border-[#cbd5e1] flex items-center justify-center text-[#173A7A] font-black text-xl mb-5 mx-auto lg:mx-0 shadow-sm">
+              ०२
+            </div>
+
+            <h3 class="font-bold text-[#173A7A] text-lg text-center lg:text-left">
+              पहिलो कुराकानी
+            </h3>
+
+            <p class="mt-2 text-sm text-[#475569] text-center lg:text-left leading-relaxed">
+              तपाईंलाई परामर्शको आवश्यकता किन महसुस भइरहेको छ र के परिवर्तन चाहनुहुन्छ भन्नेबारे खुला कुराकानी गर्नुहोस्।
+            </p>
+
+          </div>
+
+
+          <div class="relative bg-white pt-2">
+
+            <div class="w-14 h-14 rounded-full bg-[#FAF8F5] border-2 border-[#cbd5e1] flex items-center justify-center text-[#173A7A] font-black text-xl mb-5 mx-auto lg:mx-0 shadow-sm">
+              ०३
+            </div>
+
+            <h3 class="font-bold text-[#173A7A] text-lg text-center lg:text-left">
+              प्रारम्भिक मूल्याङ्कन
+            </h3>
+
+            <p class="mt-2 text-sm text-[#475569] text-center lg:text-left leading-relaxed">
+              जीवनका अनुभव, व्यवहारका ढाँचा, व्यक्तिगत सामर्थ्य तथा वर्तमान परिस्थितिलाई गहिराइमा बुझ्ने प्रयास गरिन्छ।
+            </p>
+
+          </div>
+
+
+          <div class="relative bg-white pt-2">
+
+            <div class="w-14 h-14 rounded-full bg-[#FAF8F5] border-2 border-[#cbd5e1] flex items-center justify-center text-[#173A7A] font-black text-xl mb-5 mx-auto lg:mx-0 shadow-sm">
+              ०४
+            </div>
+
+            <h3 class="font-bold text-[#173A7A] text-lg text-center lg:text-left">
+              व्यक्तिगत योजना
+            </h3>
+
+            <p class="mt-2 text-sm text-[#475569] text-center lg:text-left leading-relaxed">
+              तपाईंका लक्ष्यअनुसार उपयुक्त साइकोथेरापी तथा मनोविमर्श विधिहरू समावेश गरी व्यक्तिगत योजना तयार गरिन्छ।
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 4. NORMALIZATION & COMMON REASONS -->
+  <section id="conditions" class="py-16 bg-[#FAF8F5]">
+
+    <div class="container-nh">
+
+      <div class="max-w-3xl mx-auto text-center">
+
+        <h2 class="text-3xl font-extrabold sm:text-4xl text-[#173A7A] leading-snug">
+          परामर्श लिन कुनै मानसिक रोग वा डायग्नोसिस (Diagnosis) हुनैपर्छ भन्ने छैन।
+        </h2>
+
+        <p class="mt-4 text-base text-[#475569] leading-relaxed">
+          जीवनका विभिन्न मोडमा जोकसैले पनि मनोवैज्ञानिक कठिनाइ अनुभव गर्न सक्छन्। यस्ता समस्याहरू जीवनका उतारचढाव, सम्बन्धका जटिलताहरू, तनाव र व्यक्तिगत परिस्थितिका प्रभावका कारण उत्पन्न हुने गर्छन्।
+        </p>
+
+      </div>
+
+
+      <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+        <div class="p-5 rounded-2xl bg-white border border-[#e2e8f0] shadow-sm">
+
+          <h3 class="font-bold text-[#173A7A] text-base">
+            चिन्ता तथा अत्यधिक तनाव
+          </h3>
+
+          <p class="mt-1 text-xs text-[#64748b]">
+            लगातार चिन्ता (Anxiety), प्यानिक अट्याक, वा सधैँ अशान्त र तनावग्रस्त महसुस हुनु।
+          </p>
+
+        </div>
+
+
+        <div class="p-5 rounded-2xl bg-white border border-[#e2e8f0] shadow-sm">
+
+          <h3 class="font-bold text-[#173A7A] text-base">
+            उदासीनता तथा डिप्रेसन
+          </h3>
+
+          <p class="mt-1 text-xs text-[#64748b]">
+            जाँगर तथा ऊर्जा कम हुनु, लामो समयसम्म दुःखी रहनु, वा वरपरको वातावरणबाट अलग्गिएको महसुस हुनु।
+          </p>
+
+        </div>
+
+
+        <div class="p-5 rounded-2xl bg-white border border-[#e2e8f0] shadow-sm">
+
+          <h3 class="font-bold text-[#173A7A] text-base">
+            विगतका पीडादायी अनुभव र आघात (Trauma)
+          </h3>
+
+          <p class="mt-1 text-xs text-[#64748b]">
+            वर्तमान जीवनमा प्रभाव पारिरहेका विगतका पीडादायी घटना वा भावनात्मक चोटलाई बुझ्ने र व्यवस्थापन गर्ने प्रक्रिया।
+          </p>
+
+        </div>
+
+
+        <div class="p-5 rounded-2xl bg-white border border-[#e2e8f0] shadow-sm">
+
+          <h3 class="font-bold text-[#173A7A] text-base">
+            सम्बन्ध र जीवनका उतारचढाव
+          </h3>
+
+          <p class="mt-1 text-xs text-[#64748b]">
+            सम्बन्धमा आउने द्वन्द्व, छुट्टिनुको पीडा, शोक, वा जीवनमा आउने ठूला परिवर्तनहरूसँग जुध्नुपर्ने अवस्था।
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 5. REFINED METAPHOR SECTION -->
+  <section id="philosophy" class="py-16 bg-white border-y border-[#e2e8f0]">
+
+    <div class="container-nh max-w-5xl">
+
+      <div class="text-center max-w-3xl mx-auto mb-10">
+
+        <span class="text-xs font-extrabold uppercase tracking-widest text-[#385BAA]">
+          हाम्रो मूल दृष्टिकोण
+        </span>
+
+        <h2 class="mt-2 text-3xl font-extrabold sm:text-4xl text-[#173A7A] leading-snug">
+          सतहमा देखिने अनुभवका पछाडि गहिरा प्रभावहरू हुन सक्छन्।
+        </h2>
+
+        <p class="mt-3 text-base text-[#475569]">
+          हिमशिला (Iceberg) को उदाहरणले भावनात्मक कठिनाइहरू सतहमा तुरुन्तै नदेखिने विगतका अनुभव, सम्बन्धका ढाँचा तथा गतिशीलता, सिकिएका व्यवहार र आन्तरिक विश्वासहरूबाट कसरी प्रभावित हुन सक्छन् भन्ने कुरा बुझ्न मद्दत गर्छ। थेरापी मार्फत यी गहिरा प्रभावहरूलाई सुरक्षित ढङ्गले खोजी र सम्बोधन गर्न सकिन्छ।
+        </p>
+
+      </div>
+
+
+      <div class="relative overflow-hidden rounded-3xl border border-[#cbd5e1] shadow-lg bg-gradient-to-b from-[#EBF8FF] via-[#0284C7] to-[#0A2540]">
+
+        <div class="relative p-6 sm:p-8 bg-gradient-to-b from-[#F0F9FF] to-[#BAE6FD]/60">
+
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+
+            <span class="inline-block self-start sm:self-auto rounded-full bg-[#D84315] px-4 py-1.5 text-xs font-extrabold uppercase text-white shadow-sm">
+              सतहमा (Top)
+            </span>
+
+            <span class="text-xs font-bold text-[#173A7A] uppercase tracking-wider">
+              तपाईंले अहिले प्रत्यक्ष अनुभव गरिरहनुभएका लक्षणहरू
+            </span>
+
+          </div>
+
+
+          <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
+
+            <div class="rounded-xl bg-white/90 p-3 text-center shadow-sm border border-sky-100">
+              <div class="text-sm font-bold text-[#173A7A]">
+                चिन्ता र प्यानिक (Anxiety & Panic)
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-white/90 p-3 text-center shadow-sm border border-sky-100">
+              <div class="text-sm font-bold text-[#173A7A]">
+                फोबिया र डर (Phobia)
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-white/90 p-3 text-center shadow-sm border border-sky-100">
+              <div class="text-sm font-bold text-[#173A7A]">
+                बारम्बार आउने अनिच्छित विचारहरू
+              </div>
+            </div>
+
+            <div class="rounded-xl bg-white/90 p-3 text-center shadow-sm border border-sky-100">
+              <div class="text-sm font-bold text-[#173A7A]">
+                तनाव र दबाब (Stress)
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="relative bg-[#0284C7] py-2 px-8 flex items-center justify-between text-white text-xs font-extrabold uppercase tracking-widest border-y border-white/30">
+
+          <span class="flex items-center gap-2">
+            🌊 पानीको सतह
+          </span>
+
+          <span class="hidden sm:inline">
+            समस्या उत्पन्न गराउने भित्री कारकहरूको खोज
+          </span>
+
+        </div>
+
+
+        <div class="p-6 sm:p-10 text-white bg-gradient-to-b from-[#0284C7]/40 to-[#0A2540]">
+
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-8">
+
+            <span class="inline-block self-start sm:self-auto rounded-full bg-white/20 backdrop-blur-md px-4 py-1.5 text-xs font-bold text-sky-50 border border-white/20">
+              गहिराइमा (Bottom)
+            </span>
+
+            <span class="text-xs font-bold text-sky-200 uppercase tracking-wider">
+              बुझ्न र खोज्न आवश्यक मुख्य भित्री ढाँचा तथा प्रभावहरू
+            </span>
+
+          </div>
+
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+
+            <div class="rounded-2xl bg-white/10 backdrop-blur-md p-4 border border-white/10">
+
+              <div class="font-bold text-white text-base">
+                मूल मान्यताहरू (Core Beliefs)
+              </div>
+
+              <p class="mt-1 text-xs text-sky-200">
+                बाल्यकाल वा प्रारम्भिक अनुभवबाट निर्माण भएका आफू र संसारप्रतिका गहिरा धारणाहरू।
+              </p>
+
+            </div>
+
+
+            <div class="rounded-2xl bg-white/10 backdrop-blur-md p-4 border border-white/10">
+
+              <div class="font-bold text-white text-base">
+                विगतका अनुभवहरू
+              </div>
+
+              <p class="mt-1 text-xs text-sky-200">
+                अझै पूर्ण रूपमा समाधान नभएका सम्झना तथा भावनात्मक आघातहरू।
+              </p>
+
+            </div>
+
+
+            <div class="rounded-2xl bg-white/10 backdrop-blur-md p-4 border border-white/10">
+
+              <div class="font-bold text-white text-base">
+                सिकिएका व्यवहारिक ढाँचाहरू
+              </div>
+
+              <p class="mt-1 text-xs text-sky-200">
+                स्वचालित रूपमा व्यक्त हुने भावनात्मक प्रतिक्रिया र सामना गर्ने बानीहरू।
+              </p>
+
+            </div>
+
+
+            <div class="rounded-2xl bg-white/10 backdrop-blur-md p-4 border border-white/10">
+
+              <div class="font-bold text-white text-base">
+                सम्बन्धका ढाँचा तथा गतिशीलता
+              </div>
+
+              <p class="mt-1 text-xs text-sky-200">
+                सम्बन्धमा रहेका आन्तरिक द्वन्द्व तथा समाधान हुन बाँकी रहेका भित्री तनावहरू।
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 6. GROUPED INTEGRATIVE APPROACHES SECTION -->
+  <section id="services" class="py-16 bg-[#FAF8F5]">
+
+    <div class="container-nh max-w-5xl text-center">
+
+      <h2 class="text-3xl font-extrabold text-[#173A7A] leading-snug">
+        थेरापी प्रत्येक व्यक्तिको आवश्यकता अनुसार विशिष्ट हुन्छ।
+      </h2>
+
+      <p class="mt-4 text-base text-[#475569] leading-relaxed max-w-3xl mx-auto">
+        तपाईंको आवश्यकता र लक्ष्य अनुसार, हाम्रा थेरापिस्टहरूले विभिन्न प्रमाणमा आधारित (evidence-informed) साइकोथेरापी, मनोविमर्श तथा अन्य उपयुक्त विधिहरूको संयोजन (Integrative Approach) प्रयोग गर्नुहुन्छ।
+      </p>
+
+
+      <div class="mt-12 grid md:grid-cols-3 gap-6 text-left">
+
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-[#e2e8f0]">
+
+          <h3 class="font-bold text-[#D84315] text-sm uppercase tracking-wider mb-4 border-b border-[#f1f5f9] pb-3">
+            कुराकानी र विचारमा आधारित (Talk-based & Cognitive)
+          </h3>
+
+          <ul class="space-y-2.5 text-sm font-semibold text-[#173A7A]">
+            <li>Cognitive Behavioral Therapy (CBT)</li>
+            <li>Psychodynamic Approaches</li>
+            <li>Person-Centered Counseling</li>
+            <li>Psychosocial Counselling</li>
+          </ul>
+
+        </div>
+
+
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-[#e2e8f0]">
+
+          <h3 class="font-bold text-[#D84315] text-sm uppercase tracking-wider mb-4 border-b border-[#f1f5f9] pb-3">
+            अनुभवात्मक र एकीकृत (Experiential & Integrative)
+          </h3>
+
+          <ul class="space-y-2.5 text-sm font-semibold text-[#173A7A]">
+            <li>Gestalt Psychotherapy</li>
+            <li>Clinical Hypnotherapy</li>
+            <li>Emotional Freedom Techniques (EFT)</li>
+            <li>Emotional Empowerment Technique (EET)</li>
+          </ul>
+
+        </div>
+
+
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-[#e2e8f0]">
+
+          <h3 class="font-bold text-[#D84315] text-sm uppercase tracking-wider mb-4 border-b border-[#f1f5f9] pb-3">
+            आघात (Trauma) र शरीर-केन्द्रित (Body-Oriented)
+          </h3>
+
+          <ul class="space-y-2.5 text-sm font-semibold text-[#173A7A]">
+            <li>Trauma Counseling</li>
+            <li>Mindfulness Practices</li>
+            <li>Somatic Practices</li>
+            <li>Healing Touch Supportive Therapy</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 7. ABOUT ARCHANA BIBHOR -->
+  <section id="about" class="py-16 bg-white border-y border-[#e2e8f0]">
+
+    <div class="container-nh grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+
+      <img
+        src="/images/archana-bibhor.png"
+        alt="अर्चना विभोर"
+        width="360"
+        height="360"
+        class="w-full rounded-3xl shadow-lg object-cover max-w-[360px] mx-auto"
+      />
+
+      <div>
+
+        <h2 class="text-3xl font-extrabold text-[#173A7A]">
+          अर्चना विभोर
+        </h2>
+
+        <p class="text-lg font-bold text-[#385BAA]">
+          संस्थापक तथा मुख्य अभ्यासकर्ता
+        </p>
+
+
+        <p class="mt-4 text-base text-[#475569] font-medium leading-relaxed">
+          अर्चना विभोर नेपाल हिप्नोसिसकी संस्थापक तथा मुख्य अभ्यासकर्ता हुनुहुन्छ। उहाँको कार्यशैली सबै सेवाग्राहीका लागि एउटै विधि अपनाउनुको सट्टा, प्रत्येक व्यक्तिका अनुभव, सामर्थ्य, सम्बन्ध र लक्ष्यलाई गहिराइमा बुझेर सोहीअनुसार मनोविमर्श प्रदान गर्नमा केन्द्रित छ।
+        </p>
+
+
+        <div class="mt-5 bg-[#FAF8F5] p-5 rounded-2xl border border-[#e2e8f0]">
+
+          <ul class="space-y-3 text-sm font-semibold text-[#475569]">
+
+            <li class="flex items-start gap-2">
+
+              <svg class="w-5 h-5 text-[#D84315] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+
+              क्लिनिकल साइकोलोजीमा डक्टर आफ साइकोलोजी (PsyD) अध्ययनरत — यूएसआईयू (United States International University–Africa)
+
+            </li>
+
+
+            <li class="flex items-start gap-2">
+
+              <svg class="w-5 h-5 text-[#D84315] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+
+              साइकोथेरापी, मनोविमर्श तथा शिक्षा क्षेत्रमा २०+ वर्षको व्यावसायिक अनुभव
+
+            </li>
+
+          </ul>
+
+        </div>
+
+
+        <div class="mt-6 flex flex-wrap gap-4">
+
+          <a href="/np/team" class="inline-flex rounded-lg bg-[#173A7A] px-5 py-2.5 text-[13px] font-bold text-white shadow-sm hover:bg-[#102f64] transition">
+            अर्चनाबारे थप जान्नुहोस् →
+          </a>
+
+          <a href="/np/team" class="inline-flex rounded-lg border border-[#cbd5e1] bg-white px-5 py-2.5 text-[13px] font-bold text-[#173A7A] hover:bg-[#f1f5f9] transition">
+            हाम्रो सम्पूर्ण टोलीलाई भेट्नुहोस्
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 8. NEPAL HYPNOSIS ACADEMY -->
+  <section id="training" class="py-16 bg-[#FAF8F5]">
+
+    <div class="container-nh max-w-6xl">
+
+      <div class="text-center max-w-3xl mx-auto mb-12">
+
+        <span class="text-xs font-extrabold uppercase tracking-widest text-[#D84315]">
+          नेपाल हिप्नोसिस एकेडेमी
+        </span>
+
+        <h2 class="mt-2 text-3xl font-extrabold sm:text-4xl text-[#173A7A] leading-snug">
+          तालिम, सिकाइ र आत्म-विकास
+        </h2>
+
+        <p class="mt-4 text-base text-[#475569] leading-relaxed">
+          मनोविमर्श र साइकोथेरापी सम्बन्धी व्यावसायिक तालिमका साथै व्यावहारिक आत्म-विकास कार्यशाला तथा वेलनेस कार्यक्रमहरूबारे जान्नुहोस्।
+        </p>
+
+      </div>
+
+
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <!-- Column 1 -->
+        <div class="rounded-3xl bg-white p-8 border border-[#e2e8f0] shadow-sm">
+
+          <div class="flex items-center gap-3 mb-6 pb-6 border-b border-[#f1f5f9]">
+
+            <div class="w-10 h-10 rounded-xl bg-[#D84315]/10 flex items-center justify-center text-[#D84315]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </div>
+
+            <div>
+
+              <h3 class="text-xl font-extrabold text-[#173A7A]">
+                Self-Help & Wellness
+              </h3>
+
+              <p class="text-xs text-[#64748b]">
+                सबैका लागि खुला
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="space-y-4">
+
+            <div>
+
+              <h4 class="font-bold text-[#173A7A] text-sm">
+                Self-Esteem Training Series
+              </h4>
+
+              <p class="mt-1 text-xs text-[#475569] leading-relaxed">
+                आफूलाई बुझ्न, आत्म-स्वीकृति बढाउन र आत्म-सम्मान अभिवृद्धि गर्न तयार गरिएको विशेष कार्यक्रम।
+              </p>
+
+            </div>
+
+
+            <div class="border-t border-[#f1f5f9] pt-4">
+
+              <h4 class="font-bold text-[#173A7A] text-sm">
+                Self Help with Self Hypnosis
+              </h4>
+
+              <p class="mt-1 text-xs text-[#475569]">
+                आत्मविश्वास अभिवृद्धि र लक्ष्य प्राप्तिका लागि 'सेल्फ-हिप्नोसिस' को प्रयोग सम्बन्धी घनीभूत कार्यशाला।
+              </p>
+
+            </div>
+
+
+            <div class="border-t border-[#f1f5f9] pt-4">
+
+              <h4 class="font-bold text-[#173A7A] text-sm">
+                Joymandu – A Journey of Joy
+              </h4>
+
+              <p class="mt-1 text-xs text-[#475569] leading-relaxed">
+                इनडोर गतिविधि र प्राकृतिक पदयात्रा (Hike) समावेश गरिएको एकदिने आनन्दमयी कार्यक्रम।
+              </p>
+
+            </div>
+
+
+            <div class="border-t border-[#f1f5f9] pt-4">
+
+              <h4 class="font-bold text-[#173A7A] text-sm">
+                Tailored Recreational Activities
+              </h4>
+
+              <p class="mt-1 text-xs text-[#475569]">
+                विभिन्न संघ-संस्था र समूहका लागि आवश्यकता अनुसार तयार गरिने मानसिक स्वास्थ्य तथा वेलनेस कार्यक्रम।
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- Column 2 -->
+        <div class="rounded-3xl bg-white p-8 border border-[#e2e8f0] shadow-sm flex flex-col justify-between">
+
+          <div>
+
+            <div class="flex items-center gap-3 mb-6 pb-6 border-b border-[#f1f5f9]">
+
+              <div class="w-10 h-10 rounded-xl bg-[#173A7A]/10 flex items-center justify-center text-[#173A7A]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+
+              <div>
+
+                <h3 class="text-xl font-extrabold text-[#173A7A]">
+                  व्यावसायिक तालिम (Professional Training)
+                </h3>
+
+                <p class="text-xs text-[#64748b]">
+                  मानसिक स्वास्थ्यकर्मी तथा यस क्षेत्रमा लाग्न चाहनेहरूका लागि
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="space-y-4">
+
+              <div>
+
+                <h4 class="font-bold text-[#173A7A] text-sm">
+                  Eclectic Psychotherapy
+                </h4>
+
+                <p class="mt-1 text-xs text-[#475569]">
+                  विभिन्न प्रकारका क्लाइन्ट र उनीहरूका समस्या सम्बोधन गर्न आवश्यक व्यावहारिक सीप विकास।
+                </p>
+
+              </div>
+
+
+              <div class="border-t border-[#f1f5f9] pt-4">
+
+                <h4 class="font-bold text-[#173A7A] text-sm">
+                  Psychosocial Counselling
+                </h4>
+
+                <p class="mt-1 text-xs text-[#475569]">
+                  मनोविमर्शका सिद्धान्त, सीप तथा व्यावसायिक आचारसंहिता सम्बन्धी आधारभूत तालिम।
+                </p>
+
+              </div>
+
+
+              <div class="border-t border-[#f1f5f9] pt-4">
+
+                <h4 class="font-bold text-[#173A7A] text-sm">
+                  Clinical Psychotherapy
+                </h4>
+
+                <p class="mt-1 text-xs text-[#475569]">
+                  जटिल मानसिक कठिनाइ र ट्रमा (Trauma) सम्बन्धी उच्चस्तरीय अध्ययन तथा प्रशिक्षण।
+                </p>
+
+              </div>
+
+
+              <div class="border-t border-[#f1f5f9] pt-4">
+
+                <h4 class="font-bold text-[#173A7A] text-sm">
+                  Gestalt Psychotherapy
+                </h4>
+
+                <p class="mt-1 text-xs text-[#475569]">
+                  वर्तमान क्षण (Present Moment) र स्व-जागरूकता (Self-Awareness) मा आधारित अनुभवात्मक तालिम।
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="mt-8 pt-6 border-t border-[#e2e8f0] text-center">
+
+            <a href="https://portal.nepalhypnosis.com" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-xl bg-[#173A7A] px-6 py-3 text-xs font-bold text-white shadow-md hover:bg-[#102f64] transition">
+              कोर्सहरू र दर्ता प्रक्रिया हेर्नुहोस् →
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 9. FULLY AUTOMATED YOUTUBE API CAROUSEL -->
+  <section id="media" class="py-16 bg-white border-y border-[#e2e8f0]">
+
+    <div class="container-nh">
+
+      <div class="flex items-center justify-between mb-8">
+
+        <div>
+
+          <span class="text-xs font-extrabold uppercase tracking-widest text-[#D84315]">
+            भिडियो ग्यालरी
+          </span>
+
+          <h2 class="text-3xl font-extrabold text-[#173A7A]">
+            विशेष सामग्री तथा भिडियोहरू
+          </h2>
+
+        </div>
+
+
+        <div class="flex gap-2">
+
+          <button id="slideLeft" class="w-10 h-10 rounded-full border border-[#cbd5e1] bg-white flex items-center justify-center text-[#173A7A] hover:bg-[#FAF8F5] transition shadow-sm cursor-pointer" aria-label="बायाँतर्फ स्क्रोल गर्नुहोस्">
+            ←
+          </button>
+
+          <button id="slideRight" class="w-10 h-10 rounded-full border border-[#cbd5e1] bg-white flex items-center justify-center text-[#173A7A] hover:bg-[#FAF8F5] transition shadow-sm cursor-pointer" aria-label="दायाँतर्फ स्क्रोल गर्नुहोस्">
+            →
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- Dynamic Container -->
+      <div id="videoContainer" class="flex gap-6 overflow-x-auto scroll-smooth pb-4 no-scrollbar min-h-[220px] items-center">
+        <p class="text-sm text-[#64748b] animate-pulse">
+          YouTube च्यानलबाट नवीनतम भिडियोहरू लोड हुँदैछन्...
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <script>
+    const container = document.getElementById('videoContainer');
+    const btnLeft = document.getElementById('slideLeft');
+    const btnRight = document.getElementById('slideRight');
+
+    btnLeft?.addEventListener('click', () => {
+      container?.scrollBy({ left: -380, behavior: 'smooth' });
+    });
+
+    btnRight?.addEventListener('click', () => {
+      container?.scrollBy({ left: 380, behavior: 'smooth' });
+    });
+
+    function escapeHtml(str) {
+      const div = document.createElement('div');
+      div.innerText = str;
+      return div.innerHTML;
+    }
+
+    async function loadYouTubeChannelVideos() {
+      if (!container) return;
+
+      const apiKey = 'AIzaSyDs_uVXUMbewqsCD-zoInrmDOE0DXgwQ40';
+      const playlistId = 'UUifKne_f3_7iydVqF91fkQA';
+      const apiUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&maxResults=6&key=${apiKey}`;
+
+      try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+
+        if (data.items && data.items.length > 0) {
+          container.innerHTML = '';
+
+          data.items.forEach(item => {
+            const rawTitle = item.snippet?.title || '';
+            const videoId = item.snippet?.resourceId?.videoId;
+
+            if (!videoId || rawTitle === 'Private video' || rawTitle === 'Deleted video') return;
+
+            const title = escapeHtml(rawTitle);
+            const card = document.createElement('div');
+
+            card.className = "min-w-[300px] sm:min-w-[360px] max-w-[360px] rounded-2xl border border-[#e2e8f0] bg-[#FAF8F5] overflow-hidden shadow-sm flex flex-col shrink-0";
+
+            card.innerHTML = `
+              <div class="aspect-video w-full bg-black relative">
+                <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/${videoId}" title="${title}" loading="lazy" allowfullscreen></iframe>
+              </div>
+
+              <div class="p-4 flex-1 flex flex-col justify-between">
+                <h3 class="font-bold text-[#173A7A] text-sm line-clamp-2">${title}</h3>
+                <span class="mt-2 text-xs text-[#64748b]">नेपाल हिप्नोसिस</span>
+              </div>
+            `;
+
+            container.appendChild(card);
+          });
+
+        } else {
+          container.innerHTML = '<p class="text-sm text-[#64748b]">यस च्यानलमा कुनै भिडियो भेटिएन।</p>';
+        }
+
+      } catch (error) {
+        console.error('Error fetching YouTube API:', error);
+        container.innerHTML = '<p class="text-sm text-red-500">भिडियोहरू लोड गर्न सकिएन। कृपया पुनः प्रयास गर्नुहोस्।</p>';
+      }
+    }
+
+    loadYouTubeChannelVideos();
+  </script>
+
+
+  <!-- 10. FREQUENTLY ASKED QUESTIONS -->
+  <section id="faq" class="py-16 bg-[#FAF8F5]">
+
+    <div class="container-nh max-w-4xl">
+
+      <div class="text-center mb-12">
+
+        <h2 class="text-3xl font-extrabold text-[#173A7A]">
+          बारम्बार सोधिने प्रश्नहरू
+        </h2>
+
+      </div>
+
+
+      <div class="space-y-4">
+
+        <details class="rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-sm group">
+
+          <summary class="cursor-pointer font-bold text-[#173A7A] focus-visible:outline-none">
+            थेरापी मेरो लागि उपयुक्त छ कि छैन भनेर कसरी थाहा पाउने?
+          </summary>
+
+          <p class="mt-4 text-sm text-[#475569] leading-relaxed pt-3 border-t border-[#f1f5f9]">
+            यदि कुनै कुराले तपाईंलाई लगातार मानसिक तनाव वा दुःख दिइरहेको छ, दैनिक जीवनमा बाधा पुऱ्याइरहेको छ, वा अगाडि बढ्न कठिन भइरहेको छ भने थेरापीले ती भावनाहरूलाई सुरक्षित वातावरणमा बुझ्न र निकास पाउन मद्दत गर्छ। सुरुमै सबै कुरा स्पष्ट भइसकेको हुनुपर्छ भन्ने छैन।
+          </p>
+
+        </details>
+
+
+        <details class="rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-sm group">
+
+          <summary class="cursor-pointer font-bold text-[#173A7A] focus-visible:outline-none">
+            सहयोग वा परामर्श लिनुअघि कुनै रोगको निर्क्योल (Diagnosis) हुनुपर्छ?
+          </summary>
+
+          <p class="mt-4 text-sm text-[#475569] leading-relaxed pt-3 border-t border-[#f1f5f9]">
+            पर्दैन। मानिसहरू विभिन्न कारणले थेरापीमा आउँछन्—चाहे त्यो कुनै विशिष्ट मानसिक कठिनाइ होस् या जीवनको कुनै कठिन मोडमा पाएको तनाव। परामर्श लिन कुनै पूर्व-निदान वा मेडिकल डायग्नोसिस आवश्यक छैन।
+          </p>
+
+        </details>
+
+
+        <details class="rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-sm group">
+
+          <summary class="cursor-pointer font-bold text-[#173A7A] focus-visible:outline-none">
+            पहिलो परामर्श बैठक (First Session) मा के हुन्छ?
+          </summary>
+
+          <p class="mt-4 text-sm text-[#475569] leading-relaxed pt-3 border-t border-[#f1f5f9]">
+            पहिलो सेसनमा मुख्यतया तपाईंका चिन्ता, अनुभव र लक्ष्यहरूबारे कुराकानी गरिन्छ। साथै, हाम्रा सेवाहरू तपाईंका आवश्यकताका लागि कति उपयुक्त छन् भन्ने कुरा मूल्याङ्कन गरी अगाडि बढ्ने साझा योजना बनाइन्छ।
+          </p>
+
+        </details>
+
+
+        <details class="rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-sm group">
+
+          <summary class="cursor-pointer font-bold text-[#173A7A] focus-visible:outline-none">
+            के मेरा कुराकानीहरू पूर्ण रूपमा गोप्य राखिन्छन्?
+          </summary>
+
+          <p class="mt-4 text-sm text-[#475569] leading-relaxed pt-3 border-t border-[#f1f5f9]">
+            गोपनीयता हाम्रो पेसागत मर्यादाको मेरुदण्ड हो। थेरापीमा व्यक्त गरिएका सम्पूर्ण जानकारीहरू व्यावसायिक आचारसंहिता तथा लागू हुने गोपनीयता मापदण्ड अनुसार सुरक्षित राखिन्छन्। गोपनीयताका सीमाहरू (जस्तै: तत्काल सुरक्षा सम्बन्धी गम्भीर जोखिम) बारे पहिलो सेसनमै स्पष्ट रूपमा जानकारी दिइन्छ।
+          </p>
+
+        </details>
+
+
+        <details class="rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-sm group">
+
+          <summary class="cursor-pointer font-bold text-[#173A7A] focus-visible:outline-none">
+            के अनलाइन परामर्श (Online Sessions) सेवा पनि उपलब्ध छ?
+          </summary>
+
+          <p class="mt-4 text-sm text-[#475569] leading-relaxed pt-3 border-t border-[#f1f5f9]">
+            अवश्य। काठमाडौँस्थित क्लिनिकमा प्रत्यक्ष (In-person) भेटघाटका साथै, उपत्यका बाहिर वा विदेशमा रहनुहुने सेवाग्राहीहरूका लागि सुरक्षित अनलाइन भिडियो परामर्श सेवा उपलब्ध छ।
+          </p>
+
+        </details>
+
+
+        <details class="rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-sm group">
+
+          <summary class="cursor-pointer font-bold text-[#173A7A] focus-visible:outline-none">
+            क्लिनिकल हिप्नोथेरापी (Clinical Hypnotherapy) भनेको के हो? के यो हरेक सेसनमा प्रयोग हुन्छ?
+          </summary>
+
+          <p class="mt-4 text-sm text-[#475569] leading-relaxed pt-3 border-t border-[#f1f5f9]">
+            Clinical Hypnotherapy मा hypnosis को therapeutic प्रयोगमार्फत सोच, भावना, व्यवहार तथा अनुभवसँग सम्बन्धित ढाँचाहरूलाई बुझ्न र तिनमा काम गर्न सहयोग गरिन्छ। यो विभिन्न therapeutic approaches मध्ये एउटा हो र आवश्यकता तथा therapeutic appropriateness अनुसार प्रयोग गरिन्छ—हरेक session मा वा सबै सेवाग्राहीका लागि प्रयोग गरिँदैन।
+          </p>
+
+        </details>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- 11. FINAL CTA SECTION -->
+  <section class="py-20 bg-[#173A7A] text-center text-white border-t border-[#0c244d]">
+
+    <div class="container-nh max-w-3xl mx-auto">
+
+      <h2 class="text-3xl font-extrabold sm:text-4xl leading-snug">
+        हामीलाई सम्पर्क गर्नुअघि सबै कुरा स्पष्ट भइसकेको हुनुपर्दैन।
+      </h2>
+
+      <p class="mt-4 text-blue-100 text-base sm:text-lg leading-relaxed">
+        पहिलो कदम चाल्नका लागि तपाईंसँग सबै प्रश्नको उत्तर हुनैपर्छ भन्ने छैन। साइकोथेरापी वा हाम्रा तालिम कार्यक्रमहरू तपाईंका लागि उपयुक्त छन् कि छैनन् भन्नेबारे बुझ्नका लागि हामीलाई नहिचकिचाई सम्पर्क गर्न सक्नुहुन्छ।
+      </p>
+
+
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+
+        <a href="https://portal.nepalhypnosis.com" target="_blank" rel="noopener noreferrer" class="rounded-xl bg-[#D84315] px-8 py-3.5 text-[15px] font-bold text-white shadow-md hover:bg-[#b93812] transition">
+          परामर्शका लागि समय लिनुहोस्
+        </a>
+
+        <a href="#training" class="rounded-xl bg-white/10 px-8 py-3.5 text-[15px] font-bold text-white hover:bg-white/20 transition border border-white/20">
+          तालिम कार्यक्रमहरू हेर्नुहोस्
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+</BaseLayout>

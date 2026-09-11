@@ -1,11 +1,556 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<BaseLayout title="Psychotherapy Clinic & Professional Training Center in Kathmandu">
+
+  <!-- 1. COMPACT HERO SECTION -->
+  <section class="relative bg-gradient-to-b from-[#F5F1EA] to-[#FAF8F5] pt-10 pb-12">
+    <div class="container-nh max-w-4xl mx-auto text-center">
+      
+      <span class="text-[11px] font-extrabold tracking-[0.2em] text-[#D84315] uppercase">
+        CONFIDENTIAL PSYCHOTHERAPY & COUNSELING
+      </span>
+
+      <h1 class="mt-4 font-[Poppins] text-4xl font-extrabold leading-[1.15] tracking-tight text-[#173A7A] sm:text-5xl lg:text-6xl text-balance">
+        You don't have to carry everything alone.
+      </h1>
+
+      <p class="mt-4 text-base text-[#475569] sm:text-lg max-w-2xl mx-auto leading-relaxed">
+        When something feels overwhelming, persistent, or difficult to understand, therapy provides a safe space to explore what is happening and find a way forward.
+      </p>
+
+      <!-- Reassurance Badges -->
+      <div class="mt-5 flex flex-wrap justify-center gap-6 text-sm font-bold text-[#173A7A]">
+        <span class="flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D84315" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg> 
+          Confidential
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D84315" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Individualized
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D84315" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+          In-person & online
+        </span>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="mt-7 flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <a href="https://portal.nepalhypnosis.com" target="_blank" rel="noopener noreferrer" class="rounded-xl bg-[#D84315] px-8 py-3.5 text-[15px] font-bold text-white shadow-md hover:bg-[#b93812] transition">
+          Request a Consultation
+        </a>
+        <a href="#how-it-works" class="rounded-xl border border-[#cbd5e1] bg-white px-8 py-3.5 text-[15px] font-bold text-[#173A7A] hover:bg-[#f1f5f9] transition">
+          See How Therapy Begins ↓
+        </a>
+      </div>
+
+      <!-- HORIZONTAL GRAPHIC BANNER -->
+      <div class="mt-10 relative overflow-hidden rounded-2xl border border-[#e2e8f0] shadow-sm max-w-3xl mx-auto h-[120px] sm:h-[150px]">
+        <img src="/images/therapy_session.jpg" alt="Nepal Hypnosis Therapy Environment" width="768" height="150" class="w-full h-full object-cover object-top" />
+        <div class="absolute inset-0 bg-gradient-to-r from-[#173A7A]/80 via-transparent to-[#173A7A]/60 flex items-center justify-between px-6 text-white">
+          <div class="text-left">
+            <span class="text-xs font-bold uppercase tracking-widest text-blue-200">Established 2012 AD</span>
+            <div class="text-lg font-bold">A Safe Space for Healing & Growth</div>
+          </div>
+          <span class="hidden sm:inline-block rounded-full bg-white/20 backdrop-blur-md px-4 py-1.5 text-xs font-bold">Kathmandu Clinic</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 2. AUDIENCE TRIAGE PANELS -->
+  <section class="py-12 bg-[#FAF8F5]">
+    <div class="container-nh">
+      <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+        
+        <!-- Therapy Pathway -->
+        <a href="#conditions" class="group block rounded-[2rem] bg-white p-8 shadow-sm border border-[#e2e8f0] transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-[#173A7A] flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 bg-[#F5F1EA] rounded-full flex items-center justify-center text-[#D84315] mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </div>
+            <h2 class="text-2xl font-extrabold text-[#173A7A]">I am seeking support</h2>
+            <p class="mt-2 text-[#475569] leading-relaxed">Confidential psychotherapy, counseling, and hypnotherapy tailored to your unique emotional needs and life experiences.</p>
+          </div>
+          <span class="inline-flex items-center gap-2 mt-6 font-bold text-[#D84315] group-hover:text-[#b93812] transition-transform group-hover:translate-x-1">
+            What Can Therapy Help With? →
+          </span>
+        </a>
+
+        <!-- Training Pathway -->
+        <a href="#training" class="group block rounded-[2rem] bg-white p-8 shadow-sm border border-[#e2e8f0] transition-all duration-300 hover:-translate-y-1 hover:shadow-md hover:border-[#173A7A] flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 bg-[#F5F1EA] rounded-full flex items-center justify-center text-[#D84315] mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            </div>
+            <h2 class="text-2xl font-extrabold text-[#173A7A]">I am exploring training</h2>
+            <p class="mt-2 text-[#475569] leading-relaxed">Explore professional training in counseling and psychotherapy, alongside practical self-help workshops and wellness programs.</p>
+          </div>
+          <span class="inline-flex items-center gap-2 mt-6 font-bold text-[#173A7A] group-hover:text-[#102f64] transition-transform group-hover:translate-x-1">
+            Explore Academy Pathways →
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. HOW THERAPY BEGINS -->
+  <section id="how-it-works" class="py-16 bg-white border-y border-[#e2e8f0]">
+    <div class="container-nh max-w-5xl">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl font-extrabold text-[#173A7A]">How Therapy Begins</h2>
+        <p class="mt-3 text-base text-[#475569]">Taking the first step can feel daunting. Here is what you can expect.</p>
+      </div>
+
+      <div class="relative">
+        <div class="hidden lg:block absolute top-[28px] left-[10%] right-[10%] h-0.5 bg-[#f1f5f9] -z-10"></div>
+        
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 relative">
+          <div class="relative bg-white pt-2">
+            <div class="w-14 h-14 rounded-full bg-[#FAF8F5] border-2 border-[#D84315] flex items-center justify-center text-[#173A7A] font-black text-xl mb-5 mx-auto lg:mx-0 shadow-sm">01</div>
+            <h3 class="font-bold text-[#173A7A] text-lg text-center lg:text-left">Reach out</h3>
+            <p class="mt-2 text-sm text-[#475569] text-center lg:text-left leading-relaxed">Request an initial consultation through the secure portal.</p>
+          </div>
+          <div class="relative bg-white pt-2">
+            <div class="w-14 h-14 rounded-full bg-[#FAF8F5] border-2 border-[#cbd5e1] flex items-center justify-center text-[#173A7A] font-black text-xl mb-5 mx-auto lg:mx-0 shadow-sm">02</div>
+            <h3 class="font-bold text-[#173A7A] text-lg text-center lg:text-left">First conversation</h3>
+            <p class="mt-2 text-sm text-[#475569] text-center lg:text-left leading-relaxed">Discuss what brings you to therapy and what you hope to change.</p>
+          </div>
+          <div class="relative bg-white pt-2">
+            <div class="w-14 h-14 rounded-full bg-[#FAF8F5] border-2 border-[#cbd5e1] flex items-center justify-center text-[#173A7A] font-black text-xl mb-5 mx-auto lg:mx-0 shadow-sm">03</div>
+            <h3 class="font-bold text-[#173A7A] text-lg text-center lg:text-left">Assessment</h3>
+            <p class="mt-2 text-sm text-[#475569] text-center lg:text-left leading-relaxed">Explore relevant experiences, patterns, strengths, and current circumstances.</p>
+          </div>
+          <div class="relative bg-white pt-2">
+            <div class="w-14 h-14 rounded-full bg-[#FAF8F5] border-2 border-[#cbd5e1] flex items-center justify-center text-[#173A7A] font-black text-xl mb-5 mx-auto lg:mx-0 shadow-sm">04</div>
+            <h3 class="font-bold text-[#173A7A] text-lg text-center lg:text-left">Individualized plan</h3>
+            <p class="mt-2 text-sm text-[#475569] text-center lg:text-left leading-relaxed">Agree on a tailored, eclectic approach suited to your unique goals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. NORMALIZATION & COMMON REASONS -->
+  <section id="conditions" class="py-16 bg-[#FAF8F5]">
+    <div class="container-nh">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl font-extrabold sm:text-4xl text-[#173A7A]">You do not need a diagnosis to seek support.</h2>
+        <p class="mt-4 text-base text-[#475569] leading-relaxed">
+          People can experience psychological difficulties at different points in their lives. Psychological difficulties can affect anyone, often emerging from a complex interaction of life experiences, relationships, stress, and personal circumstances.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="p-5 rounded-2xl bg-white border border-[#e2e8f0] shadow-sm">
+          <h3 class="font-bold text-[#173A7A] text-base">Anxiety & Overwhelm</h3>
+          <p class="mt-1 text-xs text-[#64748b]">Persistent worry, panic attacks, or feeling constantly on edge.</p>
+        </div>
+        <div class="p-5 rounded-2xl bg-white border border-[#e2e8f0] shadow-sm">
+          <h3 class="font-bold text-[#173A7A] text-base">Low Mood & Depression</h3>
+          <p class="mt-1 text-xs text-[#64748b]">Loss of energy, persistent sadness, and feeling disconnected.</p>
+        </div>
+        <div class="p-5 rounded-2xl bg-white border border-[#e2e8f0] shadow-sm">
+          <h3 class="font-bold text-[#173A7A] text-base">Trauma & Past Experiences</h3>
+          <p class="mt-1 text-xs text-[#64748b]">Processing distressing past events that affect your present life.</p>
+        </div>
+        <div class="p-5 rounded-2xl bg-white border border-[#e2e8f0] shadow-sm">
+          <h3 class="font-bold text-[#173A7A] text-base">Relationship & Life Changes</h3>
+          <p class="mt-1 text-xs text-[#64748b]">Navigating conflict, separation, grief, or major life transitions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. REFINED METAPHOR SECTION -->
+  <section id="philosophy" class="py-16 bg-white border-y border-[#e2e8f0]">
+    <div class="container-nh max-w-5xl">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-[#385BAA]">Core Philosophy</span>
+        <h2 class="mt-2 text-3xl font-extrabold sm:text-4xl text-[#173A7A]">What we experience on the surface may have deeper influences.</h2>
+        <p class="mt-3 text-base text-[#475569]">
+          The iceberg is a simple metaphor for the way emotional difficulties can sometimes be shaped by experiences, relationships, learned patterns, beliefs, and ways of coping that are not immediately obvious. Therapy can help us explore these influences in a safe and meaningful way.
+        </p>
+      </div>
+
+      <div class="relative overflow-hidden rounded-3xl border border-[#cbd5e1] shadow-lg bg-gradient-to-b from-[#EBF8FF] via-[#0284C7] to-[#0A2540]">
+        <div class="relative p-6 sm:p-8 bg-gradient-to-b from-[#F0F9FF] to-[#BAE6FD]/60">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <span class="inline-block self-start sm:self-auto rounded-full bg-[#D84315] px-4 py-1.5 text-xs font-extrabold uppercase text-white shadow-sm">
+              Top
+            </span>
+            <span class="text-xs font-bold text-[#173A7A] uppercase tracking-wider">What you may be experiencing now</span>
+          </div>
+          
+          <div class="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
+            <div class="rounded-xl bg-white/90 p-3 text-center shadow-sm border border-sky-100">
+              <div class="text-sm font-bold text-[#173A7A]">Anxiety & Panic</div>
+            </div>
+            <div class="rounded-xl bg-white/90 p-3 text-center shadow-sm border border-sky-100">
+              <div class="text-sm font-bold text-[#173A7A]">Phobias & Fear</div>
+            </div>
+            <div class="rounded-xl bg-white/90 p-3 text-center shadow-sm border border-sky-100">
+              <div class="text-sm font-bold text-[#173A7A]">Intrusive Thoughts</div>
+            </div>
+            <div class="rounded-xl bg-white/90 p-3 text-center shadow-sm border border-sky-100">
+              <div class="text-sm font-bold text-[#173A7A]">Stress & Tension</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="relative bg-[#0284C7] py-2 px-8 flex items-center justify-between text-white text-xs font-extrabold uppercase tracking-widest border-y border-white/30">
+          <span class="flex items-center gap-2">🌊 Waterline Boundary</span>
+          <span class="hidden sm:inline">Exploring what may be contributing</span>
+        </div>
+
+        <div class="p-6 sm:p-10 text-white bg-gradient-to-b from-[#0284C7]/40 to-[#0A2540]">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-8">
+            <span class="inline-block self-start sm:self-auto rounded-full bg-white/20 backdrop-blur-md px-4 py-1.5 text-xs font-bold text-sky-50 border border-white/20">
+              Bottom
+            </span>
+            <span class="text-xs font-bold text-sky-200 uppercase tracking-wider">Patterns and influences worth exploring</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="rounded-2xl bg-white/10 backdrop-blur-md p-4 border border-white/10">
+              <div class="font-bold text-white text-base">Core Beliefs</div>
+              <p class="mt-1 text-xs text-sky-200">Deep-seated self-perceptions shaped early in life.</p>
+            </div>
+            <div class="rounded-2xl bg-white/10 backdrop-blur-md p-4 border border-white/10">
+              <div class="font-bold text-white text-base">Past Experiences</div>
+              <p class="mt-1 text-xs text-sky-200">Unprocessed memories and emotional trauma.</p>
+            </div>
+            <div class="rounded-2xl bg-white/10 backdrop-blur-md p-4 border border-white/10">
+              <div class="font-bold text-white text-base">Learned Patterns</div>
+              <p class="mt-1 text-xs text-sky-200">Automatic emotional reactions and coping habits.</p>
+            </div>
+            <div class="rounded-2xl bg-white/10 backdrop-blur-md p-4 border border-white/10">
+              <div class="font-bold text-white text-base">Relationship Dynamics</div>
+              <p class="mt-1 text-xs text-sky-200">Relational conflicts and unresolved hidden stress.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. GROUPED INTEGRATIVE APPROACHES SECTION -->
+  <section id="services" class="py-16 bg-[#FAF8F5]">
+    <div class="container-nh max-w-5xl text-center">
+      <h2 class="text-3xl font-extrabold text-[#173A7A]">Therapy is tailored to the individual.</h2>
+      <p class="mt-4 text-base text-[#475569] leading-relaxed max-w-3xl mx-auto">
+        Depending on your needs and therapeutic goals, your therapist may draw upon a range of established psychotherapy, counselling, experiential, and supportive approaches.
+      </p>
+      
+      <div class="mt-12 grid md:grid-cols-3 gap-6 text-left">
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-[#e2e8f0]">
+          <h3 class="font-bold text-[#D84315] text-sm uppercase tracking-wider mb-4 border-b border-[#f1f5f9] pb-3">Talk-based & Cognitive</h3>
+          <ul class="space-y-2.5 text-sm font-semibold text-[#173A7A]">
+            <li>Cognitive Behavioral Therapy (CBT)</li>
+            <li>Psychodynamic Approaches</li>
+            <li>Person-Centered Counseling</li>
+            <li>Psychosocial Counselling</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-[#e2e8f0]">
+          <h3 class="font-bold text-[#D84315] text-sm uppercase tracking-wider mb-4 border-b border-[#f1f5f9] pb-3">Experiential & Integrative</h3>
+          <ul class="space-y-2.5 text-sm font-semibold text-[#173A7A]">
+            <li>Gestalt Psychotherapy</li>
+            <li>Clinical Hypnotherapy</li>
+            <li>Emotional Freedom Techniques (EFT)</li>
+            <li>Emotional Empowerment Technique (EET)</li>
+          </ul>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-[#e2e8f0]">
+          <h3 class="font-bold text-[#D84315] text-sm uppercase tracking-wider mb-4 border-b border-[#f1f5f9] pb-3">Trauma & Body-Oriented</h3>
+          <ul class="space-y-2.5 text-sm font-semibold text-[#173A7A]">
+            <li>Trauma Counseling</li>
+            <li>Mindfulness Practices</li>
+            <li>Somatic Practices</li>
+            <li>Healing Touch Supportive Therapy</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. ABOUT ARCHANA BIBHOR -->
+  <section id="about" class="py-16 bg-white border-y border-[#e2e8f0]">
+    <div class="container-nh grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+      <img src="/images/archana-bibhor.png" alt="Archana Bibhor" width="360" height="360" class="w-full rounded-3xl shadow-lg object-cover max-w-[360px] mx-auto" />
+      <div>
+        <h2 class="text-3xl font-extrabold text-[#173A7A]">Archana Bibhor</h2>
+        <p class="text-lg font-bold text-[#385BAA]">Founder & Lead Practitioner</p>
+        
+        <p class="mt-4 text-base text-[#475569] font-medium leading-relaxed">
+          Archana Bibhor is the founder and lead practitioner of Nepal Hypnosis. Her work focuses on understanding each client's individual experiences, strengths, relationships, and goals rather than applying a one-size-fits-all therapeutic model.
+        </p>
+
+        <div class="mt-5 bg-[#FAF8F5] p-5 rounded-2xl border border-[#e2e8f0]">
+          <ul class="space-y-3 text-sm font-semibold text-[#475569]">
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-[#D84315] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              Doctor of Psychology (PsyD) Candidate in Clinical Psychology — United States International University (USIU-Africa)
+            </li>
+            <li class="flex items-start gap-2">
+              <svg class="w-5 h-5 text-[#D84315] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              20+ years of professional practice in psychotherapy, counselling, and education
+            </li>
+          </ul>
+        </div>
+        
+        <div class="mt-6 flex flex-wrap gap-4">
+          <a href="/team" class="inline-flex rounded-lg bg-[#173A7A] px-5 py-2.5 text-[13px] font-bold text-white shadow-sm hover:bg-[#102f64] transition">
+            Learn More About Archana →
+          </a>
+          <a href="/team" class="inline-flex rounded-lg border border-[#cbd5e1] bg-white px-5 py-2.5 text-[13px] font-bold text-[#173A7A] hover:bg-[#f1f5f9] transition">
+            Meet the Full Team
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. NEPAL HYPNOSIS ACADEMY -->
+  <section id="training" class="py-16 bg-[#FAF8F5]">
+    <div class="container-nh max-w-6xl">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-[#D84315]">Nepal Hypnosis Academy</span>
+        <h2 class="mt-2 text-3xl font-extrabold sm:text-4xl text-[#173A7A]">Training, Learning & Self-Development</h2>
+        <p class="mt-4 text-base text-[#475569] leading-relaxed">
+          Explore professional training in counseling and psychotherapy, alongside practical self-help workshops and wellness programs.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        
+        <!-- Column 1 -->
+        <div class="rounded-3xl bg-white p-8 border border-[#e2e8f0] shadow-sm">
+          <div class="flex items-center gap-3 mb-6 pb-6 border-b border-[#f1f5f9]">
+            <div class="w-10 h-10 rounded-xl bg-[#D84315]/10 flex items-center justify-center text-[#D84315]">
+               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </div>
+            <div>
+              <h3 class="text-xl font-extrabold text-[#173A7A]">Self-Help & Wellness</h3>
+              <p class="text-xs text-[#64748b]">Open to individuals from all walks of life</p>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div>
+              <h4 class="font-bold text-[#173A7A] text-sm">Self-Esteem Training Series</h4>
+              <p class="mt-1 text-xs text-[#475569] leading-relaxed">A unique program designed to help you understand, love, and accept yourself.</p>
+            </div>
+            <div class="border-t border-[#f1f5f9] pt-4">
+              <h4 class="font-bold text-[#173A7A] text-sm">Self Help with Self Hypnosis</h4>
+              <p class="mt-1 text-xs text-[#475569]">An intensive workshop on self-hypnosis for goal achievement and confidence.</p>
+            </div>
+            <div class="border-t border-[#f1f5f9] pt-4">
+              <h4 class="font-bold text-[#173A7A] text-sm">Joymandu – A Journey of Joy</h4>
+              <p class="mt-1 text-xs text-[#475569] leading-relaxed">A one-day program combining center-based activities with a short hike.</p>
+            </div>
+            <div class="border-t border-[#f1f5f9] pt-4">
+              <h4 class="font-bold text-[#173A7A] text-sm">Tailored Recreational Activities</h4>
+              <p class="mt-1 text-xs text-[#475569]">Custom wellness modules for organization staff members and specialized groups.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="rounded-3xl bg-white p-8 border border-[#e2e8f0] shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-6 pb-6 border-b border-[#f1f5f9]">
+              <div class="w-10 h-10 rounded-xl bg-[#173A7A]/10 flex items-center justify-center text-[#173A7A]">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              </div>
+              <div>
+                <h3 class="text-xl font-extrabold text-[#173A7A]">Professional Training</h3>
+                <p class="text-xs text-[#64748b]">For mental health practitioners & career newcomers</p>
+              </div>
+            </div>
+
+            <div class="space-y-4">
+              <div>
+                <h4 class="font-bold text-[#173A7A] text-sm">Eclectic Psychotherapy</h4>
+                <p class="mt-1 text-xs text-[#475569]">Develop practical skills for working with diverse client presentations.</p>
+              </div>
+              <div class="border-t border-[#f1f5f9] pt-4">
+                <h4 class="font-bold text-[#173A7A] text-sm">Psychosocial Counselling</h4>
+                <p class="mt-1 text-xs text-[#475569]">Comprehensive foundational training in counseling techniques and ethics.</p>
+              </div>
+              <div class="border-t border-[#f1f5f9] pt-4">
+                <h4 class="font-bold text-[#173A7A] text-sm">Clinical Psychotherapy</h4>
+                <p class="mt-1 text-xs text-[#475569]">Advanced learning relevant to complex emotional difficulties and trauma.</p>
+              </div>
+              <div class="border-t border-[#f1f5f9] pt-4">
+                <h4 class="font-bold text-[#173A7A] text-sm">Gestalt Psychotherapy</h4>
+                <p class="mt-1 text-xs text-[#475569]">Experiential training focusing on the present moment and self-awareness.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-[#e2e8f0] text-center">
+            <a href="https://portal.nepalhypnosis.com" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-xl bg-[#173A7A] px-6 py-3 text-xs font-bold text-white shadow-md hover:bg-[#102f64] transition">
+              Explore Courses & Registration →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. FULLY AUTOMATED YOUTUBE API CAROUSEL -->
+  <section id="media" class="py-16 bg-white border-y border-[#e2e8f0]">
+    <div class="container-nh">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-[#D84315]">Video Gallery</span>
+          <h2 class="text-3xl font-extrabold text-[#173A7A]">Featured Media & Videos</h2>
+        </div>
+        <div class="flex gap-2">
+          <button id="slideLeft" class="w-10 h-10 rounded-full border border-[#cbd5e1] bg-white flex items-center justify-center text-[#173A7A] hover:bg-[#FAF8F5] transition shadow-sm cursor-pointer" aria-label="Scroll left">
+            ←
+          </button>
+          <button id="slideRight" class="w-10 h-10 rounded-full border border-[#cbd5e1] bg-white flex items-center justify-center text-[#173A7A] hover:bg-[#FAF8F5] transition shadow-sm cursor-pointer" aria-label="Scroll right">
+            →
+          </button>
+        </div>
+      </div>
+
+      <!-- Dynamic Container -->
+      <div id="videoContainer" class="flex gap-6 overflow-x-auto scroll-smooth pb-4 no-scrollbar min-h-[220px] items-center">
+        <p class="text-sm text-[#64748b] animate-pulse">Loading live videos directly from YouTube channel...</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const container = document.getElementById('videoContainer');
+    const btnLeft = document.getElementById('slideLeft');
+    const btnRight = document.getElementById('slideRight');
+
+    btnLeft?.addEventListener('click', () => {
+      container?.scrollBy({ left: -380, behavior: 'smooth' });
+    });
+
+    btnRight?.addEventListener('click', () => {
+      container?.scrollBy({ left: 380, behavior: 'smooth' });
+    });
+
+    function escapeHtml(str) {
+      const div = document.createElement('div');
+      div.innerText = str;
+      return div.innerHTML;
+    }
+
+    async function loadYouTubeChannelVideos() {
+      if (!container) return;
+
+      const apiKey = 'AIzaSyDs_uVXUMbewqsCD-zoInrmDOE0DXgwQ40'; 
+      const playlistId = 'UUifKne_f3_7iydVqF91fkQA'; 
+      const apiUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&maxResults=6&key=${apiKey}`;
+
+      try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+
+        if (data.items && data.items.length > 0) {
+          container.innerHTML = ''; 
+
+          data.items.forEach(item => {
+            const rawTitle = item.snippet?.title || '';
+            const videoId = item.snippet?.resourceId?.videoId;
+
+            if (!videoId || rawTitle === 'Private video' || rawTitle === 'Deleted video') return;
+
+            const title = escapeHtml(rawTitle);
+            const card = document.createElement('div');
+            card.className = "min-w-[300px] sm:min-w-[360px] max-w-[360px] rounded-2xl border border-[#e2e8f0] bg-[#FAF8F5] overflow-hidden shadow-sm flex flex-col shrink-0";
+            card.innerHTML = `
+              <div class="aspect-video w-full bg-black relative">
+                <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/${videoId}" title="${title}" loading="lazy" allowfullscreen></iframe>
+              </div>
+              <div class="p-4 flex-1 flex flex-col justify-between">
+                <h3 class="font-bold text-[#173A7A] text-sm line-clamp-2">${title}</h3>
+                <span class="mt-2 text-xs text-[#64748b]">Nepal Hypnosis</span>
+              </div>
+            `;
+            container.appendChild(card);
+          });
+        } else {
+          container.innerHTML = '<p class="text-sm text-[#64748b]">No videos found in this channel.</p>';
+        }
+      } catch (error) {
+        console.error('Error fetching YouTube API:', error);
+        container.innerHTML = '<p class="text-sm text-red-500">Unable to load live video feed. Please try again.</p>';
+      }
+    }
+
+    loadYouTubeChannelVideos();
+  </script>
+
+  <!-- 10. FREQUENTLY ASKED QUESTIONS -->
+  <section id="faq" class="py-16 bg-[#FAF8F5]">
+    <div class="container-nh max-w-4xl">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-extrabold text-[#173A7A]">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="space-y-4">
+        <details class="rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-sm group">
+          <summary class="cursor-pointer font-bold text-[#173A7A] focus-visible:outline-none">How do I know whether therapy is right for me?</summary>
+          <p class="mt-4 text-sm text-[#475569] leading-relaxed pt-3 border-t border-[#f1f5f9]">If something is consistently causing you distress, affecting your daily life, or if you simply feel overwhelmed and stuck, therapy provides a safe space to explore these feelings. You don't need to have everything figured out to start.</p>
+        </details>
+        
+        <details class="rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-sm group">
+          <summary class="cursor-pointer font-bold text-[#173A7A] focus-visible:outline-none">Do I need a diagnosis before seeking help?</summary>
+          <p class="mt-4 text-sm text-[#475569] leading-relaxed pt-3 border-t border-[#f1f5f9]">Not at all. People come to therapy for many reasons, whether dealing with a specific difficulty or simply navigating a period where life feels overwhelming or unmanageable.</p>
+        </details>
+        
+        <details class="rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-sm group">
+          <summary class="cursor-pointer font-bold text-[#173A7A] focus-visible:outline-none">What happens during the first session?</summary>
+          <p class="mt-4 text-sm text-[#475569] leading-relaxed pt-3 border-t border-[#f1f5f9]">The first session generally focuses on understanding your concerns, relevant experiences, goals, and exploring whether our service is appropriate for your needs. It is an initial conversation to help us plan a path forward together.</p>
+        </details>
+
+        <details class="rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-sm group">
+          <summary class="cursor-pointer font-bold text-[#173A7A] focus-visible:outline-none">Is everything confidential?</summary>
+          <p class="mt-4 text-sm text-[#475569] leading-relaxed pt-3 border-t border-[#f1f5f9]">Confidentiality is a fundamental part of our professional practice. Information shared in therapy is handled in accordance with applicable ethical and professional responsibilities. The limits of confidentiality (such as immediate safety concerns) will be explained clearly during the therapeutic process.</p>
+        </details>
+        
+        <details class="rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-sm group">
+          <summary class="cursor-pointer font-bold text-[#173A7A] focus-visible:outline-none">Are sessions available online as well as in-person?</summary>
+          <p class="mt-4 text-sm text-[#475569] leading-relaxed pt-3 border-t border-[#f1f5f9]">Yes. We offer both in-person sessions at our Kathmandu clinic and secure online video consultations for clients residing outside Kathmandu or abroad.</p>
+        </details>
+
+        <details class="rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-sm group">
+          <summary class="cursor-pointer font-bold text-[#173A7A] focus-visible:outline-none">What is clinical hypnotherapy and is it used in every session?</summary>
+          <p class="mt-4 text-sm text-[#475569] leading-relaxed pt-3 border-t border-[#f1f5f9]">Clinical hypnotherapy is a therapeutic modality utilizing focused attention and guided hypnosis to explore and work with subconscious patterns. It is one of several modalities we draw upon when clinically appropriate—it is not used in every session.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. FINAL CTA SECTION -->
+  <section class="py-20 bg-[#173A7A] text-center text-white border-t border-[#0c244d]">
+    <div class="container-nh max-w-3xl mx-auto">
+      <h2 class="text-3xl font-extrabold sm:text-4xl">You don't have to figure everything out before reaching out.</h2>
+      <p class="mt-4 text-blue-100 text-base sm:text-lg leading-relaxed">
+        Taking the first step does not mean you need to have all the answers. If you would like to explore whether psychotherapy or one of our programs may be appropriate for you, you can contact us confidentially.
+      </p>
+      
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://portal.nepalhypnosis.com" target="_blank" rel="noopener noreferrer" class="rounded-xl bg-[#D84315] px-8 py-3.5 text-[15px] font-bold text-white shadow-md hover:bg-[#b93812] transition">
+          Request a Consultation
+        </a>
+        <a href="#training" class="rounded-xl bg-white/10 px-8 py-3.5 text-[15px] font-bold text-white hover:bg-white/20 transition border border-white/20">
+          Explore Training Programs
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

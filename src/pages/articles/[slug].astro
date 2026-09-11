@@ -1,0 +1,25 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles');
+  return articles.map((article) => ({
+    params: { slug: article.id.replace(/\.md$/, '') },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+---
+
+<BaseLayout title={article.data.title}>
+  <article class="container-nh py-16 max-w-3xl mx-auto">
+    <h1 class="text-3xl font-extrabold text-[#173A7A] mb-3">{article.data.title}</h1>
+    <div class="text-xs text-[#64748b] mb-8 uppercase tracking-wider font-semibold">Author: {article.data.author}</div>
+    <div class="prose prose-blue max-w-none text-[#475569] leading-relaxed">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

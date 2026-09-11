@@ -1,0 +1,224 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+interface TeamMember {
+  name: string;
+  role: string;
+  credentials: string[];
+  image: string;
+  languages: string;
+  availability: string;
+  location: string;
+  approaches: string[];
+  bio: string;
+}
+
+const teamMembers: TeamMember[] = [
+  {
+    name: "Archana Bibhor",
+    role: "Founder & Lead Practitioner",
+    credentials: [
+      "Doctor of Psychology (PsyD) Candidate in Clinical Psychology — United States International University (USIU-Africa)",
+      "20+ years of professional practice in psychotherapy, counselling, and education",
+      "Pioneer of eclectic psychotherapy and clinical hypnotherapy in Nepal (Est. 2012 AD)"
+    ],
+    image: "/images/archana-bibhor.png",
+    languages: "English, Nepali",
+    availability: "In-Person & Online",
+    location: "Kathmandu, Nepal",
+    approaches: [
+      "Eclectic Psychotherapy",
+      "Clinical Hypnotherapy",
+      "Gestalt Psychotherapy",
+      "Cognitive Behavioral Therapy (CBT)",
+      "Trauma-Informed Care"
+    ],
+    bio: "Archana Bibhor is the founder and lead practitioner of Nepal Hypnosis. With over two decades of professional practice in mental health and human development, her clinical work focuses on understanding each client's individual experiences, strengths, relationships, and goals rather than applying a rigid, one-size-fits-all model. She draws upon a rich synthesis of talk-based cognitive strategies, experiential methodologies, and somatic practices to foster deep, sustainable healing."
+  },
+  {
+    name: "Shraddha Tripathi, PsyD",
+    role: "Consultant Psychologist",
+    credentials: [
+      "Doctor of Psychology (PsyD) in Clinical Psychology",
+      "Specialist in Relationship Dynamics & Life Transitions",
+      "Experienced in Individual & Couples Counselling"
+    ],
+    image: "/images/shraddha-tripathi.png",
+    languages: "English, Hindi",
+    availability: "Online Video Consultations",
+    location: "Dubai, UAE",
+    approaches: [
+      "Person-Centered Counselling",
+      "Relationship Dynamics",
+      "Psychosocial Counselling",
+      "Mindfulness-Based Strategies"
+    ],
+    bio: "Dr. Shraddha Tripathi specializes in relationship dynamics, emotional well-being, and navigating major life transitions. Her therapeutic space is grounded in warm empathy, collaborative inquiry, and non-judgmental acceptance—helping clients develop resilience and self-awareness during challenging life phases."
+  }
+];
+---
+
+<BaseLayout 
+  title="Our Clinical Team & Practitioners | Nepal Hypnosis"
+  description="Meet the experienced practitioners at Nepal Hypnosis Kathmandu. Dedicated to confidential, individualized psychotherapy and counselling."
+>
+
+  <!-- HERO SECTION -->
+  <section class="relative bg-gradient-to-b from-[#F5F1EA] to-[#FAF8F5] pt-12 pb-14 border-b border-[#e2e8f0]">
+    <div class="container-nh max-w-4xl text-center mx-auto">
+      <span class="text-[11px] font-extrabold tracking-[0.2em] text-[#D84315] uppercase">
+        QUALIFIED & EXPERIENCED PRACTITIONERS
+      </span>
+      <h1 class="mt-3 font-[Poppins] text-4xl sm:text-5xl font-extrabold text-[#173A7A] leading-tight">
+        Meet Our Clinical Team
+      </h1>
+      <p class="mt-4 text-base sm:text-lg text-[#475569] leading-relaxed max-w-2xl mx-auto">
+        Our practitioners provide a safe, respectful, and strictly confidential environment. We are dedicated to understanding your unique story and walking alongside you on your path forward.
+      </p>
+
+      <!-- Commitment Badges -->
+      <div class="mt-6 flex flex-wrap justify-center gap-6 text-xs sm:text-sm font-bold text-[#173A7A]">
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-[#D84315]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          Strict Ethics & Confidentiality
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-[#D84315]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Tailored Eclectic Approach
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-[#D84315]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+          In-Clinic & Secure Online
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM MEMBERS LISTING -->
+  <section class="py-16 bg-white">
+    <div class="container-nh max-w-5xl">
+      <div class="grid gap-12 lg:gap-16">
+        
+        {teamMembers.map((member) => (
+          <article class="flex flex-col md:flex-row gap-8 items-start bg-[#FAF8F5] p-6 md:p-10 rounded-[2.5rem] border border-[#e2e8f0] shadow-sm hover:shadow-md transition-shadow">
+            
+            <!-- Photo & Quick Details -->
+            <div class="w-full md:w-1/3 shrink-0 flex flex-col items-center text-center md:text-left md:items-start">
+              <img 
+                src={member.image} 
+                alt={member.name} 
+                width="320" 
+                height="320" 
+                class="w-full max-w-[280px] md:max-w-none aspect-square object-cover rounded-3xl shadow-md border border-[#e2e8f0] bg-white" 
+              />
+              
+              <div class="mt-6 w-full space-y-3 bg-white p-4 rounded-2xl border border-[#e2e8f0] text-xs font-semibold">
+                <div>
+                  <span class="block uppercase tracking-wider text-[10px] font-bold text-[#173A7A]">Languages</span>
+                  <span class="text-[#475569]">{member.languages}</span>
+                </div>
+                <div class="border-t border-[#f1f5f9] pt-2">
+                  <span class="block uppercase tracking-wider text-[10px] font-bold text-[#173A7A]">Format</span>
+                  <span class="text-[#475569]">{member.availability}</span>
+                </div>
+                <div class="border-t border-[#f1f5f9] pt-2">
+                  <span class="block uppercase tracking-wider text-[10px] font-bold text-[#173A7A]">Location</span>
+                  <span class="text-[#475569]">{member.location}</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="w-full md:w-2/3 flex flex-col justify-between h-full">
+              <div>
+                <h2 class="text-3xl font-extrabold text-[#173A7A]">{member.name}</h2>
+                <p class="text-base font-bold text-[#D84315] mt-1">{member.role}</p>
+
+                <!-- Qualifications List -->
+                <div class="mt-5 space-y-2.5">
+                  {member.credentials.map((cred) => (
+                    <div class="flex items-start gap-2 text-xs sm:text-sm font-semibold text-[#173A7A]">
+                      <svg class="w-4 h-4 text-[#D84315] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                      <span>{cred}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <!-- Bio -->
+                <p class="mt-5 text-sm sm:text-base text-[#475569] leading-relaxed font-normal">
+                  {member.bio}
+                </p>
+
+                <!-- Approaches Tags -->
+                <div class="mt-6">
+                  <span class="block text-[11px] font-extrabold uppercase tracking-wider text-[#385BAA] mb-2">Key Modalities & Approaches</span>
+                  <div class="flex flex-wrap gap-2">
+                    {member.approaches.map((approach) => (
+                      <span class="rounded-lg bg-white border border-[#cbd5e1] px-3 py-1 text-xs font-semibold text-[#173A7A]">
+                        {approach}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <!-- CTA Button -->
+              <div class="mt-8 pt-6 border-t border-[#cbd5e1]/60 flex flex-wrap items-center justify-between gap-4">
+                <span class="text-xs text-[#64748b]">Confidential consultations handled via secure portal.</span>
+                <a 
+                  href="https://portal.nepalhypnosis.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 rounded-xl bg-[#173A7A] px-5 py-2.5 text-xs sm:text-sm font-bold text-white shadow-sm hover:bg-[#102f64] transition"
+                >
+                  Request Consultation with {member.name.split(' ')[0]} →
+                </a>
+              </div>
+
+            </div>
+
+          </article>
+        ))}
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY / STANDARDS BANNER -->
+  <section class="py-14 bg-[#FAF8F5] border-t border-[#e2e8f0]">
+    <div class="container-nh max-w-4xl text-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-[#173A7A]">Our Commitment to Ethical Practice</h2>
+      <p class="mt-3 text-sm sm:text-base text-[#475569] leading-relaxed max-w-2xl mx-auto">
+        Every therapy session at Nepal Hypnosis follows strict international standards of professional ethics, privacy, and non-judgmental respect. We do not apply a rigid model; rather, we honor where you are in your life journey.
+      </p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA SECTION -->
+  <section class="py-16 bg-[#173A7A] text-center text-white">
+    <div class="container-nh max-w-3xl mx-auto">
+      <h2 class="text-3xl font-extrabold sm:text-4xl">Ready to begin your therapeutic journey?</h2>
+      <p class="mt-4 text-blue-100 text-base leading-relaxed">
+        You don't have to figure everything out before getting in touch. Request a consultation through our client portal to start a conversation.
+      </p>
+      
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a 
+          href="https://portal.nepalhypnosis.com" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="rounded-xl bg-[#D84315] px-8 py-3.5 text-[15px] font-bold text-white shadow-md hover:bg-[#b93812] transition"
+        >
+          Request a Consultation
+        </a>
+        <a 
+          href="/#how-it-works" 
+          class="rounded-xl bg-white/10 px-8 py-3.5 text-[15px] font-bold text-white hover:bg-white/20 transition border border-white/20"
+        >
+          How Therapy Works ↓
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

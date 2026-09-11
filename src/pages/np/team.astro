@@ -1,0 +1,228 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+interface TeamMember {
+  name: string;
+  shortName: string;
+  role: string;
+  credentials: string[];
+  image: string;
+  languages: string;
+  availability: string;
+  location: string;
+  approaches: string[];
+  bio: string;
+}
+
+const teamMembers: TeamMember[] = [
+  {
+    name: "अर्चना विभोर",
+    shortName: "अर्चना",
+    role: "संस्थापक तथा प्रमुख मनोचिकित्सक",
+    credentials: [
+      "क्लिनिकल साइकोलोजीमा डक्टर अफ साइकोलोजी (PsyD) क्यान्डिडेट — युनाइटेड स्टेट्स इन्टरनेशनल युनिभर्सिटी (USIU-Africa)",
+      "मनोचिकित्सा, परामर्श तथा शिक्षा क्षेत्रमा २० वर्षभन्दा बढीको व्यावसायिक अनुभव",
+      "नेपालमा एक्लेक्टिक मनोचिकित्सा र क्लिनिकल हिप्नोथेरापीका अग्रदूत (स्थापना २०१२ AD / २०६९ BS)"
+    ],
+    image: "/images/archana-bibhor.png",
+    languages: "अंग्रेजी, नेपाली",
+    availability: "प्रत्यक्ष (क्लिनिकमा) तथा अनलाइन",
+    location: "काठमाडौं, नेपाल",
+    approaches: [
+      "एक्लेक्टिक मनोचिकित्सा (Eclectic Psychotherapy)",
+      "क्लिनिकल हिप्नोथेरापी (Clinical Hypnotherapy)",
+      "गेस्टाल्ट मनोचिकित्सा (Gestalt Psychotherapy)",
+      "कग्निटिभ बिहेभियरल थेरापी (CBT)",
+      "ट्रमा-इन्फोर्म्ड केयर (Trauma-Informed Care)"
+    ],
+    bio: "अर्चना विभोर नेपाल हिप्नोसिसकी संस्थापक तथा प्रमुख मनोचिकित्सक हुनुहुन्छ। मानसिक स्वास्थ्य र मानव विकासको क्षेत्रमा दुई दशकभन्दा बढीको व्यावसायिक अनुभवका साथ, उहाँको क्लिनिकल कार्यले कुनै कठोर वा एउटै ढाँचा लागू गर्नुको सट्टा प्रत्येक सेवाग्राहीको व्यक्तिगत अनुभव, सामर्थ्य, सम्बन्ध र लक्ष्यहरूलाई बुझ्नमा जोड दिन्छ। उहाँ गहिरो र दिगो रूपान्तरणका लागि कुराकानीमा आधारित कग्निटिभ रणनीतिहरू, अनुभवात्मक विधिहरू र सोमाटिक (शारीरिक-मानसिक) अभ्यासहरूको समृद्ध संयोजन प्रयोग गर्नुहुन्छ।"
+  },
+  {
+    name: "डा. श्रद्धा त्रिपाठी (PsyD)",
+    shortName: "डा. श्रद्धा",
+    role: "कन्सल्टेन्ट साइकोलोजिस्ट",
+    credentials: [
+      "क्लिनिकल साइकोलोजीमा डक्टर अफ साइकोलोजी (PsyD)",
+      "सम्बन्धको आयाम र जीवनका परिवर्तन सम्बन्धी विशेषज्ञ",
+      "व्यक्तिगत तथा दम्पती (कपल्स) परामर्शमा अनुभवी"
+    ],
+    image: "/images/shraddha-tripathi.png",
+    languages: "अंग्रेजी, हिन्दी",
+    availability: "अनलाइन भिडियो परामर्श",
+    location: "दुबई, युएई",
+    approaches: [
+      "पर्सन-सेन्टर्ड काउन्सिलिङ (Person-Centered)",
+      "सम्बन्धको आयाम (Relationship Dynamics)",
+      "मनोसामाजिक परामर्श (Psychosocial Counselling)",
+      "माइन्डफुलनेस-आधारित रणनीतिहरू"
+    ],
+    bio: "डा. श्रद्धा त्रिपाठी सम्बन्धका आयामहरू, भावनात्मक सुस्वास्थ्य, र जीवनका प्रमुख रूपान्तरण वा परिवर्तनहरू सहज बनाउनमा विशेषज्ञता राख्नुहुन्छ। उहाँको उपचारात्मक वातावरण न्यानो सहानुभूति, सहयोगात्मक अध्ययन र बिना-पूर्वाग्रहको स्वीकृतिमा आधारित छ—जसले सेवाग्राहीहरूलाई जीवनका चुनौतीपूर्ण चरणहरूमा लचिलोपन र आत्म-जागरुकता विकास गर्न मद्दत गर्दछ।"
+  }
+];
+---
+
+<BaseLayout 
+  title="हाम्रो क्लिनिकल टोली तथा विशेषज्ञहरू"
+  description="नेपाल हिप्नोसिस काठमाडौंका अनुभवी मनोचिकित्सक तथा परामर्शदाताहरूलाई चिन्नुहोस्। गोपनीयता र व्यक्तिगत मनोचिकित्साका लागि प्रतिबद्ध।"
+  lang="np"
+>
+
+  <!-- HERO SECTION -->
+  <section class="relative bg-gradient-to-b from-[#F5F1EA] to-[#FAF8F5] pt-12 pb-14 border-b border-[#e2e8f0]">
+    <div class="container-nh max-w-4xl text-center mx-auto">
+      <span class="text-[11px] font-extrabold tracking-[0.2em] text-[#D84315] uppercase">
+        योग्य तथा अनुभवी मनोचिकित्सकहरू
+      </span>
+      <h1 class="mt-3 font-[Poppins] text-4xl sm:text-5xl font-extrabold text-[#173A7A] leading-tight">
+        हाम्रो क्लिनिकल टोलीसँग भेट्नुहोस्
+      </h1>
+      <p class="mt-4 text-base sm:text-lg text-[#475569] leading-relaxed max-w-2xl mx-auto">
+        हाम्रा विशेषज्ञहरूले सुरक्षित, आदरपूर्ण र पूर्ण रूपमा गोपनीय वातावरण प्रदान गर्छन्। हामी तपाईंको अद्वितीय कथा बुझ्न र तपाईंको जीवन यात्रामा साथ दिन समर्पित छौं।
+      </p>
+
+      <!-- Commitment Badges -->
+      <div class="mt-6 flex flex-wrap justify-center gap-6 text-xs sm:text-sm font-bold text-[#173A7A]">
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-[#D84315]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          कडा नैतिक मापदण्ड र गोपनीयता
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-[#D84315]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          व्यक्तिगत एक्लेक्टिक उपचारात्मक विधि
+        </span>
+        <span class="flex items-center gap-1.5">
+          <svg class="w-4 h-4 text-[#D84315]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
+          क्लिनिकमा प्रत्यक्ष र सुरक्षित अनलाइन
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM MEMBERS LISTING -->
+  <section class="py-16 bg-white">
+    <div class="container-nh max-w-5xl">
+      <div class="grid gap-12 lg:gap-16">
+        
+        {teamMembers.map((member) => (
+          <article class="flex flex-col md:flex-row gap-8 items-start bg-[#FAF8F5] p-6 md:p-10 rounded-[2.5rem] border border-[#e2e8f0] shadow-sm hover:shadow-md transition-shadow">
+            
+            <!-- Photo & Quick Details -->
+            <div class="w-full md:w-1/3 shrink-0 flex flex-col items-center text-center md:text-left md:items-start">
+              <img 
+                src={member.image} 
+                alt={member.name} 
+                width="320" 
+                height="320" 
+                class="w-full max-w-[280px] md:max-w-none aspect-square object-cover rounded-3xl shadow-md border border-[#e2e8f0] bg-white" 
+              />
+              
+              <div class="mt-6 w-full space-y-3 bg-white p-4 rounded-2xl border border-[#e2e8f0] text-xs font-semibold">
+                <div>
+                  <span class="block uppercase tracking-wider text-[10px] font-bold text-[#173A7A]">भाषा</span>
+                  <span class="text-[#475569]">{member.languages}</span>
+                </div>
+                <div class="border-t border-[#f1f5f9] pt-2">
+                  <span class="block uppercase tracking-wider text-[10px] font-bold text-[#173A7A]">माध्यम</span>
+                  <span class="text-[#475569]">{member.availability}</span>
+                </div>
+                <div class="border-t border-[#f1f5f9] pt-2">
+                  <span class="block uppercase tracking-wider text-[10px] font-bold text-[#173A7A]">स्थान</span>
+                  <span class="text-[#475569]">{member.location}</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Content Area -->
+            <div class="w-full md:w-2/3 flex flex-col justify-between h-full">
+              <div>
+                <h2 class="text-3xl font-extrabold text-[#173A7A]">{member.name}</h2>
+                <p class="text-base font-bold text-[#D84315] mt-1">{member.role}</p>
+
+                <!-- Qualifications List -->
+                <div class="mt-5 space-y-2.5">
+                  {member.credentials.map((cred) => (
+                    <div class="flex items-start gap-2 text-xs sm:text-sm font-semibold text-[#173A7A]">
+                      <svg class="w-4 h-4 text-[#D84315] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                      <span>{cred}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <!-- Bio -->
+                <p class="mt-5 text-sm sm:text-base text-[#475569] leading-relaxed font-normal">
+                  {member.bio}
+                </p>
+
+                <!-- Approaches Tags -->
+                <div class="mt-6">
+                  <span class="block text-[11px] font-extrabold uppercase tracking-wider text-[#385BAA] mb-2">मुख्य उपचार विधिहरू तथा पहुँच</span>
+                  <div class="flex flex-wrap gap-2">
+                    {member.approaches.map((approach) => (
+                      <span class="rounded-lg bg-white border border-[#cbd5e1] px-3 py-1 text-xs font-semibold text-[#173A7A]">
+                        {approach}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              <!-- CTA Button -->
+              <div class="mt-8 pt-6 border-t border-[#cbd5e1]/60 flex flex-wrap items-center justify-between gap-4">
+                <span class="text-xs text-[#64748b]">सुरक्षित पोर्टलमार्फत गोपनीय परामर्श सञ्चालन गरिन्छ।</span>
+                <a 
+                  href="https://portal.nepalhypnosis.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  class="inline-flex items-center gap-2 rounded-xl bg-[#173A7A] px-5 py-2.5 text-xs sm:text-sm font-bold text-white shadow-sm hover:bg-[#102f64] transition"
+                >
+                  {member.shortName} सँग परामर्श अनुरोध गर्नुहोस् →
+                </a>
+              </div>
+
+            </div>
+
+          </article>
+        ))}
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY / STANDARDS BANNER -->
+  <section class="py-14 bg-[#FAF8F5] border-t border-[#e2e8f0]">
+    <div class="container-nh max-w-4xl text-center">
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-[#173A7A]">नैतिक अभ्यासप्रति हाम्रो प्रतिबद्धता</h2>
+      <p class="mt-3 text-sm sm:text-base text-[#475569] leading-relaxed max-w-2xl mx-auto">
+        नेपाल हिप्नोसिसमा प्रत्येक थेरापी सत्रले व्यावसायिक नैतिकता, गोपनीयता र निष्पक्ष आदरका कडा अन्तर्राष्ट्रिय मापदण्डहरू पालना गर्दछ। हामी कुनै कठोर ढाँचा लागू गर्दैनौं; बरु, तपाईं जीवनको जुन मोडमा हुनुहुन्छ, त्यसलाई सम्मान गर्दछौं।
+      </p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA SECTION -->
+  <section class="py-16 bg-[#173A7A] text-center text-white">
+    <div class="container-nh max-w-3xl mx-auto">
+      <h2 class="text-3xl font-extrabold sm:text-4xl">आफ्नो उपचारात्मक यात्रा सुरु गर्न तयार हुनुहुन्छ?</h2>
+      <p class="mt-4 text-blue-100 text-base leading-relaxed">
+        सम्पर्क गर्नुअघि नै सबै कुरा स्पष्ट भइसकेको हुनुपर्छ भन्ने छैन। कुराकानी सुरु गर्न हाम्रो ग्राहक पोर्टलमार्फत परामर्शको लागि अनुरोध गर्नुहोस्।
+      </p>
+      
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a 
+          href="https://portal.nepalhypnosis.com" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="rounded-xl bg-[#D84315] px-8 py-3.5 text-[15px] font-bold text-white shadow-md hover:bg-[#b93812] transition"
+        >
+          परामर्श अनुरोध गर्नुहोस्
+        </a>
+        <a 
+          href="/np/#how-it-works" 
+          class="rounded-xl bg-white/10 px-8 py-3.5 text-[15px] font-bold text-white hover:bg-white/20 transition border border-white/20"
+        >
+          थेरापी कसरी काम गर्छ ↓
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

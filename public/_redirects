@@ -1,0 +1,7 @@
+# Legacy Drupal URL Redirects to New Static Routes
+/node/1                  /about/our-story/               301
+/node/2                  /services/clinical-hypnotherapy/ 301
+/hypnotherapy-services   /services/clinical-hypnotherapy/ 301
+/training-programs       /training/                       301
+/contact-us              /contact/                        301
+/drupal/*                /                                301
