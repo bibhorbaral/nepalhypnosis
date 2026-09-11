@@ -4,6 +4,8 @@ import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://nepalhypnosis.com',
+  trailingSlash: 'ignore',
   vite: {
     plugins: [tailwindcss()]
   },
