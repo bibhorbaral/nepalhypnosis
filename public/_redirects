@@ -1,7 +1,29 @@
 # Legacy Drupal URL Redirects to New Static Routes
-/node/1                  /about/our-story/               301
+/node/1                  /about/our-story/                301
 /node/2                  /services/clinical-hypnotherapy/ 301
 /hypnotherapy-services   /services/clinical-hypnotherapy/ 301
 /training-programs       /training/                       301
 /contact-us              /contact/                        301
 /drupal/*                /                                301
+
+# Core Service & Page Redirects from Legacy Markdown Files
+/clinical-hypnotherapy-nepal                 /services/clinical-hypnotherapy/ 301
+/counseling-psychology-nepal-clinic          /services/counselling/           301
+/gestalt-psychology-in-nepal                 /services/psychotherapy/         301
+/meditation-mindfulness                      /services/mindfulness-based-interventions/ 301
+/about-us                                    /about/                          301
+/our-team                                    /team/                           301
+/contact-info                                /contact/                        301
+/vacancy                                     /vacancy/                        301
+/testimonial                                 /testimonials/                   301
+
+# Training & Institutional Authority Redirects
+/hypnosis-training-institute                 /training/                       301
+/integrated-clinical-hypnotherapy-training-level1 /training/clinical-hypnotherapy-level-1/ 301
+/integrated-clinical-hypnotherapy-level-1-combined /training/clinical-hypnotherapy-level-1/ 301
+/importance-of-mental-health-interventions-in-nepal /insights/mental-health-interventions-nepal/ 301
+
+# Alternative Modalities (Redirected safely to core clinical services)
+/past-life-regression-nepal                  /services/psychotherapy/         301
+/healing-touch-energy-therapy-nepal          /services/psychotherapy/         301
+/graphology-episode-1                        /services/psychotherapy/         301
