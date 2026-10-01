@@ -1,71 +1,78 @@
 # ============================================================
-# CRITICAL OVERRIDES & WILDCARDS (Must be at the top)
+# CLOUDFLARE PAGES NATIVE 301 REDIRECT REGISTRY
 # ============================================================
-/node/80                                             /articles/psychological-first-aid-pfa-shishir-subba/ 301
-/en/node/80                                          /articles/psychological-first-aid-pfa-shishir-subba/ 301
-/en/article/psychological-first-aid-pfa-shishir-subba  /articles/psychological-first-aid-pfa-shishir-subba/ 301
-/node/*                                              /articles/                                         301
 
-# ============================================================
-# NEPAL HYPNOSIS — LEGACY URL MIGRATION REGISTRY
-# ============================================================
-/content/about-us                                    /about/                          301
-/about-us                                            /about/                          301
-/our-team                                            /team/                           301
-/contact-info                                        /contact/                        301
-/contact-us                                          /contact/                        301
-/vacancy                                             /vacancy/                        301
-/testimonial                                         /testimonials/                   301
+# High-Priority Explicit Article Mappings
+/node/80 /articles/psychological-first-aid-pfa-shishir-subba/ 301
+/en/node/80 /articles/psychological-first-aid-pfa-shishir-subba/ 301
+/en/article/psychological-first-aid-pfa-shishir-subba /articles/psychological-first-aid-pfa-shishir-subba/ 301
 
-/node/1                                              /about/our-story/                301
-/node/2                                              /services/clinical-hypnotherapy/ 301
-/node/49                                             /articles/psychology-in-nepal-by-prof-dr-shishir-subba/ 301
-/node/50                                             /articles/my-son-has-an-attitude-problem/ 301
-/hypnotherapy-services                               /services/clinical-hypnotherapy/ 301
-/training-programs                                   /training/                       301
+# Core Institutional Pages
+/content/about-us /about/ 301
+/about-us /about/ 301
+/our-team /team/ 301
+/contact-info /contact/ 301
+/contact-us /contact/ 301
+/vacancy /vacancy/ 301
+/testimonial /testimonials/ 301
 
-/en/psychotherapy                                    /services/psychotherapy/         301
-/en/psychotherapy/past-life-regression-nepal         /services/psychotherapy/         301
-/en/psychotherapy/clinical-hpnotherapy-nepal         /services/clinical-hypnotherapy/ 301
-/en/psychotherapy/counseling-psychology-nepal-clinic   /services/counselling/           301
-/en/psychotherapy/healing-touch-energy-therapy-nepal   /services/psychotherapy/         301
+# Legacy Drupal Nodes
+/node/1 /about/our-story/ 301
+/node/2 /services/clinical-hypnotherapy/ 301
+/node/49 /articles/psychology-in-nepal-by-prof-dr-shishir-subba/ 301
+/node/50 /articles/my-son-has-an-attitude-problem/ 301
+/node/79 /articles/nepal-hypnosis-featured-in-himal-magazine/ 301
+/hypnotherapy-services /services/clinical-hypnotherapy/ 301
+/training-programs /training/ 301
+
+# Psychotherapy & Clinical Pathways
+/en/psychotherapy /services/psychotherapy/ 301
+/en/psychotherapy/past-life-regression-nepal /services/psychotherapy/ 301
+/en/psychotherapy/clinical-hpnotherapy-nepal /services/clinical-hypnotherapy/ 301
+/en/psychotherapy/counseling-psychology-nepal-clinic /services/counselling/ 301
+/en/psychotherapy/healing-touch-energy-therapy-nepal /services/psychotherapy/ 301
 /en/psychotherapy/neuro-linguistic-programming-nlp-kathmandu /services/psychotherapy/ 301
-/en/psychotherapy/gestalt-psychology-in-nepal          /services/psychotherapy/         301
-/en/psycho-social-counseling                         /services/counselling/           301
+/en/psychotherapy/gestalt-psychology-in-nepal /services/psychotherapy/ 301
+/en/psycho-social-counseling /services/counselling/ 301
 
-/clinical-hypnotherapy-nepal                         /services/clinical-hypnotherapy/ 301
-/counseling-psychology-nepal-clinic                  /services/counselling/           301
-/gestalt-psychology-in-nepal                         /services/psychotherapy/         301
-/meditation-mindfulness                              /services/mindfulness-based-interventions/ 301
-/past-life-regression-nepal                          /services/psychotherapy/         301
-/healing-touch-energy-therapy-nepal                  /services/psychotherapy/         301
+/clinical-hypnotherapy-nepal /services/clinical-hypnotherapy/ 301
+/counseling-psychology-nepal-clinic /services/counselling/ 301
+/gestalt-psychology-in-nepal /services/psychotherapy/ 301
+/meditation-mindfulness /services/mindfulness-based-interventions/ 301
+/past-life-regression-nepal /services/psychotherapy/ 301
+/healing-touch-energy-therapy-nepal /services/psychotherapy/ 301
 
-/en/training                                         /training/                       301
-/en/training/professional                            /training/                       301
-/en/training/self-help                               /training/                       301
-/en/training/professional/hypnosis-training-institute /training/                      301
-/en/training/professional/hypnotherapy-episode1      /training/clinical-hypnotherapy-level-1/ 301
-/en/training/professional/graphology-episode-1       /training/                       301
-/en/training/self-help/self-esteem-series            /training/                       301
-/en/training/self-help/self-hypnosis                 /training/                       301
-/en/training/self-help/joymandu-joy-kathmandu-hiking-nature /training/                301
-/en/training/self-help/meditation-mindfulness        /training/                       301
-/en/psychosocial-counselor-ctevt-training            /training/                       301
+# Training Pathways
+/en/training /training/ 301
+/en/training/professional /training/ 301
+/en/training/self-help /training/ 301
+/en/training/professional/hypnosis-training-institute /training/ 301
+/en/training/professional/hypnotherapy-episode1 /training/clinical-hypnotherapy-level-1/ 301
+/en/training/professional/graphology-episode-1 /training/ 301
+/en/training/self-help/self-esteem-series /training/ 301
+/en/training/self-help/self-hypnosis /training/ 301
+/en/training/self-help/joymandu-joy-kathmandu-hiking-nature /training/ 301
+/en/training/self-help/meditation-mindfulness /training/ 301
+/en/psychosocial-counselor-ctevt-training /training/ 301
 
-/hypnosis-training-institute                         /training/                       301
-/integrated-clinical-hypnotherapy-training-level1    /training/clinical-hypnotherapy-level-1/ 301
-/integrated-clinical-hypnotherapy-level-1-combined   /training/clinical-hypnotherapy-level-1/ 301
-/graphology-episode-1                                /training/                       301
+/hypnosis-training-institute /training/ 301
+/integrated-clinical-hypnotherapy-training-level1 /training/clinical-hypnotherapy-level-1/ 301
+/integrated-clinical-hypnotherapy-level-1-combined /training/clinical-hypnotherapy-level-1/ 301
+/graphology-episode-1 /training/ 301
 
-/en/article/cognitive-behavioral-therapy-CBT         /articles/cognitive-behavioral-therapy-cbt/ 301
-/en/article/how-to-guide-children-art-of-parenting   /articles/how-to-guide-children-art-of-parenting/ 301
-/en/article/about-love-in-nepali                     /articles/about-love-in-nepali/ 301
-/en/article/decreasing-generation-gap                /articles/decreasing-generation-gap/ 301
+# Restored Articles Mappings
+/en/article/cognitive-behavioral-therapy-CBT /articles/cognitive-behavioral-therapy-cbt/ 301
+/en/article/how-to-guide-children-art-of-parenting /articles/how-to-guide-children-art-of-parenting/ 301
+/en/article/about-love-in-nepali /articles/about-love-in-nepali/ 301
+/en/article/decreasing-generation-gap /articles/decreasing-generation-gap/ 301
 /en/article/safalta-ko-sutra-nyuna-atsamman-mathi-bijaya /articles/safalta-ko-sutra-nyuna-atsamman-mathi-bijaya/ 301
 /en/article/sexuality-management-prof-dr-shanta-niraula /articles/sexuality-management-prof-dr-shanta-niraula/ 301
-/importance-of-mental-health-interventions-in-nepal  /articles/importance-of-mental-health-interventions-in-nepal/ 301
+/importance-of-mental-health-interventions-in-nepal /articles/importance-of-mental-health-interventions-in-nepal/ 301
 
-/questionsanswers                                    /articles/                       301
-/index.php/en/question-answer/how-to-improve-memory  /articles/how-to-improve-memory/ 301
+/questionsanswers /articles/ 301
+/index.php/en/question-answer/how-to-improve-memory /articles/how-to-improve-memory/ 301
 /index.php/en/question-answer/how-to-overcome-failures /articles/how-to-overcome-failures/ 301
-/index.php/en/question-answer/filing-divorce-paper   /articles/filing-divorce-paper/  301
+/index.php/en/question-answer/filing-divorce-paper /articles/filing-divorce-paper/ 301
+
+# Catch-all Wildcard for any remaining legacy node requests
+/node/* /articles/ 301
