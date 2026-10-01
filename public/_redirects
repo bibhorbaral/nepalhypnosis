@@ -1,9 +1,10 @@
 # ============================================================
-# EXPLICIT HIGH-PRIORITY OVERRIDES
+# CRITICAL OVERRIDES & WILDCARDS (Must be at the top)
 # ============================================================
 /node/80                                             /articles/psychological-first-aid-pfa-shishir-subba/ 301
 /en/node/80                                          /articles/psychological-first-aid-pfa-shishir-subba/ 301
 /en/article/psychological-first-aid-pfa-shishir-subba  /articles/psychological-first-aid-pfa-shishir-subba/ 301
+/node/*                                              /articles/                                         301
 
 # ============================================================
 # NEPAL HYPNOSIS — LEGACY URL MIGRATION REGISTRY
