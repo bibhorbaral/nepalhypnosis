@@ -4,6 +4,13 @@
 # ============================================================
 
 # ------------------------------------------------------------
+# 0. High-Priority Direct Overrides (Fixes for specific nodes/articles)
+# ------------------------------------------------------------
+/node/80                                             /articles/psychological-first-aid-pfa-shishir-subba/ 301
+/en/node/80                                          /articles/psychological-first-aid-pfa-shishir-subba/ 301
+/en/article/psychological-first-aid-pfa-shishir-subba  /articles/psychological-first-aid-pfa-shishir-subba/ 301
+
+# ------------------------------------------------------------
 # 1. Institutional & Core Pages
 # ------------------------------------------------------------
 /content/about-us                                    /about/                          301
@@ -21,7 +28,6 @@
 /node/2                                              /services/clinical-hypnotherapy/ 301
 /node/49                                             /articles/psychology-in-nepal-by-prof-dr-shishir-subba/ 301
 /node/50                                             /articles/my-son-has-an-attitude-problem/ 301
-/node/80                                             /articles/psychological-first-aid-pfa-shishir-subba/ 301
 /hypnotherapy-services                               /services/clinical-hypnotherapy/ 301
 /training-programs                                   /training/                       301
 /drupal/*                                            /                                301
