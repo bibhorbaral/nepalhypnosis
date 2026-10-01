@@ -1,10 +1,12 @@
 ---
-title: "Counseling Psychology Services"
+title: "Psychosocial Counseling"
 slug: "counseling-psychology-nepal-clinic"
 lang: "en"
 author: "Archana Bibhor"
-legacyNode: 52
-legacyAlias: "/psychotherapy/counseling-psychology-nepal-clinic"
+legacyAlias: "/en/psychotherapy/counseling-psychology-nepal-clinic"
+status: "pending-clinical-review"
 ---
 
-Archived legacy content placeholder. Full text will be synced from backup archives.
+Counseling psychology focuses on providing therapeutic treatments to clients who experience a wide variety of symptoms. It is also one of the largest specialty areas within psychology.
+
+The Society of Counseling Psychology describes the field as "a psychological specialty [that] facilitates personal and interpersonal functioning across the life span with a focus on emotional, social, vocational, educational, health-related, developmental and organizational concerns."

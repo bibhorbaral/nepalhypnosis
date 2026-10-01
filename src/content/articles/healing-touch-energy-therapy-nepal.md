@@ -1,10 +1,12 @@
 ---
-title: "Healing Touch & Energy Therapy Modalities"
+title: "Healing Touch"
 slug: "healing-touch-energy-therapy-nepal"
 lang: "en"
 author: "Archana Bibhor"
-legacyNode: 98
-legacyAlias: "/psychotherapy/healing-touch-energy-therapy-nepal"
+legacyAlias: "/index.php/en/psychotherapy/healing-touch-energy-therapy-nepal"
+status: "pending-clinical-review"
 ---
 
-Archived legacy content placeholder. Full text will be synced from backup archives.
+Healing Touch follows the energy-based approach of therapy. It is a biofield therapy that utilizes the magnetic field around the body and influences the human energy system with the objective of reestablishing the balance and harmonies in the energy system.
+
+Nepal Hypnosis provides healing touch energy therapy as well as offers professional course.
