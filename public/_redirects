@@ -1,18 +1,13 @@
 # ============================================================
-# NEPAL HYPNOSIS — LEGACY URL MIGRATION REGISTRY
-# Single Redirect Mechanism: Cloudflare Pages Native 301
+# EXPLICIT HIGH-PRIORITY OVERRIDES
 # ============================================================
-
-# ------------------------------------------------------------
-# 0. High-Priority Direct Overrides (Fixes for specific nodes/articles)
-# ------------------------------------------------------------
 /node/80                                             /articles/psychological-first-aid-pfa-shishir-subba/ 301
 /en/node/80                                          /articles/psychological-first-aid-pfa-shishir-subba/ 301
 /en/article/psychological-first-aid-pfa-shishir-subba  /articles/psychological-first-aid-pfa-shishir-subba/ 301
 
-# ------------------------------------------------------------
-# 1. Institutional & Core Pages
-# ------------------------------------------------------------
+# ============================================================
+# NEPAL HYPNOSIS — LEGACY URL MIGRATION REGISTRY
+# ============================================================
 /content/about-us                                    /about/                          301
 /about-us                                            /about/                          301
 /our-team                                            /team/                           301
@@ -21,20 +16,13 @@
 /vacancy                                             /vacancy/                        301
 /testimonial                                         /testimonials/                   301
 
-# ------------------------------------------------------------
-# 2. Drupal Node & Legacy System Mapping
-# ------------------------------------------------------------
 /node/1                                              /about/our-story/                301
 /node/2                                              /services/clinical-hypnotherapy/ 301
 /node/49                                             /articles/psychology-in-nepal-by-prof-dr-shishir-subba/ 301
 /node/50                                             /articles/my-son-has-an-attitude-problem/ 301
 /hypnotherapy-services                               /services/clinical-hypnotherapy/ 301
 /training-programs                                   /training/                       301
-/drupal/*                                            /                                301
 
-# ------------------------------------------------------------
-# 3. Psychotherapy & Clinical Services
-# ------------------------------------------------------------
 /en/psychotherapy                                    /services/psychotherapy/         301
 /en/psychotherapy/past-life-regression-nepal         /services/psychotherapy/         301
 /en/psychotherapy/clinical-hpnotherapy-nepal         /services/clinical-hypnotherapy/ 301
@@ -50,12 +38,7 @@
 /meditation-mindfulness                              /services/mindfulness-based-interventions/ 301
 /past-life-regression-nepal                          /services/psychotherapy/         301
 /healing-touch-energy-therapy-nepal                  /services/psychotherapy/         301
-/index.php/en/psychotherapy/healing-touch-energy-therapy-nepal /services/psychotherapy/ 301
-/index.php/en/psychotherapy/gestalt-psychology-in-nepal        /services/psychotherapy/         301
 
-# ------------------------------------------------------------
-# 4. Training & Academy Pathways
-# ------------------------------------------------------------
 /en/training                                         /training/                       301
 /en/training/professional                            /training/                       301
 /en/training/self-help                               /training/                       301
@@ -72,12 +55,7 @@
 /integrated-clinical-hypnotherapy-training-level1    /training/clinical-hypnotherapy-level-1/ 301
 /integrated-clinical-hypnotherapy-level-1-combined   /training/clinical-hypnotherapy-level-1/ 301
 /graphology-episode-1                                /training/                       301
-/index.php/en/training/self-help/meditation-mindfulness /training/                    301
-/index.php/en/training/self-help/self-hypnosis       /training/                       301
 
-# ------------------------------------------------------------
-# 5. Restored Articles & Insights Mapping
-# ------------------------------------------------------------
 /en/article/cognitive-behavioral-therapy-CBT         /articles/cognitive-behavioral-therapy-cbt/ 301
 /en/article/how-to-guide-children-art-of-parenting   /articles/how-to-guide-children-art-of-parenting/ 301
 /en/article/about-love-in-nepali                     /articles/about-love-in-nepali/ 301
