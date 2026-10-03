@@ -3,6 +3,7 @@ title: "PSYCHOLOGICAL FIRST AID (PFA) / Shishir Subba"
 slug: "psychological-first-aid-pfa-shishir-subba"
 lang: "en"
 author: "Prof. Dr. Shishir Subba"
+legacyNode: 80
 legacyAlias: "/en/node/80"
 status: "pending-clinical-review"
 ---
