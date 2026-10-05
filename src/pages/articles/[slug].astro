@@ -1,6 +1,8 @@
 ---
 import { getCollection, render } from 'astro:content';
-import Layout from '../../layouts/Layout.astro';
+// Replace 'Layout' with whatever layout name your homepage uses (e.g., BaseLayout, MainLayout)
+import Layout from '../../layouts/BaseLayout.astro'; 
+import '../../styles/global.css';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles');
@@ -16,7 +18,7 @@ const { Content } = await render(article);
 ---
 
 <Layout title={`${article.data.title} | Nepal Hypnosis`}>
-  <main class="min-h-screen bg-slate-50/50 py-12 px-4 sm:px-6 lg:px-8">
+  <main class="min-h-screen bg-slate-50 py-12 px-4 sm:px-6 lg:px-8">
     <article class="max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-xl shadow-sm border border-gray-100">
       <header class="mb-8 border-b border-gray-100 pb-6">
         <h1 class="text-3xl sm:text-4xl font-bold text-[#1a365d] tracking-tight mb-3">
