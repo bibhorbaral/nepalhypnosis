@@ -8,6 +8,7 @@ interface Props {
   image?: string;
   canonical?: string;
   noindex?: boolean;
+  pageSchema?: object;
 }
 
 const {
@@ -16,7 +17,8 @@ const {
   lang = "en",
   image = "/images/social-preview.jpg",
   canonical,
-  noindex = false
+  noindex = false,
+  pageSchema
 } = Astro.props;
 
 const siteUrl = "https://nepalhypnosis.com";
@@ -32,9 +34,9 @@ const labels = {
   en: {
     announcement: 'Pioneer Psychotherapy Clinic & Training Center • Operating Since 2012 AD',
     conditions: 'Seeking Support',
-    howItWorks: 'How it Works',
+    howItWorks: 'Process',
     about: 'About',
-    team: 'Our Team',
+    team: 'Team',
     services: 'Approaches',
     training: 'Training',
     media: 'Media',
@@ -44,7 +46,8 @@ const labels = {
     whatsappText: '+977 9841459618',
     location: 'Kathmandu, Nepal',
     footerIntro: 'Registered in 2012 AD, Nepal Hypnosis is a pioneer psychotherapy clinic and training center in Kathmandu. We provide individualized, confidential, 1-to-1 therapy through an eclectic approach tailored to each client.',
-    explore: 'CLINICAL PRACTICE',
+    explore: 'EXPLORE',
+    servicesHeading: 'APPROACHES & INSIGHTS',
     portalTitle: 'CLIENT PORTAL',
     privacy: 'Privacy & Confidentiality',
     connect: 'CONNECT WITH US',
@@ -61,7 +64,7 @@ const labels = {
     conditions: 'समस्याहरू',
     howItWorks: 'प्रक्रिया',
     about: 'हाम्रो बारेमा',
-    team: 'हाम्रो टोली',
+    team: 'टोली',
     services: 'उपचार विधिहरू',
     training: 'तालिम',
     media: 'मिडिया',
@@ -71,7 +74,8 @@ const labels = {
     whatsappText: '+977 9841459618',
     location: 'काठमाडौं, नेपाल',
     footerIntro: 'सन् २०१२ (२०६९) मा दर्ता भई काठमाडौंमा सञ्चालित अग्रणी मनोचिकित्सा क्लिनिक तथा तालिम केन्द्र।',
-    explore: 'क्लिनिकल सेवा',
+    explore: 'मुख्य पृष्ठहरू',
+    servicesHeading: 'उपचार विधि र लेखहरू',
     portalTitle: 'ग्राहक पोर्टल',
     privacy: 'गोपनीयता तथा नैतिक मापदण्ड',
     connect: 'हामीसँग जोडिनुहोस्',
@@ -87,7 +91,7 @@ const labels = {
 
 const t = labels[lang];
 
-const schema = {
+const defaultSchema = {
   "@context": "https://schema.org",
   "@type": "MedicalClinic",
   "name": "Nepal Hypnosis",
@@ -104,6 +108,8 @@ const schema = {
   },
   "foundingDate": "2012"
 };
+
+const activeSchema = pageSchema || defaultSchema;
 ---
 
 <!doctype html>
@@ -130,7 +136,7 @@ const schema = {
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
     <meta name="theme-color" content="#102f64" />
 
-    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(activeSchema)} />
 
     <style is:global>
       :focus-visible {
@@ -189,7 +195,7 @@ const schema = {
 
     <!-- HEADER -->
     <header class="sticky top-0 z-50 w-full border-0 border-b border-[#e2e8f0]/80 bg-white/95 backdrop-blur-xl">
-      <div class="container-nh flex h-[76px] items-center justify-between gap-5">
+      <div class="container-nh flex h-[76px] items-center justify-between gap-4">
         <a href={homePath} class="group flex min-w-0 items-center gap-3">
           <img src="/images/logo.jpg" alt="Nepal Hypnosis Logo" width="48" height="48" class="h-11 w-auto object-contain sm:h-12" />
           <div class="min-w-0">
@@ -203,14 +209,14 @@ const schema = {
         </a>
 
         <!-- DESKTOP NAV -->
-        <nav class="hidden items-center gap-6 lg:flex">
-          <a href={lang === 'np' ? '/np/#how-it-works' : '/#how-it-works'} class="text-[14px] font-semibold text-[#475569] hover:text-[#D84315]">{t.howItWorks}</a>
-          <a href={lang === 'np' ? '/np/#services' : '/#services'} class="text-[14px] font-semibold text-[#475569] hover:text-[#D84315]">{t.services}</a>
-          <a href={lang === 'np' ? '/np/team' : '/team'} class="text-[14px] font-semibold text-[#475569] hover:text-[#D84315]">{t.team}</a>
-          <a href={lang === 'np' ? '/np/clinical-standards' : '/clinical-standards'} class="text-[14px] font-semibold text-[#475569] hover:text-[#D84315]">{lang === 'np' ? 'नैतिक मापदण्ड' : 'Standards'}</a>
-          <a href={lang === 'np' ? '/np/#training' : '/#training'} class="text-[14px] font-semibold text-[#475569] hover:text-[#D84315]">{t.training}</a>
-          <a href={lang === 'np' ? '/np/#media' : '/#media'} class="text-[14px] font-semibold text-[#475569] hover:text-[#D84315]">{t.media}</a>
-          <a href={lang === 'np' ? '/np/#faq' : '/#faq'} class="text-[14px] font-semibold text-[#475569] hover:text-[#D84315]">{t.faq}</a>
+        <nav class="hidden items-center gap-5 lg:flex">
+          <a href={lang === 'np' ? '/np/#how-it-works' : '/#how-it-works'} class="text-[13px] font-semibold text-[#475569] hover:text-[#D84315]">{t.howItWorks}</a>
+          <a href={lang === 'np' ? '/np/#services' : '/#services'} class="text-[13px] font-semibold text-[#475569] hover:text-[#D84315]">{t.services}</a>
+          <a href={lang === 'np' ? '/np/team' : '/team'} class="text-[13px] font-semibold text-[#475569] hover:text-[#D84315]">{t.team}</a>
+          <a href={lang === 'np' ? '/np/clinical-standards' : '/clinical-standards'} class="text-[13px] font-semibold text-[#475569] hover:text-[#D84315]">{lang === 'np' ? 'नैतिक मापदण्ड' : 'Standards'}</a>
+          <a href={lang === 'np' ? '/np/#training' : '/#training'} class="text-[13px] font-semibold text-[#475569] hover:text-[#D84315]">{t.training}</a>
+          <a href={lang === 'np' ? '/np/#media' : '/#media'} class="text-[13px] font-semibold text-[#475569] hover:text-[#D84315]">{t.media}</a>
+          <a href={lang === 'np' ? '/np/#faq' : '/#faq'} class="text-[13px] font-semibold text-[#475569] hover:text-[#D84315]">{t.faq}</a>
         </nav>
 
         <div class="flex items-center gap-3">
@@ -262,9 +268,9 @@ const schema = {
       <slot />
     </main>
 
-    <!-- FOOTER WITH SOCIAL MEDIA ICONS INTEGRATED -->
+    <!-- FOOTER WITH ACCESSIBLE SERVICE & INSIGHT LINKS -->
     <footer class="bg-[#102f64] text-white">
-      <div class="container-nh grid gap-12 py-16 md:grid-cols-[1.4fr_0.8fr_0.8fr]">
+      <div class="container-nh grid gap-10 py-16 md:grid-cols-[1.2fr_0.9fr_0.9fr_0.9fr]">
         <div>
           <div class="mb-5 flex items-center gap-3">
             <img src="/images/logo.jpg" alt="Nepal Hypnosis" width="48" height="48" class="h-12 w-auto rounded-lg bg-white p-1" />
@@ -301,15 +307,28 @@ const schema = {
 
         <div>
           <h3 class="mb-5 text-xs font-bold uppercase tracking-wider text-white">{t.explore}</h3>
-          <ul class="space-y-3 text-sm text-blue-100">
+          <ul class="space-y-2.5 text-sm text-blue-100">
             <li><a href={lang === 'np' ? '/np/#conditions' : '/#conditions'} class="hover:text-white">{t.conditions}</a></li>
-            <li><a href={lang === 'np' ? '/np/#about' : '/#about'} class="hover:text-white">{t.about}</a></li>
+            <li><a href={lang === 'np' ? '/np/about' : '/about'} class="hover:text-white">{t.about}</a></li>
             <li><a href={lang === 'np' ? '/np/#services' : '/#services'} class="hover:text-white">{t.services}</a></li>
+            <li><a href={lang === 'np' ? '/np/team' : '/team'} class="hover:text-white">{t.team}</a></li>
             <li><a href={lang === 'np' ? '/np/#training' : '/#training'} class="hover:text-white">{t.training}</a></li>
             <li><a href={lang === 'np' ? '/np/#media' : '/#media'} class="hover:text-white">{t.media}</a></li>
             <li><a href={lang === 'np' ? '/np/#faq' : '/#faq'} class="hover:text-white">{t.faq}</a></li>
           </ul>
         </div>
+
+<div>
+  <h3 class="mb-5 text-xs font-bold uppercase tracking-wider text-white">{t.servicesHeading}</h3>
+  <ul class="space-y-2.5 text-sm text-blue-100">
+    <li><a href="/services/psychotherapy/" class="hover:text-white">Psychotherapy</a></li>
+    <li><a href="/services/clinical-hypnotherapy/" class="hover:text-white">Clinical Hypnotherapy</a></li>
+    <li><a href="/services/gestalt-psychology-in-nepal/" class="hover:text-white">Gestalt Psychology</a></li>
+    <li><a href="/insights/anxiety-support/" class="hover:text-white">Anxiety Support</a></li>
+    <li><a href="/insights/stress-management/" class="hover:text-white">Stress Management</a></li>
+    <li><a href="/clinical-standards" class="hover:text-white">{lang === 'np' ? 'नैतिक मापदण्ड' : 'Clinical Standards'}</a></li>
+  </ul>
+</div>
 
         <div>
           <h3 class="mb-5 text-xs font-bold uppercase tracking-wider text-white">{t.portalTitle}</h3>
@@ -343,17 +362,23 @@ const schema = {
       const mobileLinks = document.querySelectorAll('.mobile-link');
 
       function openMenu() {
-        mobileMenu.hidden = false;
-        requestAnimationFrame(() => {
-          mobileMenu.classList.remove('translate-x-full');
-          menuBtn.setAttribute('aria-expanded', 'true');
-        });
+        if (mobileMenu) {
+          mobileMenu.hidden = false;
+          requestAnimationFrame(() => {
+            mobileMenu.classList.remove('translate-x-full');
+            menuBtn?.setAttribute('aria-expanded', 'true');
+          });
+        }
       }
 
       function closeMenu() {
-        mobileMenu.classList.add('translate-x-full');
-        menuBtn.setAttribute('aria-expanded', 'false');
-        setTimeout(() => { mobileMenu.hidden = true; }, 300);
+        if (mobileMenu) {
+          mobileMenu.classList.add('translate-x-full');
+          menuBtn?.setAttribute('aria-expanded', 'false');
+          setTimeout(() => { 
+            if (mobileMenu) mobileMenu.hidden = true; 
+          }, 300);
+        }
       }
 
       menuBtn?.addEventListener('click', openMenu);

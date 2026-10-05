@@ -1,0 +1,97 @@
+---
+// src/pages/contact.astro
+import Layout from '../layouts/BaseLayout.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Nepal Hypnosis",
+  "image": "https://nepalhypnosis.com/images/logo.jpg",
+  "@id": "https://nepalhypnosis.com",
+  "url": "https://nepalhypnosis.com",
+  "telephone": "+977-9841459618",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "77 Thatu Marg",
+    "addressLocality": "Kathmandu",
+    "addressCountry": "NP"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 27.7172, 
+    "longitude": 85.3240 
+  }
+};
+---
+
+<Layout 
+  title="Contact Us & Location"
+  description="Contact Nepal Hypnosis Clinic and Training Center in Kathmandu. Find our location, phone number, and consultation portal."
+  pageSchema={pageSchema}
+>
+  <section class="py-16 bg-[#FAF8F5] px-4">
+    <div class="container-nh max-w-5xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 bg-white rounded-3xl shadow-sm border border-[#e2e8f0] p-8 sm:p-12">
+        
+        <div>
+          <h1 class="text-3xl font-extrabold text-[#173A7A] mb-6">Get in Touch</h1>
+          <p class="text-[#475569] mb-8">
+            Nepal Hypnosis provides a secure, confidential environment for your mental health care. All clinical inquiries and booking requests are handled via our secure client portal[cite: 1, 2].
+          </p>
+
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-[#EBF8FF] rounded-lg flex items-center justify-center shrink-0 text-[#0284C7]">
+                📍
+              </div>
+              <div>
+                <h3 class="font-bold text-[#173A7A]">Location</h3>
+                <p class="text-sm text-[#475569] mt-1">77 Thatu Marg, Kathmandu, Nepal</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-[#EBF8FF] rounded-lg flex items-center justify-center shrink-0 text-[#0284C7]">
+                📞
+              </div>
+              <div>
+                <h3 class="font-bold text-[#173A7A]">Phone / WhatsApp</h3>
+                <p class="text-sm text-[#475569] mt-1">+977-9841459618</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 bg-[#EBF8FF] rounded-lg flex items-center justify-center shrink-0 text-[#0284C7]">
+                ✉️️
+              </div>
+              <div>
+                <h3 class="font-bold text-[#173A7A]">Email</h3>
+                <p class="text-sm text-[#475569] mt-1">info@nepalhypnosis.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10">
+            <a href="https://portal.nepalhypnosis.com/form/consultation-request" target="_blank" rel="noopener noreferrer" class="inline-flex w-full justify-center rounded-xl bg-[#D84315] px-8 py-3.5 text-[15px] font-bold text-white shadow-md hover:bg-[#b93812] transition">
+              Client Intake Portal
+            </a>
+          </div>
+        </div>
+
+        <div class="h-[400px] w-full bg-slate-100 rounded-2xl overflow-hidden border border-[#e2e8f0]">
+          <!-- Replace this iframe src with the exact Google Maps embed link for Nepal Hypnosis -->
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18..." 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</Layout>

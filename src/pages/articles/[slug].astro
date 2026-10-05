@@ -1,37 +1,126 @@
 ---
+// src/pages/articles/[slug].astro
 import { getCollection, render } from 'astro:content';
-// Replace 'Layout' with whatever layout name your homepage uses (e.g., BaseLayout, MainLayout)
 import Layout from '../../layouts/BaseLayout.astro'; 
 import '../../styles/global.css';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles');
   
-  return articles.map((article) => ({
-    params: { slug: article.data.slug },
+  const validArticles = articles.filter((article) => {
+    const content = article.body || '';
+    const isPlaceholder = content.includes('Archived legacy content placeholder');
+    const data = article.data as any;
+    const isPublished = data.status !== 'draft';
+    return !isPlaceholder && isPublished;
+  });
+
+  return validArticles.map((article) => ({
+    params: { slug: article.data.slug || article.id.replace(/\.md$/, '') },
     props: { article },
   }));
 }
 
 const { article } = Astro.props;
 const { Content } = await render(article);
+const data = article.data as any;
+const { 
+  title, 
+  description, 
+  author = "Archana Bibhor", 
+  reviewedBy, 
+  datePublished, 
+  dateModified, 
+  evidenceLevel, 
+  contentType 
+} = data;
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": title,
+  "description": description || "",
+  "author": {
+    "@type": "Person",
+    "name": author
+  },
+  ...(reviewedBy && {
+    "contributor": {
+      "@type": "Person",
+      "name": reviewedBy
+    }
+  }),
+  ...(datePublished && { "datePublished": new Date(datePublished).toISOString() }),
+  ...(dateModified && { "dateModified": new Date(dateModified).toISOString() }),
+  "publisher": {
+    "@type": "MedicalClinic",
+    "name": "Nepal Hypnosis",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://nepalhypnosis.com/images/logo.jpg"
+    }
+  }
+};
 ---
 
-<Layout title={`${article.data.title} | Nepal Hypnosis`}>
-  <main class="min-h-screen bg-slate-50 py-12 px-4 sm:px-6 lg:px-8">
-    <article class="max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-xl shadow-sm border border-gray-100">
-      <header class="mb-8 border-b border-gray-100 pb-6">
-        <h1 class="text-3xl sm:text-4xl font-bold text-[#1a365d] tracking-tight mb-3">
-          {article.data.title}
+<Layout title={`${title} | Nepal Hypnosis`} description={description} pageSchema={articleSchema}>
+  <main class="min-h-screen bg-[#FAF8F5] py-12 px-4 sm:px-6 lg:px-8">
+    <article class="max-w-3xl mx-auto bg-white p-8 sm:p-12 rounded-3xl shadow-sm border border-[#e2e8f0]">
+      
+      <header class="mb-10 border-b border-[#f1f5f9] pb-8">
+        {contentType && (
+          <span class="text-[11px] font-extrabold tracking-[0.2em] text-[#D84315] uppercase mb-4 block">
+            {contentType.replace('-', ' ')}
+          </span>
+        )}
+        
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-[#173A7A] tracking-tight mb-8 leading-snug">
+          {title}
         </h1>
-        <p class="text-xs font-semibold text-gray-500 uppercase tracking-wider">
-          AUTHOR: {article.data.author || "ARCHANA BIBHOR"}
-        </p>
+        
+        <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 bg-[#F5F1EA] p-5 rounded-2xl border border-[#e2e8f0]">
+          <div>
+            <p class="text-[10px] font-extrabold text-[#475569] uppercase tracking-widest mb-0.5">Written By</p>
+            <p class="text-sm font-bold text-[#173A7A]">{author}</p>
+          </div>
+          
+          {reviewedBy && (
+            <div class="hidden sm:block w-px h-8 bg-[#cbd5e1]"></div>
+          )}
+          
+          {reviewedBy && (
+            <div>
+              <p class="text-[10px] font-extrabold text-[#475569] uppercase tracking-widest mb-0.5">Clinically Reviewed By</p>
+              <p class="text-sm font-bold text-[#173A7A]">{reviewedBy}</p>
+            </div>
+          )}
+
+          {dateModified && (
+             <div class="hidden sm:block w-px h-8 bg-[#cbd5e1]"></div>
+          )}
+
+          {dateModified && (
+            <div>
+              <p class="text-[10px] font-extrabold text-[#475569] uppercase tracking-widest mb-0.5">Last Updated</p>
+              <p class="text-sm font-bold text-[#173A7A]">
+                {new Date(dateModified).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </p>
+            </div>
+          )}
+        </div>
+
+        {evidenceLevel && (
+          <div class="mt-5 inline-flex items-center gap-1.5 rounded-full bg-[#EBF8FF] px-3.5 py-1.5 text-xs font-bold text-[#0284C7] border border-[#BAE6FD]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+            {evidenceLevel}
+          </div>
+        )}
       </header>
 
-      <div class="prose prose-lg max-w-none text-gray-700 leading-relaxed">
+      <div class="prose prose-lg max-w-none text-[#475569] leading-relaxed prose-headings:text-[#173A7A] prose-headings:font-extrabold prose-a:text-[#D84315] prose-li:marker:text-[#D84315]">
         <Content />
       </div>
+      
     </article>
   </main>
 </Layout>
