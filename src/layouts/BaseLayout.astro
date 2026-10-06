@@ -179,9 +179,6 @@ const activeSchema = pageSchema || defaultSchema;
           transition-duration: 0.01ms !important;
         }
       }
-      .group:hover .dropdown-menu {
-        display: block;
-      }
     </style>
   </head>
 
@@ -196,7 +193,7 @@ const activeSchema = pageSchema || defaultSchema;
         </div>
         <div class="flex items-center gap-6">
           <a href={`mailto:${t.email}`} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 font-semibold text-[#173A7A] hover:text-[#D84315]">
-            <span>✉️ {t.email}</span>
+            <span>✉️️ {t.email}</span>
           </a>
           <a href="https://wa.me/9779841459618" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 font-semibold text-[#173A7A] hover:text-[#D84315]">
             <span>💬 {t.whatsappText}</span>
@@ -224,26 +221,10 @@ const activeSchema = pageSchema || defaultSchema;
         <!-- DESKTOP NAV -->
         <nav class="hidden items-center gap-5 lg:flex">
           <a href={lang === 'np' ? '/np/#how-it-works' : '/#how-it-works'} class="text-[13px] font-semibold text-[#475569] hover:text-[#D84315]">{t.howItWorks}</a>
-          
-          <!-- Services Dropdown -->
-          <div class="relative group py-2">
-            <button class="text-[13px] font-semibold text-[#475569] group-hover:text-[#D84315] flex items-center gap-1 focus:outline-none">
-              {t.services} <svg class="w-3 h-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
-            </button>
-            <div class="dropdown-menu absolute left-0 top-full hidden w-[220px] rounded-xl bg-white p-2 shadow-lg border border-[#e2e8f0] z-50">
-              <a href="/services/psychotherapy/" class="block rounded-lg px-4 py-2 text-[13px] font-semibold text-[#475569] hover:bg-[#FAF8F5] hover:text-[#D84315]">Psychotherapy</a>
-              <a href="/services/clinical-hypnotherapy/" class="block rounded-lg px-4 py-2 text-[13px] font-semibold text-[#475569] hover:bg-[#FAF8F5] hover:text-[#D84315]">Clinical Hypnotherapy</a>
-              <a href="/services/gestalt-psychotherapy-nepal/" class="block rounded-lg px-4 py-2 text-[13px] font-semibold text-[#475569] hover:bg-[#FAF8F5] hover:text-[#D84315]">Gestalt Psychotherapy</a>
-              <a href="/services/psychosocial-counselling/" class="block rounded-lg px-4 py-2 text-[13px] font-semibold text-[#475569] hover:bg-[#FAF8F5] hover:text-[#D84315]">Psychosocial Counselling</a>
-            </div>
-          </div>
-
+          <a href={lang === 'np' ? '/np/#services' : '/#services'} class="text-[13px] font-semibold text-[#475569] hover:text-[#D84315]">{t.services}</a>
           <a href={lang === 'np' ? '/np/team' : '/team'} class="text-[13px] font-semibold text-[#475569] hover:text-[#D84315]">{t.team}</a>
           <a href={lang === 'np' ? '/np/clinical-standards' : '/clinical-standards'} class="text-[13px] font-semibold text-[#475569] hover:text-[#D84315]">{lang === 'np' ? 'नैतिक मापदण्ड' : 'Standards'}</a>
-          
-          <!-- Direct Academy Link (Navigates directly to the homepage Training section) -->
           <a href={lang === 'np' ? '/np/#training' : '/#training'} class="text-[13px] font-semibold text-[#475569] hover:text-[#D84315]">{t.training}</a>
-
           <a href={lang === 'np' ? '/np/#media' : '/#media'} class="text-[13px] font-semibold text-[#475569] hover:text-[#D84315]">{t.media}</a>
           <a href={lang === 'np' ? '/np/#faq' : '/#faq'} class="text-[13px] font-semibold text-[#475569] hover:text-[#D84315]">{t.faq}</a>
         </nav>
@@ -273,17 +254,7 @@ const activeSchema = pageSchema || defaultSchema;
       <nav class="flex-1 overflow-y-auto p-5 flex flex-col gap-4 text-base font-bold text-[#173A7A]">
         <a href={lang === 'np' ? '/np/#conditions' : '/#conditions'} class="mobile-link block">{t.conditions}</a>
         <a href={lang === 'np' ? '/np/#how-it-works' : '/#how-it-works'} class="mobile-link block">{t.howItWorks}</a>
-        
-        <div class="border-y border-[#f1f5f9] py-3">
-          <span class="block mb-2 text-[#385BAA]">{t.services}</span>
-          <div class="pl-4 flex flex-col gap-2 font-semibold text-sm">
-            <a href="/services/psychotherapy/" class="mobile-link text-[#475569]">Psychotherapy</a>
-            <a href="/services/clinical-hypnotherapy/" class="mobile-link text-[#475569]">Clinical Hypnotherapy</a>
-            <a href="/services/gestalt-psychotherapy-nepal/" class="mobile-link text-[#475569]">Gestalt Psychotherapy</a>
-            <a href="/services/psychosocial-counselling/" class="mobile-link text-[#475569]">Psychosocial Counselling</a>
-          </div>
-        </div>
-
+        <a href={lang === 'np' ? '/np/#services' : '/#services'} class="mobile-link block">{t.services}</a>
         <a href={lang === 'np' ? '/np/team' : '/team'} class="mobile-link block">{t.team}</a>
         <a href={lang === 'np' ? '/np/clinical-standards' : '/clinical-standards'} class="mobile-link block">{lang === 'np' ? 'नैतिक मापदण्ड' : 'Standards'}</a>
         <a href={lang === 'np' ? '/np/#training' : '/#training'} class="mobile-link block">{t.training}</a>
