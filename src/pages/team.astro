@@ -4,12 +4,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout 
   title="Our Team & Clinical Leadership"
-  description="Meet the experienced clinical practitioners, psychotherapists, and educators at Nepal Hypnosis Kathmandu, led by founder Archana Bibhor."
+  description="Meet the experienced clinical practitioners, psychotherapists, and educators at Nepal Hypnosis, including founder Archana Bibhor and Dr. Sharaddha Tripathi."
 >
 
   <!-- HERO SECTION -->
   <section class="relative bg-gradient-to-b from-[#F5F1EA] to-[#FAF8F5] pt-12 pb-14 border-b border-[#e2e8f0]">
-    <div class="container-nh max-w-4xl text-center mx-auto">
+    <div class="container-nh max-w-4xl text-center mx-auto px-4">
       <span class="text-[11px] font-extrabold tracking-[0.2em] text-[#D84315] uppercase">
         PROFESSIONAL LEADERSHIP & FACULTY
       </span>
@@ -22,10 +22,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     </div>
   </section>
 
-  <!-- LEAD PRACTITIONER SECTION -->
+  <!-- CLINICAL TEAM GRID SECTION -->
   <section class="py-16 bg-white border-b border-[#e2e8f0]">
-    <div class="container-nh max-w-5xl">
-      <div class="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+    <div class="container-nh max-w-6xl px-4 space-y-16">
+      
+      <!-- 1. ARCHANA BIBHOR -->
+      <div class="grid items-center gap-10 lg:grid-cols-[0.8fr_1.2fr] bg-[#FAF8F5] p-8 sm:p-10 rounded-3xl border border-[#e2e8f0] shadow-sm">
         
         <div class="relative">
           <img 
@@ -33,9 +35,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             alt="Archana Bibhor - Founder & Lead Clinical Practitioner" 
             width="400" 
             height="400" 
-            class="w-full rounded-3xl shadow-lg object-cover max-w-[380px] mx-auto border border-[#e2e8f0]" 
+            class="w-full rounded-2xl shadow-md object-cover max-w-[340px] mx-auto border border-[#e2e8f0]" 
           />
-          <div class="absolute -bottom-4 -right-4 hidden sm:block bg-[#173A7A] text-white px-4 py-2 rounded-xl text-xs font-bold shadow-md">
+          <div class="absolute -bottom-3 -right-3 hidden sm:block bg-[#173A7A] text-white px-3.5 py-1.5 rounded-lg text-xs font-bold shadow-md">
             Est. 2012 Practitioner
           </div>
         </div>
@@ -45,46 +47,118 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <h2 class="mt-1 text-3xl font-extrabold text-[#173A7A]">Archana Bibhor</h2>
           <p class="text-base font-bold text-[#385BAA]">PsyD Candidate & Senior Psychotherapist</p>
           
-          <p class="mt-4 text-base text-[#475569] leading-relaxed font-medium">
+          <p class="mt-4 text-sm sm:text-base text-[#475569] leading-relaxed font-medium">
             Archana Bibhor is the founder and lead clinical practitioner of Nepal Hypnosis. With over two decades of professional experience in psychotherapy, counselling, and mental health education, her work emphasizes understanding each client's unique psychological landscape, relational history, and personal strengths.
           </p>
 
-          <div class="mt-6 space-y-3 bg-[#FAF8F5] p-6 rounded-2xl border border-[#e2e8f0]">
-            <div class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-[#D84315] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-              <div>
-                <strong class="text-[#173A7A] block text-sm">Advanced Academic Candidacy</strong>
-                <span class="text-xs text-[#475569]">PsyD Candidate in Clinical Psychology — United States International University (USIU-Africa)</span>
-              </div>
+          <!-- Key Metadata Grid -->
+          <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 bg-white p-4 rounded-xl border border-[#e2e8f0] text-xs font-bold text-[#173A7A]">
+            <div>
+              <span class="block text-[10px] uppercase text-[#64748b] font-normal">Location</span>
+              📍 Kathmandu, Nepal
             </div>
-
-            <div class="flex items-start gap-3 pt-3 border-t border-[#e2e8f0]">
-              <svg class="w-5 h-5 text-[#D84315] shrink-0 mt-0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-              <div>
-                <strong class="text-[#173A7A] block text-sm">Clinical & Educational Experience</strong>
-                <span class="text-xs text-[#475569]">Over 20 years dedicated to clinical practice, counselor training, and psychological well-being programs.</span>
-              </div>
+            <div>
+              <span class="block text-[10px] uppercase text-[#64748b] font-normal">Languages</span>
+              🗣️ Nepali, English
+            </div>
+            <div class="col-span-2 sm:col-span-1">
+              <span class="block text-[10px] uppercase text-[#64748b] font-normal">Therapy Mode</span>
+              💻 Online & 🏛️ In-Person
             </div>
           </div>
 
-          <div class="mt-8">
-            <a href="https://portal.nepalhypnosis.com/form/consultation-request" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-xl bg-[#D84315] px-7 py-3 text-sm font-bold text-white shadow-md hover:bg-[#b93812] transition">
-              Request a Consultation with Archana →
+          <div class="mt-5 space-y-2 text-xs font-medium text-[#475569]">
+            <p class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#D84315] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              PsyD Candidate in Clinical Psychology — United States International University (USIU-Africa)
+            </p>
+            <p class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#D84315] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              20+ Years of Professional Experience in Clinical Practice & Education
+            </p>
+          </div>
+
+          <div class="mt-6">
+            <a href="https://portal.nepalhypnosis.com/form/consultation-request" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-xl bg-[#D84315] px-6 py-2.5 text-xs font-bold text-white shadow-md hover:bg-[#b93812] transition">
+              Request Consult with Archana →
             </a>
           </div>
 
         </div>
 
       </div>
+
+      <!-- 2. SHRADDHA TRIPATHI, PsyD -->
+      <div class="grid items-center gap-10 lg:grid-cols-[0.8fr_1.2fr] bg-[#FAF8F5] p-8 sm:p-10 rounded-3xl border border-[#e2e8f0] shadow-sm">
+        
+        <div class="relative">
+          <img 
+            src="/images/shraddha-tripathi.png" 
+            alt="Sharaddha Tripathi, PsyD - Clinical Psychologist" 
+            width="400" 
+            height="400" 
+            class="w-full rounded-2xl shadow-md object-cover max-w-[340px] mx-auto border border-[#e2e8f0]" 
+          />
+          <div class="absolute -bottom-3 -right-3 hidden sm:block bg-[#173A7A] text-white px-3.5 py-1.5 rounded-lg text-xs font-bold shadow-md">
+            Online Practitioner
+          </div>
+        </div>
+
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-[#D84315]">Clinical Associate</span>
+          <h2 class="mt-1 text-3xl font-extrabold text-[#173A7A]">Sharaddha Tripathi, PsyD</h2>
+          <p class="text-base font-bold text-[#385BAA]">Clinical Psychologist</p>
+          
+          <p class="mt-4 text-sm sm:text-base text-[#475569] leading-relaxed font-medium">
+            Dr. Sharaddha Tripathi brings advanced doctoral training in clinical psychology from USIU-Africa. Based in Dubai, UAE, she specializes in providing evidence-informed, culturally sensitive online psychotherapy to individuals seeking structured psychological support across international jurisdictions.
+          </p>
+
+          <!-- Key Metadata Grid -->
+          <div class="mt-6 grid grid-cols-2 sm:grid-cols-3 gap-3 bg-white p-4 rounded-xl border border-[#e2e8f0] text-xs font-bold text-[#173A7A]">
+            <div>
+              <span class="block text-[10px] uppercase text-[#64748b] font-normal">Location</span>
+              📍 Dubai, UAE
+            </div>
+            <div>
+              <span class="block text-[10px] uppercase text-[#64748b] font-normal">Languages</span>
+              🗣️ Hindi, English
+            </div>
+            <div class="col-span-2 sm:col-span-1">
+              <span class="block text-[10px] uppercase text-[#64748b] font-normal">Therapy Mode</span>
+              💻 Online Consultation
+            </div>
+          </div>
+
+          <div class="mt-5 space-y-2 text-xs font-medium text-[#475569]">
+            <p class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#D84315] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+              Doctor of Psychology (PsyD) in Clinical Psychology — United States International University (USIU-Africa)
+            </p>
+            <p class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#D84315] shrink-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              Specialized in Distance & Telehealth Psychotherapy for Global Clients
+            </p>
+          </div>
+
+          <div class="mt-6">
+            <a href="https://portal.nepalhypnosis.com/form/consultation-request" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-xl bg-[#D84315] px-6 py-2.5 text-xs font-bold text-white shadow-md hover:bg-[#b93812] transition">
+              Request Consult with Sharaddha →
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
   </section>
 
-  <!-- CLINICAL ETHOS & SUPPORTING FACULTY -->
+  <!-- CLINICAL ETHOS & PRACTICE STANDARDS -->
   <section class="py-16 bg-[#FAF8F5]">
-    <div class="container-nh max-w-4xl text-center">
+    <div class="container-nh max-w-4xl text-center px-4">
       <h2 class="text-3xl font-extrabold text-[#173A7A]">Our Practice Standards</h2>
       <p class="mt-4 text-base text-[#475569] leading-relaxed">
-        At Nepal Hypnosis, our therapeutic team and associates operate under rigorous standards of confidentiality, evidence-informed care, and professional supervision. We believe in collaborative, respectful, and non-judgmental mental healthcare.
+        At Nepal Hypnosis, our therapeutic team operates under rigorous standards of confidentiality, evidence-informed care, and professional supervision. We believe in collaborative, respectful, and non-judgmental mental healthcare.
       </p>
       
       <div class="mt-10 grid sm:grid-cols-3 gap-6 text-left">
@@ -106,7 +180,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- CTA -->
   <section class="py-16 bg-[#173A7A] text-center text-white">
-    <div class="container-nh max-w-3xl mx-auto">
+    <div class="container-nh max-w-3xl mx-auto px-4">
       <h2 class="text-3xl font-extrabold sm:text-4xl">Ready to begin your journey?</h2>
       <p class="mt-4 text-blue-100 text-base leading-relaxed">
         Whether you are seeking individual psychotherapy or exploring professional training, we are here to support you.
