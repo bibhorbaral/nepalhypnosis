@@ -1,13 +1,25 @@
 # ============================================================
+
 # CLOUDFLARE PAGES NATIVE 301 REDIRECT REGISTRY
+
 # ============================================================
 
-# High-Priority Explicit Article Mappings
+# ============================================================
+
+# HIGH-PRIORITY EXPLICIT ARTICLE MAPPINGS
+
+# ============================================================
+
 /node/80 /articles/psychological-first-aid-pfa-shishir-subba/ 301
 /en/node/80 /articles/psychological-first-aid-pfa-shishir-subba/ 301
 /en/article/psychological-first-aid-pfa-shishir-subba /articles/psychological-first-aid-pfa-shishir-subba/ 301
 
-# Core Institutional Pages
+# ============================================================
+
+# CORE INSTITUTIONAL PAGES
+
+# ============================================================
+
 /content/about-us /about/ 301
 /about-us /about/ 301
 /our-team /team/ 301
@@ -16,7 +28,12 @@
 /vacancy /vacancy/ 301
 /testimonial /testimonials/ 301
 
-# Legacy Drupal Nodes
+# ============================================================
+
+# LEGACY DRUPAL NODES
+
+# ============================================================
+
 /node/1 /about/our-story/ 301
 /node/2 /services/clinical-hypnotherapy/ 301
 /node/49 /articles/psychology-in-nepal-by-prof-dr-shishir-subba/ 301
@@ -25,24 +42,49 @@
 /hypnotherapy-services /services/clinical-hypnotherapy/ 301
 /training-programs /training/ 301
 
-# Psychotherapy & Clinical Pathways
+# ============================================================
+
+# PSYCHOTHERAPY & CLINICAL PATHWAYS
+
+# ============================================================
+
 /en/psychotherapy /services/psychotherapy/ 301
 /en/psychotherapy/past-life-regression-nepal /services/psychotherapy/ 301
 /en/psychotherapy/clinical-hpnotherapy-nepal /services/clinical-hypnotherapy/ 301
 /en/psychotherapy/counseling-psychology-nepal-clinic /services/counselling/ 301
 /en/psychotherapy/healing-touch-energy-therapy-nepal /services/psychotherapy/ 301
 /en/psychotherapy/neuro-linguistic-programming-nlp-kathmandu /services/psychotherapy/ 301
-/en/psychotherapy/gestalt-psychology-in-nepal /services/psychotherapy/ 301
+
+# Gestalt legacy URL -> dedicated canonical Gestalt page
+
+/en/psychotherapy/gestalt-psychology-in-nepal /services/gestalt-psychotherapy-nepal/ 301
+/en/psychotherapy/gestalt-psychology-in-nepal/ /services/gestalt-psychotherapy-nepal/ 301
+
 /en/psycho-social-counseling /services/counselling/ 301
 
 /clinical-hypnotherapy-nepal /services/clinical-hypnotherapy/ 301
 /counseling-psychology-nepal-clinic /services/counselling/ 301
-/gestalt-psychology-in-nepal /services/psychotherapy/ 301
+
+# Legacy Gestalt URLs -> dedicated canonical Gestalt page
+
+/gestalt-psychology-in-nepal /services/gestalt-psychotherapy-nepal/ 301
+/gestalt-psychology-in-nepal/ /services/gestalt-psychotherapy-nepal/ 301
+
+# Previous/current incorrect Gestalt route -> dedicated canonical Gestalt page
+
+/services/gestalt-psychology-in-nepal /services/gestalt-psychotherapy-nepal/ 301
+/services/gestalt-psychology-in-nepal/ /services/gestalt-psychotherapy-nepal/ 301
+
 /meditation-mindfulness /services/mindfulness-based-interventions/ 301
 /past-life-regression-nepal /services/psychotherapy/ 301
 /healing-touch-energy-therapy-nepal /services/psychotherapy/ 301
 
-# Training Pathways
+# ============================================================
+
+# TRAINING PATHWAYS
+
+# ============================================================
+
 /en/training /training/ 301
 /en/training/professional /training/ 301
 /en/training/self-help /training/ 301
@@ -60,7 +102,12 @@
 /integrated-clinical-hypnotherapy-level-1-combined /training/clinical-hypnotherapy-level-1/ 301
 /graphology-episode-1 /training/ 301
 
-# Restored Articles Mappings
+# ============================================================
+
+# RESTORED ARTICLES MAPPINGS
+
+# ============================================================
+
 /en/article/cognitive-behavioral-therapy-CBT /articles/cognitive-behavioral-therapy-cbt/ 301
 /en/article/how-to-guide-children-art-of-parenting /articles/how-to-guide-children-art-of-parenting/ 301
 /en/article/about-love-in-nepali /articles/about-love-in-nepali/ 301
@@ -74,5 +121,10 @@
 /index.php/en/question-answer/how-to-overcome-failures /articles/how-to-overcome-failures/ 301
 /index.php/en/question-answer/filing-divorce-paper /articles/filing-divorce-paper/ 301
 
-# Catch-all Wildcard for any remaining legacy node requests
+# ============================================================
+
+# CATCH-ALL WILDCARD FOR REMAINING LEGACY NODE REQUESTS
+
+# ============================================================
+
 /node/* /articles/ 301
