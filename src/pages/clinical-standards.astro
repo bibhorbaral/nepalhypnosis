@@ -1,36 +1,44 @@
 ---
-import Layout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<Layout title="Clinical Standards & Ethics | Nepal Hypnosis" description="Learn about the strict ethical guidelines, confidentiality standards, and professional practices upheld at Nepal Hypnosis in Kathmandu.">
-  <main class="py-16 bg-[#FAF8F5]">
-    <div class="container-nh max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-3xl shadow-sm border border-[#e2e8f0]">
-      <span class="text-[11px] font-extrabold tracking-[0.2em] text-[#D84315] uppercase mb-3 block">Professional Integrity</span>
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-[#173A7A] mb-6">Clinical Standards & Ethics</h1>
-      
-      <div class="prose max-w-none text-[#475569] space-y-6 leading-relaxed">
-        <p class="text-lg font-medium text-[#173A7A]">
-          At Nepal Hypnosis, ethical practice, absolute confidentiality, and client safety form the foundation of everything we do.
-        </p>
-        <p>
-          Established in 2012 AD, our clinic operates under rigorous professional codes of conduct aligned with international psychotherapy standards and local ethical obligations.
-        </p>
-
-        <h2 class="text-2xl font-bold text-[#173A7A] pt-4">Our Core Commitments</h2>
-        <ul class="list-disc pl-5 space-y-2">
-          <li><strong>Absolute Confidentiality:</strong> All therapeutic interactions and client records are strictly protected under professional privilege.</li>
-          <li><strong>Individualized Care:</strong> Treatment plans are customized to honor each client's psychological autonomy and background.</li>
-          <li><strong>Transparent Boundaries:</strong> The scope of practice, fees, session durations, and safety limits are clearly communicated from the outset.</li>
-        </ul>
-
-        <div class="mt-8 bg-[#F5F1EA] p-6 rounded-2xl border border-[#e2e8f0]">
-          <h3 class="text-lg font-bold text-[#173A7A] mb-2">Have Questions Regarding Our Standards?</h3>
-          <p class="text-sm mb-4">We are happy to address any inquiries regarding our clinical policies and session confidentiality.</p>
-          <a href="https://portal.nepalhypnosis.com/form/consultation-request" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-xl bg-[#D84315] px-6 py-3 text-sm font-bold text-white shadow-md hover:bg-[#b93812] transition">
-            Contact Us →
-          </a>
-        </div>
-      </div>
+<BaseLayout 
+  title="Clinical Standards, Ethics & Confidentiality" 
+  description="How Nepal Hypnosis protects your privacy, safety and rights: confidentiality and its limits, consent, supervision, records, fees, complaints and referral."
+>
+  <section class="bg-gradient-to-b from-[#F5F1EA] to-white pt-16 pb-12 border-b border-[#e2e8f0]">
+    <div class="container-nh max-w-4xl mx-auto px-4">
+      <h1 class="mt-4 text-4xl sm:text-5xl font-extrabold text-[#173A7A] leading-tight">Clinical Standards & Ethics</h1>
+      <p class="mt-6 text-lg text-[#475569] leading-relaxed">
+        Trust is the foundation of therapy. This page explains plainly how we protect you, what you can expect from us, and what we expect of ourselves. Nepal Hypnosis has been operating in Kathmandu since 2012.
+      </p>
     </div>
-  </main>
-</Layout>
+  </section>
+
+  <section class="py-12 bg-white">
+    <div class="container-nh max-w-4xl mx-auto px-4 space-y-10 text-[#475569] leading-relaxed">
+      
+      <div>
+        <h2 class="text-2xl font-bold text-[#173A7A] mb-4">Our commitments to you</h2>
+        <ul class="list-disc pl-5 space-y-3">
+          <li><strong>Strict confidentiality:</strong> What you tell us stays within the clinic. Records are held securely and shared only with your written consent, or in the limited situations below.</li>
+          <li><strong>Limits of confidentiality:</strong> We explain these at your first session. In rare cases we may need to share information: when there is a serious risk to your life or someone else's, when a child or vulnerable person is at risk, or when the law requires it.</li>
+          <li><strong>Informed consent:</strong> Before therapy starts, we explain the approach, how long it may take, benefits, risks, and fees. You can stop at any time.</li>
+          <li><strong>Individualised care:</strong> Treatment plans respect your background, culture, values and autonomy.</li>
+          <li><strong>Honest practice:</strong> We do not guarantee results or cures, and we do not claim more than the evidence supports.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-[#173A7A] mb-4">Safety and emergencies</h2>
+        <p>Nepal Hypnosis is not an emergency or crisis service. If you are in immediate danger, call <strong>1166</strong> or go to the nearest emergency department. During therapy, if we are concerned about your safety, we will discuss a safety plan with you.</p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-[#173A7A] mb-4">Your rights</h2>
+        <p>You have the right to ask questions about your treatment, see or ask about your records, be treated respectfully, get a second opinion, and stop therapy at any time.</p>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>

@@ -1,28 +1,73 @@
 ---
-import Layout from '../../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<Layout title="Stress Management & Emotional Resilience | Nepal Hypnosis" description="Practical tools and psychotherapeutic strategies to navigate chronic life stress, burnout, and emotional fatigue.">
-  <main class="py-16 bg-[#FAF8F5]">
-    <div class="container-nh max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-3xl shadow-sm border border-[#e2e8f0]">
-      <span class="text-[11px] font-extrabold tracking-[0.2em] text-[#D84315] uppercase mb-3 block">Mental Well-being Insights</span>
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-[#173A7A] mb-6">Stress Management & Resilience</h1>
+<BaseLayout 
+  title="Stress & Burnout Counselling in Kathmandu" 
+  description="Overwhelmed, exhausted or burnt out? Confidential stress and burnout counselling in Kathmandu, in person or online, to help you recover and build resilience."
+>
+  <section class="bg-gradient-to-b from-[#F5F1EA] to-white pt-16 pb-12 border-b border-[#e2e8f0]">
+    <div class="container-nh max-w-4xl mx-auto px-4">
+      <span class="text-[11px] font-extrabold tracking-[0.2em] text-[#D84315] uppercase">Insights & Support</span>
+      <h1 class="mt-4 text-4xl sm:text-5xl font-extrabold text-[#173A7A] leading-tight">Stress Management & Burnout Counselling in Kathmandu</h1>
+      <p class="mt-6 text-lg text-[#475569] leading-relaxed">
+        Stress is a normal response to pressure. It becomes a problem when it does not let up, and you begin to feel exhausted, tense, irritable or numb. Effective help is about understanding your limits, restoring your energy and building resilience.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white">
+    <div class="container-nh max-w-4xl mx-auto px-4 space-y-10 text-[#475569] leading-relaxed">
       
-      <div class="prose max-w-none text-[#475569] space-y-6 leading-relaxed">
-        <p class="text-lg font-medium text-[#173A7A]">
-          Modern life demands constant adaptation, but when stress becomes chronic, it leads to emotional exhaustion, burnout, and physical tension.
-        </p>
-        <p>
-          Effective stress management is not about avoiding pressure entirely, but about cultivating emotional resilience, setting healthy boundaries, and learning how to de-escalate internal tension.
-        </p>
-        <div class="mt-8 bg-[#F5F1EA] p-6 rounded-2xl border border-[#e2e8f0]">
-          <h3 class="text-lg font-bold text-[#173A7A] mb-2">Restore Your Well-being</h3>
-          <p class="text-sm mb-4">Take proactive steps toward managing stress and restoring inner calm.</p>
-          <a href="https://portal.nepalhypnosis.com/form/consultation-request" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-xl bg-[#D84315] px-6 py-3 text-sm font-bold text-white shadow-md hover:bg-[#b93812] transition">
-            Request a Consultation →
-          </a>
-        </div>
+      <div>
+        <h2 class="text-2xl font-bold text-[#173A7A] mb-4">Signs that stress has become too much</h2>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Constant tiredness, even after rest</li>
+          <li>Trouble sleeping, or sleeping too much</li>
+          <li>Headaches, muscle tension or stomach problems</li>
+          <li>Irritability, snapping at people, or feeling emotionally flat</li>
+          <li>Dread about work, studies or responsibilities</li>
+          <li>Withdrawing from friends and family</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-[#173A7A] mb-4">How counselling helps</h2>
+        <p class="mb-4">Together we look at where the pressure is coming from, how you currently cope, and what has to change. Therapy may include:</p>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Understanding your stress response and early warning signs</li>
+          <li>Practical tools for calming the body and mind</li>
+          <li>Challenging unhelpful thinking, for example perfectionism and difficulty saying no</li>
+          <li>Setting boundaries and making realistic plans</li>
+          <li>Rebuilding routines for sleep, activity and recovery</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-16 bg-[#FAF8F5]">
+    <div class="container-nh max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold text-[#173A7A] mb-8 text-center">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-sm">
+          <summary class="cursor-pointer font-bold text-[#173A7A] focus-visible:outline-none">How do I know if I need counselling, or just a holiday?</summary>
+          <p class="mt-4 text-sm text-[#475569] leading-relaxed pt-3 border-t border-[#f1f5f9]">A break helps when stress comes from temporary overload. If you recover little after rest, or the feelings return quickly, counselling can address the causes.</p>
+        </details>
+        <details class="rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-sm">
+          <summary class="cursor-pointer font-bold text-[#173A7A] focus-visible:outline-none">Can therapy help even if I can't change my job or situation?</summary>
+          <p class="mt-4 text-sm text-[#475569] leading-relaxed pt-3 border-t border-[#f1f5f9]">Often yes. Therapy can change how you cope, set limits and make decisions, even when circumstances stay difficult.</p>
+        </details>
       </div>
     </div>
-  </main>
-</Layout>
+  </section>
+
+  <section class="py-16 bg-[#173A7A] text-center text-white">
+    <div class="container-nh max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold">If stress is taking more than it should, you can start with a conversation.</h2>
+      <div class="mt-8">
+        <a href="https://portal.nepalhypnosis.com/form/consultation-request" target="_blank" class="rounded-xl bg-[#D84315] px-8 py-3.5 text-[15px] font-bold text-white shadow-md hover:bg-[#b93812] transition">Request a Consultation</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

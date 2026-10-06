@@ -1,28 +1,125 @@
 ---
-import Layout from '../../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<Layout title="Psychotherapy Services | Nepal Hypnosis" description="Confidential and individualized psychotherapy services in Kathmandu tailored to your unique emotional needs, life history, and goals.">
-  <main class="py-16 bg-[#FAF8F5]">
-    <div class="container-nh max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-3xl shadow-sm border border-[#e2e8f0]">
-      <span class="text-[11px] font-extrabold tracking-[0.2em] text-[#D84315] uppercase mb-3 block">Clinical Practice</span>
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-[#173A7A] mb-6">Psychotherapy Services</h1>
+<BaseLayout 
+  title="Psychotherapy & Counselling in Kathmandu" 
+  description="Confidential one-to-one psychotherapy and counselling in Kathmandu, in person or online. Evidence-informed care since 2012. Request a consultation."
+>
+  <!-- HERO SECTION -->
+  <section class="bg-gradient-to-b from-[#F5F1EA] to-white pt-16 pb-12 border-b border-[#e2e8f0]">
+    <div class="container-nh max-w-4xl mx-auto px-4">
+      <span class="text-[11px] font-extrabold tracking-[0.2em] text-[#D84315] uppercase">Clinical Practice</span>
+      <h1 class="mt-4 text-4xl sm:text-5xl font-extrabold text-[#173A7A] leading-tight">Psychotherapy & Counselling in Kathmandu</h1>
+      <p class="mt-6 text-lg text-[#475569] leading-relaxed">
+        Psychotherapy is a confidential, structured conversation with a trained professional. It gives you a safe place to understand what you are feeling, notice the patterns behind it, and build new ways of coping and relating. You do not need a diagnosis to begin, and you do not need to have it all figured out.
+      </p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <section class="py-12 bg-white">
+    <div class="container-nh max-w-4xl mx-auto px-4 space-y-10 text-[#475569] leading-relaxed">
       
-      <div class="prose max-w-none text-[#475569] space-y-6 leading-relaxed">
-        <p class="text-lg font-medium text-[#173A7A]">
-          Psychotherapy provides a confidential, structured, and compassionate space to explore emotional difficulties, recurring patterns, and life challenges.
-        </p>
-        <p>
-          At Nepal Hypnosis, we do not believe in a one-size-fits-all model. Every individual carries a unique narrative shaped by their background, relationships, and environment. Our eclectic and evidence-informed approach adapts psychotherapy to fit your specific needs.
-        </p>
-        <div class="mt-8 bg-[#F5F1EA] p-6 rounded-2xl border border-[#e2e8f0]">
-          <h3 class="text-lg font-bold text-[#173A7A] mb-2">Ready to take the next step?</h3>
-          <p class="text-sm mb-4">Reach out for a confidential initial consultation.</p>
-          <a href="https://portal.nepalhypnosis.com/form/consultation-request" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-xl bg-[#D84315] px-6 py-3 text-sm font-bold text-white shadow-md hover:bg-[#b93812] transition">
-            Request a Consultation →
-          </a>
-        </div>
+      <div>
+        <h2 class="text-2xl font-bold text-[#173A7A] mb-4">What psychotherapy can help with</h2>
+        <p class="mb-4">People come to us for many reasons, including:</p>
+        <ul class="list-disc pl-5 space-y-2 font-medium">
+          <li><a href="/insights/anxiety-support/" class="text-[#D84315] hover:underline">Anxiety, panic and constant worry</a></li>
+          <li><a href="/insights/stress-management/" class="text-[#D84315] hover:underline">Stress, exhaustion and burnout</a></li>
+          <li>Low mood and loss of interest or energy</li>
+          <li>Past painful experiences and trauma</li>
+          <li>Relationship difficulties, couples counselling and family conflict</li>
+          <li>Grief and major life changes</li>
+          <li>Anger, self-esteem and confidence</li>
+          <li>Feeling stuck, or sensing that something is wrong but being unable to name it</li>
+        </ul>
+        <p class="mt-4">If your concern is not on this list, contact us. We will tell you honestly whether we are the right service for you.</p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-[#173A7A] mb-4">How we work</h2>
+        <p class="mb-4">At Nepal Hypnosis, every client is seen one-to-one. We do not apply a single fixed model to everyone. Your therapist assesses your situation and chooses, with you, the approaches that fit your history, strengths and goals. Our approach is eclectic and evidence-informed. Your therapist may draw on:</p>
+        <ul class="list-disc pl-5 space-y-2">
+          <li><strong>Cognitive Behavioural Therapy (CBT):</strong> examines how thoughts, feelings and behaviours interact, and builds practical skills.</li>
+          <li><strong>Person-centred and psychosocial counselling:</strong> a supportive, non-judgemental relationship that helps you find your own direction.</li>
+          <li><strong>Psychodynamic approaches:</strong> explore how earlier experiences and relationships shape present patterns.</li>
+          <li><strong><a href="/services/gestalt-psychotherapy-nepal/" class="text-[#D84315] hover:underline">Gestalt psychotherapy</a>:</strong> focuses on present-moment awareness and unfinished emotional business.</li>
+          <li><strong><a href="/services/clinical-hypnotherapy/" class="text-[#D84315] hover:underline">Clinical hypnotherapy</a>:</strong> used selectively when it suits the person and the problem.</li>
+          <li><strong>Trauma-informed, mindfulness and somatic practices:</strong> pay attention to how stress is held in the body.</li>
+        </ul>
+        <p class="mt-4">We will explain what we are using and why. The research behind these approaches is not equal, and we will tell you where it is stronger and where it is more limited.</p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-[#173A7A] mb-4">Looking beneath the surface</h2>
+        <p>What you notice day to day, such as panic, fear, intrusive thoughts or tension, is often only the visible part. Beliefs formed early in life, past experiences, learned coping habits and relationship patterns can all shape it. Therapy helps you explore these influences at a pace you can manage. We cannot promise a cure or a set outcome, but many people find that understanding the roots of a difficulty makes lasting change more possible.</p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-[#173A7A] mb-4">What to expect</h2>
+        <ul class="list-decimal pl-5 space-y-3">
+          <li><strong>Reach out.</strong> Request a consultation through our secure portal, or message us on WhatsApp.</li>
+          <li><strong>First conversation.</strong> We talk about what brings you here and what you hope will change.</li>
+          <li><strong>Assessment.</strong> We explore your experiences, current circumstances, strengths and any risks.</li>
+          <li><strong>Individual plan.</strong> We agree on goals and an approach, and you decide how to proceed.</li>
+        </ul>
+        <p class="mt-4"><strong>Session details:</strong> Sessions are one-to-one and last about one hour. Most clients meet weekly, because the time between sessions lets you apply and absorb the work. Sessions are available in person in Kathmandu and by secure video for clients elsewhere in Nepal or abroad.</p>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-[#173A7A] mb-4">What psychotherapy is not</h2>
+        <p class="mb-2">Psychotherapy involves talking and structured exercises, not medication. We do not prescribe. If we think you would benefit from a medical or psychiatric assessment, we will coordinate a referral with your consent.</p>
+        <p class="mb-2">It is not advice-giving. Your therapist works with you, and you stay in control of the pace and the topics.</p>
+        <p>It is not an emergency service.</p>
+      </div>
+
+      <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-[#e2e8f0]">
+        <h2 class="text-xl font-bold text-[#173A7A] mb-3">Practical Information</h2>
+        <ul class="space-y-2 text-sm">
+          <li><strong>Location:</strong> 77 Thatu Marg, Kathmandu, Nepal</li>
+          <li><strong>Hours:</strong> 10 AM to 5 PM (Strictly on appointment basis)</li>
+          <li><strong>Confidentiality:</strong> What you share is private. We explain the limits at the start. See our <a href="/clinical-standards/" class="text-[#D84315] hover:underline">Clinical Standards</a>.</li>
+          <li><strong>Who you will see:</strong> Led by <a href="/team/" class="text-[#D84315] hover:underline">Archana Bibhor</a> and our clinical team.</li>
+        </ul>
       </div>
     </div>
-  </main>
-</Layout>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="py-16 bg-[#FAF8F5]">
+    <div class="container-nh max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold text-[#173A7A] mb-8 text-center">Frequently Asked Questions</h2>
+      <div class="space-y-4">
+        <details class="rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-sm">
+          <summary class="cursor-pointer font-bold text-[#173A7A] focus-visible:outline-none">Do I need a diagnosis to start therapy?</summary>
+          <p class="mt-4 text-sm text-[#475569] leading-relaxed pt-3 border-t border-[#f1f5f9]">No. Many people come because life feels overwhelming, not because they have a label.</p>
+        </details>
+        <details class="rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-sm">
+          <summary class="cursor-pointer font-bold text-[#173A7A] focus-visible:outline-none">How do I know if therapy is right for me?</summary>
+          <p class="mt-4 text-sm text-[#475569] leading-relaxed pt-3 border-t border-[#f1f5f9]">If something is affecting your sleep, work, relationships or sense of yourself, or you feel stuck, an initial conversation can help you decide.</p>
+        </details>
+        <details class="rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-sm">
+          <summary class="cursor-pointer font-bold text-[#173A7A] focus-visible:outline-none">How long will it take?</summary>
+          <p class="mt-4 text-sm text-[#475569] leading-relaxed pt-3 border-t border-[#f1f5f9]">It varies. Some concerns improve within a few sessions, while longer-standing patterns take more time. We review progress together.</p>
+        </details>
+        <details class="rounded-2xl border border-[#e2e8f0] bg-white p-5 shadow-sm">
+          <summary class="cursor-pointer font-bold text-[#173A7A] focus-visible:outline-none">Will you give me medicine?</summary>
+          <p class="mt-4 text-sm text-[#475569] leading-relaxed pt-3 border-t border-[#f1f5f9]">No. Psychotherapy does not involve medication.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-16 bg-[#173A7A] text-center text-white">
+    <div class="container-nh max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold">You do not have to figure everything out before reaching out.</h2>
+      <div class="mt-8">
+        <a href="https://portal.nepalhypnosis.com/form/consultation-request" target="_blank" rel="noopener noreferrer" class="rounded-xl bg-[#D84315] px-8 py-3.5 text-[15px] font-bold text-white shadow-md hover:bg-[#b93812] transition">
+          Request a Consultation
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

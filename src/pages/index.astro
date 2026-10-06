@@ -2,11 +2,14 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Psychotherapy & Counselling Clinic in Kathmandu">
+<BaseLayout 
+  title="Psychotherapy & Counselling Clinic in Kathmandu"
+  description="Confidential psychotherapy, counselling and clinical hypnotherapy in Kathmandu, with in-person and online sessions. Led by Archana Bibhor, 20+ years' experience. Book a consultation."
+>
 
   <!-- 1. COMPACT HERO SECTION -->
   <section class="relative bg-gradient-to-b from-[#F5F1EA] to-[#FAF8F5] pt-10 pb-12">
-    <div class="container-nh max-w-4xl mx-auto text-center">
+    <div class="container-nh max-w-4xl mx-auto text-center px-4">
       
       <span class="text-[11px] font-extrabold tracking-[0.2em] text-[#D84315] uppercase">
         CONFIDENTIAL PSYCHOTHERAPY & COUNSELING
@@ -15,6 +18,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       <h1 class="mt-4 font-[Poppins] text-4xl font-extrabold leading-[1.15] tracking-tight text-[#173A7A] sm:text-5xl lg:text-6xl text-balance">
         You don't have to carry everything alone.
       </h1>
+      
+      <p class="mt-3 text-lg font-bold text-[#385BAA] sm:text-xl">
+        Psychotherapy & counselling in Kathmandu.
+      </p>
 
       <p class="mt-4 text-base text-[#475569] sm:text-lg max-w-2xl mx-auto leading-relaxed">
         When something feels overwhelming, persistent, or difficult to understand, therapy provides a safe space to explore what is happening and find a way forward.
@@ -34,7 +41,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#D84315" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>
           In-person & online
         </span>
-
       </div>
 
       <!-- Action Buttons -->
@@ -64,7 +70,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- 2. AUDIENCE TRIAGE PANELS -->
   <section class="py-12 bg-[#FAF8F5]">
-    <div class="container-nh">
+    <div class="container-nh px-4">
       <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
         
         <!-- Therapy Pathway -->
@@ -101,7 +107,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- 3. HOW THERAPY BEGINS -->
   <section id="how-it-works" class="py-16 bg-white border-y border-[#e2e8f0]">
-    <div class="container-nh max-w-5xl">
+    <div class="container-nh max-w-5xl px-4">
       <div class="text-center mb-14">
         <h2 class="text-3xl font-extrabold text-[#173A7A]">How Therapy Begins</h2>
         <p class="mt-3 text-base text-[#475569]">Taking the first step can feel daunting. Here is what you can expect.</p>
@@ -138,7 +144,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- 4. NORMALIZATION & COMMON REASONS -->
   <section id="conditions" class="py-16 bg-[#FAF8F5]">
-    <div class="container-nh">
+    <div class="container-nh px-4">
       <div class="max-w-3xl mx-auto text-center">
         <h2 class="text-3xl font-extrabold sm:text-4xl text-[#173A7A]">You do not need a diagnosis to seek support.</h2>
         <p class="mt-4 text-base text-[#475569] leading-relaxed">
@@ -147,14 +153,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
 
       <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <div class="p-5 rounded-2xl bg-white border border-[#e2e8f0] shadow-sm">
-          <h3 class="font-bold text-[#173A7A] text-base">Anxiety & Overwhelm</h3>
+        <a href="/insights/anxiety-support/" class="block p-5 rounded-2xl bg-white border border-[#e2e8f0] shadow-sm hover:border-[#173A7A] hover:shadow-md transition">
+          <h3 class="font-bold text-[#173A7A] text-base flex items-center justify-between">Anxiety & Overwhelm <span class="text-[#D84315] opacity-0 hover:opacity-100 transition">→</span></h3>
           <p class="mt-1 text-xs text-[#64748b]">Persistent worry, panic attacks, or feeling constantly on edge.</p>
-        </div>
-        <div class="p-5 rounded-2xl bg-white border border-[#e2e8f0] shadow-sm">
-          <h3 class="font-bold text-[#173A7A] text-base">Low Mood & Depression</h3>
-          <p class="mt-1 text-xs text-[#64748b]">Loss of energy, persistent sadness, and feeling disconnected.</p>
-        </div>
+        </a>
+        
+        <a href="/insights/stress-management/" class="block p-5 rounded-2xl bg-white border border-[#e2e8f0] shadow-sm hover:border-[#173A7A] hover:shadow-md transition">
+          <h3 class="font-bold text-[#173A7A] text-base flex items-center justify-between">Stress & Burnout <span class="text-[#D84315] opacity-0 hover:opacity-100 transition">→</span></h3>
+          <p class="mt-1 text-xs text-[#64748b]">Exhaustion from long-term pressure and feeling disconnected.</p>
+        </a>
+
         <div class="p-5 rounded-2xl bg-white border border-[#e2e8f0] shadow-sm">
           <h3 class="font-bold text-[#173A7A] text-base">Trauma & Past Experiences</h3>
           <p class="mt-1 text-xs text-[#64748b]">Processing distressing past events that affect your present life.</p>
@@ -169,7 +177,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- 5. REFINED METAPHOR SECTION -->
   <section id="philosophy" class="py-16 bg-white border-y border-[#e2e8f0]">
-    <div class="container-nh max-w-5xl">
+    <div class="container-nh max-w-5xl px-4">
       <div class="text-center max-w-3xl mx-auto mb-10">
         <span class="text-xs font-extrabold uppercase tracking-widest text-[#385BAA]">Core Philosophy</span>
         <h2 class="mt-2 text-3xl font-extrabold sm:text-4xl text-[#173A7A]">What we experience on the surface may have deeper influences.</h2>
@@ -241,7 +249,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- 6. GROUPED INTEGRATIVE APPROACHES SECTION -->
   <section id="services" class="py-16 bg-[#FAF8F5]">
-    <div class="container-nh max-w-5xl text-center">
+    <div class="container-nh max-w-5xl text-center px-4">
       <h2 class="text-3xl font-extrabold text-[#173A7A]">Therapy is tailored to the individual.</h2>
       <p class="mt-4 text-base text-[#475569] leading-relaxed max-w-3xl mx-auto">
         Depending on your needs and therapeutic goals, your therapist may draw upon a range of established psychotherapy, counselling, experiential, and supportive approaches.
@@ -251,17 +259,17 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <div class="bg-white p-6 rounded-2xl shadow-sm border border-[#e2e8f0]">
           <h3 class="font-bold text-[#D84315] text-sm uppercase tracking-wider mb-4 border-b border-[#f1f5f9] pb-3">Talk-based & Cognitive</h3>
           <ul class="space-y-2.5 text-sm font-semibold text-[#173A7A]">
-            <li>Cognitive Behavioral Therapy (CBT)</li>
-            <li>Psychodynamic Approaches</li>
-            <li>Person-Centered Counseling</li>
-            <li>Psychosocial Counselling</li>
+            <li><a href="/services/psychotherapy/" class="hover:text-[#D84315] transition">Cognitive Behavioral Therapy (CBT)</a></li>
+            <li><a href="/services/psychotherapy/" class="hover:text-[#D84315] transition">Psychodynamic Approaches</a></li>
+            <li><a href="/services/psychosocial-counselling/" class="hover:text-[#D84315] transition">Person-Centered Counseling</a></li>
+            <li><a href="/services/psychosocial-counselling/" class="hover:text-[#D84315] transition">Psychosocial Counselling</a></li>
           </ul>
         </div>
         <div class="bg-white p-6 rounded-2xl shadow-sm border border-[#e2e8f0]">
           <h3 class="font-bold text-[#D84315] text-sm uppercase tracking-wider mb-4 border-b border-[#f1f5f9] pb-3">Experiential & Integrative</h3>
           <ul class="space-y-2.5 text-sm font-semibold text-[#173A7A]">
-            <li>Gestalt Psychotherapy</li>
-            <li>Clinical Hypnotherapy</li>
+            <li><a href="/services/gestalt-psychotherapy-nepal/" class="hover:text-[#D84315] transition">Gestalt Psychotherapy</a></li>
+            <li><a href="/services/clinical-hypnotherapy/" class="hover:text-[#D84315] transition">Clinical Hypnotherapy</a></li>
             <li>Emotional Freedom Techniques (EFT)</li>
             <li>Emotional Empowerment Technique (EET)</li>
           </ul>
@@ -276,12 +284,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </ul>
         </div>
       </div>
+      
+      <div class="mt-8 text-center">
+        <a href="/services/psychotherapy/" class="inline-flex items-center gap-2 font-bold text-[#173A7A] hover:text-[#D84315] transition">
+          View all Psychotherapy approaches →
+        </a>
+      </div>
     </div>
   </section>
 
   <!-- 7. ABOUT ARCHANA BIBHOR -->
   <section id="about" class="py-16 bg-white border-y border-[#e2e8f0]">
-    <div class="container-nh grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+    <div class="container-nh grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] px-4">
       <img src="/images/archana-bibhor1.png" alt="Archana Bibhor" width="360" height="360" class="w-full rounded-3xl shadow-lg object-cover max-w-[360px] mx-auto" />
       <div>
         <h2 class="text-3xl font-extrabold text-[#173A7A]">Archana Bibhor</h2>
@@ -306,10 +320,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         
         <div class="mt-6 flex flex-wrap gap-4">
           <a href="/team" class="inline-flex rounded-lg bg-[#173A7A] px-5 py-2.5 text-[13px] font-bold text-white shadow-sm hover:bg-[#102f64] transition">
-            Learn More About Archana →
+            Meet the Full Team →
           </a>
-          <a href="/team" class="inline-flex rounded-lg border border-[#cbd5e1] bg-white px-5 py-2.5 text-[13px] font-bold text-[#173A7A] hover:bg-[#f1f5f9] transition">
-            Meet the Full Team
+          <a href="/about" class="inline-flex rounded-lg border border-[#cbd5e1] bg-white px-5 py-2.5 text-[13px] font-bold text-[#173A7A] hover:bg-[#f1f5f9] transition">
+            About the Clinic
           </a>
         </div>
       </div>
@@ -318,7 +332,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- 8. NEPAL HYPNOSIS ACADEMY -->
   <section id="training" class="py-16 bg-[#FAF8F5]">
-    <div class="container-nh max-w-6xl">
+    <div class="container-nh max-w-6xl px-4">
       <div class="text-center max-w-3xl mx-auto mb-12">
         <span class="text-xs font-extrabold uppercase tracking-widest text-[#D84315]">Nepal Hypnosis Academy</span>
         <h2 class="mt-2 text-3xl font-extrabold sm:text-4xl text-[#173A7A]">Training, Learning & Self-Development</h2>
@@ -329,7 +343,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       <div class="grid md:grid-cols-2 gap-8">
         
-        <!-- Column 1 -->
+        <!-- Column 1: Self-Help & Wellness -->
         <div class="rounded-3xl bg-white p-8 border border-[#e2e8f0] shadow-sm">
           <div class="flex items-center gap-3 mb-6 pb-6 border-b border-[#f1f5f9]">
             <div class="w-10 h-10 rounded-xl bg-[#D84315]/10 flex items-center justify-center text-[#D84315]">
@@ -342,18 +356,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
 
           <div class="space-y-4">
-            <div>
-              <h4 class="font-bold text-[#173A7A] text-sm">Self-Esteem Training Series</h4>
+            <a href="/academy/self-esteem-training-series/" class="block group">
+              <h4 class="font-bold text-[#173A7A] text-sm group-hover:text-[#D84315] transition">Self-Esteem Training Series</h4>
               <p class="mt-1 text-xs text-[#475569] leading-relaxed">A unique program designed to help you understand, love, and accept yourself.</p>
-            </div>
-            <div class="border-t border-[#f1f5f9] pt-4">
-              <h4 class="font-bold text-[#173A7A] text-sm">Self Help with Self Hypnosis</h4>
+            </a>
+            <a href="/academy/self-hypnosis-workshop/" class="block border-t border-[#f1f5f9] pt-4 group">
+              <h4 class="font-bold text-[#173A7A] text-sm group-hover:text-[#D84315] transition">Self Help with Self Hypnosis</h4>
               <p class="mt-1 text-xs text-[#475569]">An intensive workshop on self-hypnosis for goal achievement and confidence.</p>
-            </div>
-            <div class="border-t border-[#f1f5f9] pt-4">
-              <h4 class="font-bold text-[#173A7A] text-sm">Joymandu – A Journey of Joy</h4>
+            </a>
+            <a href="/academy/joymandu/" class="block border-t border-[#f1f5f9] pt-4 group">
+              <h4 class="font-bold text-[#173A7A] text-sm group-hover:text-[#D84315] transition">Joymandu – A Journey of Joy</h4>
               <p class="mt-1 text-xs text-[#475569] leading-relaxed">A one-day program combining center-based activities with a short hike.</p>
-            </div>
+            </a>
             <div class="border-t border-[#f1f5f9] pt-4">
               <h4 class="font-bold text-[#173A7A] text-sm">Tailored Recreational Activities</h4>
               <p class="mt-1 text-xs text-[#475569]">Custom wellness modules for organization staff members and specialized groups.</p>
@@ -361,52 +375,53 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
         </div>
 
-        <!-- Column 2 -->
-        <div class="rounded-3xl bg-white p-8 border border-[#e2e8f0] shadow-sm flex flex-col justify-between">
-          <div>
-            <div class="flex items-center gap-3 mb-6 pb-6 border-b border-[#f1f5f9]">
-              <div class="w-10 h-10 rounded-xl bg-[#173A7A]/10 flex items-center justify-center text-[#173A7A]">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-              </div>
-              <div>
-                <h3 class="text-xl font-extrabold text-[#173A7A]">Professional Training</h3>
-                <p class="text-xs text-[#64748b]">For mental health practitioners & career newcomers</p>
-              </div>
+        <!-- Column 2: Professional Training -->
+        <div class="rounded-3xl bg-white p-8 border border-[#e2e8f0] shadow-sm">
+          <div class="flex items-center gap-3 mb-6 pb-6 border-b border-[#f1f5f9]">
+            <div class="w-10 h-10 rounded-xl bg-[#173A7A]/10 flex items-center justify-center text-[#173A7A]">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
             </div>
-
-            <div class="space-y-4">
-              <div>
-                <h4 class="font-bold text-[#173A7A] text-sm">Eclectic Psychotherapy</h4>
-                <p class="mt-1 text-xs text-[#475569]">Develop practical skills for working with diverse client presentations.</p>
-              </div>
-              <div class="border-t border-[#f1f5f9] pt-4">
-                <h4 class="font-bold text-[#173A7A] text-sm">Psychosocial Counselling</h4>
-                <p class="mt-1 text-xs text-[#475569]">Comprehensive foundational training in counseling techniques and ethics.</p>
-              </div>
-              <div class="border-t border-[#f1f5f9] pt-4">
-                <h4 class="font-bold text-[#173A7A] text-sm">Clinical Psychotherapy</h4>
-                <p class="mt-1 text-xs text-[#475569]">Advanced learning relevant to complex emotional difficulties and trauma.</p>
-              </div>
-              <div class="border-t border-[#f1f5f9] pt-4">
-                <h4 class="font-bold text-[#173A7A] text-sm">Gestalt Psychotherapy</h4>
-                <p class="mt-1 text-xs text-[#475569]">Experiential training focusing on the present moment and self-awareness.</p>
-              </div>
+            <div>
+              <h3 class="text-xl font-extrabold text-[#173A7A]">Professional Training</h3>
+              <p class="text-xs text-[#64748b]">For mental health practitioners & career newcomers</p>
             </div>
           </div>
 
-          <div class="mt-8 pt-6 border-t border-[#e2e8f0] text-center">
-            <a href="https://portal.nepalhypnosis.com/form/consultation-request" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-xl bg-[#173A7A] px-6 py-3 text-xs font-bold text-white shadow-md hover:bg-[#102f64] transition">
-              Explore Courses & Registration →
+          <div class="space-y-4">
+            <a href="/academy/puzzle-therapy-eclectic-therapist-training/" class="block group">
+              <h4 class="font-bold text-[#173A7A] text-sm group-hover:text-[#D84315] transition">Puzzle Therapy: Eclectic Psychotherapy</h4>
+              <p class="mt-1 text-xs text-[#475569]">Develop practical skills for working with diverse client presentations.</p>
             </a>
+            <div class="border-t border-[#f1f5f9] pt-4">
+              <h4 class="font-bold text-[#173A7A] text-sm">Psychosocial Counselling</h4>
+              <p class="mt-1 text-xs text-[#475569]">Comprehensive foundational training in counseling techniques and ethics.</p>
+            </div>
+            <div class="border-t border-[#f1f5f9] pt-4">
+              <h4 class="font-bold text-[#173A7A] text-sm">Clinical Psychotherapy</h4>
+              <p class="mt-1 text-xs text-[#475569]">Advanced learning relevant to complex emotional difficulties and trauma.</p>
+            </div>
+            <div class="border-t border-[#f1f5f9] pt-4">
+              <h4 class="font-bold text-[#173A7A] text-sm">Gestalt Psychotherapy</h4>
+              <p class="mt-1 text-xs text-[#475569]">Experiential training focusing on the present moment and self-awareness.</p>
+            </div>
           </div>
         </div>
+
       </div>
+
+      <!-- CENTERED ACADEMY CTA BUTTON (Spans both blocks) -->
+      <div class="mt-12 text-center">
+        <a href="/academy/" class="inline-flex items-center gap-2 rounded-xl bg-[#173A7A] px-8 py-3.5 text-sm font-bold text-white shadow-md hover:bg-[#102f64] transition">
+          Explore All Academy Pathways & Courses →
+        </a>
+      </div>
+
     </div>
   </section>
 
   <!-- 9. FULLY AUTOMATED YOUTUBE API CAROUSEL -->
   <section id="media" class="py-16 bg-white border-y border-[#e2e8f0]">
-    <div class="container-nh">
+    <div class="container-nh px-4">
       <div class="flex items-center justify-between mb-8">
         <div>
           <span class="text-xs font-extrabold uppercase tracking-widest text-[#D84315]">Video Gallery</span>
@@ -496,7 +511,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- 10. FREQUENTLY ASKED QUESTIONS -->
   <section id="faq" class="py-16 bg-[#FAF8F5]">
-    <div class="container-nh max-w-4xl">
+    <div class="container-nh max-w-4xl px-4">
       <div class="text-center mb-12">
         <h2 class="text-3xl font-extrabold text-[#173A7A]">Frequently Asked Questions</h2>
       </div>
@@ -537,7 +552,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
   <!-- 11. FINAL CTA SECTION -->
   <section class="py-20 bg-[#173A7A] text-center text-white border-t border-[#0c244d]">
-    <div class="container-nh max-w-3xl mx-auto">
+    <div class="container-nh max-w-3xl mx-auto px-4">
       <h2 class="text-3xl font-extrabold sm:text-4xl">You don't have to figure everything out before reaching out.</h2>
       <p class="mt-4 text-blue-100 text-base sm:text-lg leading-relaxed">
         Taking the first step does not mean you need to have all the answers. If you would like to explore whether psychotherapy or one of our programs may be appropriate for you, you can contact us confidentially.
@@ -547,7 +562,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <a href="https://portal.nepalhypnosis.com/form/consultation-request" target="_blank" rel="noopener noreferrer" class="rounded-xl bg-[#D84315] px-8 py-3.5 text-[15px] font-bold text-white shadow-md hover:bg-[#b93812] transition">
           Request a Consultation
         </a>
-        <a href="#training" class="rounded-xl bg-white/10 px-8 py-3.5 text-[15px] font-bold text-white hover:bg-white/20 transition border border-white/20">
+        <a href="/academy/" class="rounded-xl bg-white/10 px-8 py-3.5 text-[15px] font-bold text-white hover:bg-white/20 transition border border-white/20">
           Explore Training Programs
         </a>
       </div>

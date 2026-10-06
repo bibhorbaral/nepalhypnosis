@@ -1,44 +1,54 @@
 ---
-import Layout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<Layout title="About Nepal Hypnosis | Pioneer Psychotherapy Clinic" description="Learn about Nepal Hypnosis, founded in 2012 AD in Kathmandu by Archana Bibhor, providing pioneer psychotherapy and mental well-being services.">
-  <main class="py-16 bg-[#FAF8F5]">
-    <div class="container-nh max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-3xl shadow-sm border border-[#e2e8f0]">
-      <span class="text-[11px] font-extrabold tracking-[0.2em] text-[#D84315] uppercase mb-3 block">Established 2012 AD</span>
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-[#173A7A] mb-6">About Nepal Hypnosis</h1>
-      
-      <div class="prose max-w-none text-[#475569] space-y-6 leading-relaxed">
-        <p class="text-lg font-medium text-[#173A7A]">
-          Nepal Hypnosis is a pioneer psychotherapy clinic and training center located in Kathmandu, Nepal, operating continuously since 2012 AD.
-        </p>
-        <p>
-          Founded by <strong>Archana Bibhor</strong>, our institution was established with a singular vision: to provide individualized, confidential, and evidence-informed mental health care that treats each person as a whole rather than a diagnosis.
-        </p>
-
-        <h2 class="text-2xl font-bold text-[#173A7A] pt-4">Our Philosophy & Approach</h2>
-        <p>
-          Emotional difficulties often stem from a complex web of past experiences, core beliefs, and relationship dynamics. Our eclectic psychotherapeutic framework blends talk-based cognitive therapies, experiential Gestalt work, and clinical hypnotherapy to foster genuine, sustainable healing.
-        </p>
-
-        <h2 class="text-2xl font-bold text-[#173A7A] pt-4">Leadership</h2>
-        <div class="bg-[#F5F1EA] p-6 rounded-2xl border border-[#e2e8f0] flex flex-col sm:flex-row gap-6 items-center">
-          <img src="/images/archana-bibhor1.png" alt="Archana Bibhor" width="120" height="120" class="rounded-xl object-cover shadow-sm shrink-0" />
-          <div>
-            <h3 class="text-xl font-bold text-[#173A7A]">Archana Bibhor</h3>
-            <p class="text-sm font-bold text-[#385BAA] mb-2">Founder & Lead Clinical Practitioner</p>
-            <p class="text-xs text-[#475569]">
-              PsyD Candidate in Clinical Psychology (USIU-Africa) with over 20 years of professional practice in psychotherapy, counseling, and education.
-            </p>
-          </div>
-        </div>
-
-        <div class="mt-8 text-center pt-6 border-t border-[#e2e8f0]">
-          <a href="https://portal.nepalhypnosis.com/form/consultation-request" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-xl bg-[#D84315] px-8 py-3.5 text-base font-bold text-white shadow-md hover:bg-[#b93812] transition">
-            Request a Consultation →
-          </a>
-        </div>
-      </div>
+<BaseLayout 
+  title="About Nepal Hypnosis: Psychotherapy Clinic Since 2012" 
+  description="Nepal Hypnosis is a Kathmandu psychotherapy clinic and training centre, operating since 2012 and led by Archana Bibhor. Learn about our approach, team and values."
+>
+  <section class="bg-gradient-to-b from-[#F5F1EA] to-white pt-16 pb-12 border-b border-[#e2e8f0]">
+    <div class="container-nh max-w-4xl mx-auto px-4">
+      <h1 class="mt-4 text-4xl sm:text-5xl font-extrabold text-[#173A7A] leading-tight">About Nepal Hypnosis</h1>
+      <p class="mt-6 text-lg text-[#475569] leading-relaxed">
+        Nepal Hypnosis is a psychotherapy clinic and training centre in Kathmandu, operating since 2012. We offer confidential, one-to-one psychotherapy and counselling, in person and online, and we train practitioners and run wellness programmes through Nepal Hypnosis Academy.
+      </p>
     </div>
-  </main>
-</Layout>
+  </section>
+
+  <section class="py-12 bg-white">
+    <div class="container-nh max-w-4xl mx-auto px-4 space-y-10 text-[#475569] leading-relaxed">
+      
+      <div>
+        <h2 class="text-2xl font-bold text-[#173A7A] mb-4">Our approach</h2>
+        <p class="mb-4">Emotional difficulties rarely have a single cause. They often develop from a mix of experiences, relationships, beliefs and ways of coping. Our eclectic framework therefore combines:</p>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Talk-based approaches such as CBT, person-centred and psychosocial counselling, and psychodynamic work</li>
+          <li>Experiential work, including Gestalt psychotherapy</li>
+          <li>Clinical hypnotherapy, where appropriate</li>
+          <li>Trauma-informed, mindfulness and somatic practices</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-[#173A7A] mb-4">Our values</h2>
+        <ul class="list-disc pl-5 space-y-2">
+          <li><strong>Confidentiality and trust.</strong> Your privacy comes first.</li>
+          <li><strong>Respect.</strong> We do not judge. Everyone is treated with dignity.</li>
+          <li><strong>Honesty.</strong> We tell you what therapy can and cannot do.</li>
+          <li><strong>Collaboration.</strong> You are the expert on your own life, and we work with you.</li>
+        </ul>
+      </div>
+
+      <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-[#e2e8f0]">
+        <h2 class="text-xl font-bold text-[#173A7A] mb-3">Visit or contact us</h2>
+        <ul class="space-y-2 text-sm">
+          <li><strong>Address:</strong> 77 Thatu Marg, Kathmandu, Nepal</li>
+          <li><strong>Hours:</strong> 10 AM to 5 PM (Strictly on appointment basis)</li>
+          <li><strong>WhatsApp:</strong> +977 9841459618</li>
+          <li><strong>Email:</strong> info@nepalhypnosis.com</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>

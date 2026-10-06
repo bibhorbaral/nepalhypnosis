@@ -1,28 +1,62 @@
 ---
-import Layout from '../../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<Layout title="Anxiety Support & Counseling | Nepal Hypnosis" description="Professional guidance, coping strategies, and psychotherapy support for managing chronic anxiety, panic, and persistent worry in Kathmandu.">
-  <main class="py-16 bg-[#FAF8F5]">
-    <div class="container-nh max-w-4xl mx-auto bg-white p-8 sm:p-12 rounded-3xl shadow-sm border border-[#e2e8f0]">
-      <span class="text-[11px] font-extrabold tracking-[0.2em] text-[#D84315] uppercase mb-3 block">Mental Well-being Insights</span>
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-[#173A7A] mb-6">Anxiety Support & Counseling</h1>
+<BaseLayout 
+  title="Anxiety Counselling & Therapy in Kathmandu" 
+  description="Anxiety, panic and constant worry can be treated. Confidential anxiety counselling and therapy in Kathmandu, in person or online."
+>
+  <section class="bg-gradient-to-b from-[#F5F1EA] to-white pt-16 pb-12 border-b border-[#e2e8f0]">
+    <div class="container-nh max-w-4xl mx-auto px-4">
+      <span class="text-[11px] font-extrabold tracking-[0.2em] text-[#D84315] uppercase">Insights & Support</span>
+      <h1 class="mt-4 text-4xl sm:text-5xl font-extrabold text-[#173A7A] leading-tight">Anxiety Support & Counselling in Kathmandu</h1>
+      <p class="mt-6 text-lg text-[#475569] leading-relaxed">
+        Anxiety is more than ordinary stress. It can feel like a constant state of alarm that drains your energy, disturbs your sleep and shrinks your life. It is also one of the most common reasons people seek therapy, and it responds well to treatment for many people.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white">
+    <div class="container-nh max-w-4xl mx-auto px-4 space-y-10 text-[#475569] leading-relaxed">
       
-      <div class="prose max-w-none text-[#475569] space-y-6 leading-relaxed">
-        <p class="text-lg font-medium text-[#173A7A]">
-          Anxiety is more than temporary stress—it can feel like an exhausting, constant state of alarm that drains your emotional and physical energy.
-        </p>
-        <p>
-          Whether you experience panic attacks, racing thoughts, health anxiety, or generalized worry, professional support helps you decode underlying triggers and build sustainable emotional regulation.
-        </p>
-        <div class="mt-8 bg-[#F5F1EA] p-6 rounded-2xl border border-[#e2e8f0]">
-          <h3 class="text-lg font-bold text-[#173A7A] mb-2">Find Relief and Clarity</h3>
-          <p class="text-sm mb-4">Connect with our experienced therapists for confidential anxiety support sessions.</p>
-          <a href="https://portal.nepalhypnosis.com/form/consultation-request" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-xl bg-[#D84315] px-6 py-3 text-sm font-bold text-white shadow-md hover:bg-[#b93812] transition">
-            Request a Consultation →
-          </a>
-        </div>
+      <div>
+        <h2 class="text-2xl font-bold text-[#173A7A] mb-4">What anxiety can feel like</h2>
+        <ul class="list-disc pl-5 space-y-2">
+          <li><strong>In the body:</strong> a racing heart, tight chest, dizziness, trembling, stomach trouble, headaches, muscle tension, difficulty sleeping</li>
+          <li><strong>In your thoughts:</strong> constant "what if" thinking, expecting the worst, racing thoughts, trouble concentrating, intrusive thoughts</li>
+          <li><strong>In behaviour:</strong> avoiding places or people, needing reassurance, checking repeatedly, putting things off</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-2xl font-bold text-[#173A7A] mb-4">How therapy helps</h2>
+        <p class="mb-4">Your therapist begins by understanding your situation, triggers and history, then builds a plan that may include:</p>
+        <ul class="list-disc pl-5 space-y-2">
+          <li><strong>Understanding anxiety:</strong> learning how the body's alarm system works, so symptoms become less frightening.</li>
+          <li><strong>CBT skills:</strong> identifying anxious thinking patterns and testing them.</li>
+          <li><strong>Calming and regulation skills:</strong> breathing, grounding, mindfulness and relaxation.</li>
+          <li><strong>Exploring the roots:</strong> looking at beliefs, past experiences and relationship patterns that keep anxiety going.</li>
+        </ul>
+      </div>
+
+      <div class="bg-[#FAF8F5] p-6 rounded-2xl border border-[#e2e8f0]">
+        <h2 class="text-xl font-bold text-[#173A7A] mb-3">Things you can try today</h2>
+        <ul class="space-y-3 text-sm">
+          <li><strong>Slow your breathing:</strong> breathe in gently through your nose, then breathe out for longer than you breathed in.</li>
+          <li><strong>Ground yourself:</strong> name five things you can see, four you can touch, three you can hear, two you can smell and one you can taste.</li>
+          <li><strong>Look after the basics:</strong> regular sleep, movement, meals and limiting caffeine can all make a difference.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-16 bg-[#173A7A] text-center text-white">
+    <div class="container-nh max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl font-extrabold">You do not have to figure everything out before reaching out.</h2>
+      <div class="mt-8">
+        <a href="https://portal.nepalhypnosis.com/form/consultation-request" target="_blank" class="rounded-xl bg-[#D84315] px-8 py-3.5 text-[15px] font-bold text-white shadow-md hover:bg-[#b93812] transition">Request a Consultation</a>
       </div>
     </div>
-  </main>
-</Layout>
+  </section>
+</BaseLayout>
