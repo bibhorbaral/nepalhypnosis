@@ -1,0 +1,101 @@
+---
+// src/pages/team/archana-bibhor.astro
+import Layout from '../../layouts/BaseLayout.astro';
+
+const pageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Archana Bibhor",
+    "jobTitle": "Founder & Lead Clinical Practitioner",
+    "worksFor": {
+      "@type": "MedicalClinic",
+      "name": "Nepal Hypnosis"
+    },
+    "description": "Founder of Nepal Hypnosis (established in 2012 AD), with more than 20 years of professional experience in psychotherapy, counseling, and education.",
+    "image": "https://nepalhypnosis.com/images/archana-bibhor1.png"
+  }
+};
+---
+
+<Layout 
+  title="Archana Bibhor | Founder & Lead Clinical Practitioner"
+  description="Learn about Archana Bibhor, PsyD Candidate and founder of Nepal Hypnosis, offering over 20 years of experience in psychotherapy and counselling."
+  pageSchema={pageSchema}
+>
+  <section class="py-16 bg-white px-4 border-b border-[#e2e8f0]">
+    <div class="container-nh max-w-5xl">
+      <div class="grid items-start gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+        
+        <div class="relative sticky top-24">
+          <img 
+            src="/images/archana-bibhor1.png" 
+            alt="Archana Bibhor - Founder of Nepal Hypnosis" 
+            width="400" 
+            height="400" 
+            class="w-full rounded-3xl shadow-lg object-cover mx-auto border border-[#e2e8f0]" 
+          />
+          <div class="mt-6 space-y-4">
+            <a href="https://portal.nepalhypnosis.com/form/consultation-request" target="_blank" rel="noopener noreferrer" class="flex w-full items-center justify-center rounded-xl bg-[#D84315] px-6 py-3.5 text-[15px] font-bold text-white shadow-md hover:bg-[#b93812] transition">
+              Request a Consultation
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="mb-6 pb-6 border-b border-[#f1f5f9]">
+            <span class="text-xs font-extrabold uppercase tracking-widest text-[#D84315]">Founder & Lead Practitioner</span>
+            <h1 class="mt-2 text-4xl font-extrabold text-[#173A7A]">Archana Bibhor</h1>
+            <p class="text-lg font-bold text-[#385BAA] mt-1">PsyD Candidate & Senior Psychotherapist</p>
+          </div>
+          
+          <div class="prose prose-lg text-[#475569] leading-relaxed">
+            <p>
+              Archana Bibhor is the founder of Nepal Hypnosis (established in 2012 AD), with more than 20 years of professional experience in psychotherapy, counselling, and education[cite: 1, 2]. 
+            </p>
+            <p>
+              Her clinical philosophy rejects the idea of a single solution for all clients. Instead, her work emphasizes understanding each individual's unique psychological landscape, relational history, and personal strengths[cite: 2]. By integrating evidence-informed therapeutic approaches, she supports individuals in navigating anxiety, trauma, and deep-seated core beliefs[cite: 3].
+            </p>
+          </div>
+
+          <div class="mt-10">
+            <h3 class="text-xl font-extrabold text-[#173A7A] mb-5">Academic & Professional Credentials</h3>
+            <div class="grid gap-4">
+              <div class="flex items-start gap-4 bg-[#FAF8F5] p-5 rounded-2xl border border-[#e2e8f0]">
+                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shrink-0 shadow-sm border border-[#e2e8f0]">
+                  <span class="text-[#D84315] font-serif font-bold italic">Ed</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-[#173A7A]">Doctor of Psychology (PsyD) Candidate</h4>
+                  <p class="text-sm text-[#475569] mt-1">Clinical Psychology — United States International University (USIU-Africa)[cite: 2]</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4 bg-[#FAF8F5] p-5 rounded-2xl border border-[#e2e8f0]">
+                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center shrink-0 shadow-sm border border-[#e2e8f0]">
+                  <span class="text-[#D84315] font-serif font-bold italic">Pr</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-[#173A7A]">Clinical Experience</h4>
+                  <p class="text-sm text-[#475569] mt-1">Over 20 years dedicated to clinical practice, counselor training, and psychological well-being programs[cite: 2].</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10">
+            <h3 class="text-xl font-extrabold text-[#173A7A] mb-5">Primary Clinical Modalities</h3>
+            <div class="flex flex-wrap gap-3">
+              <span class="px-4 py-2 bg-blue-50 text-[#173A7A] rounded-lg text-sm font-bold border border-blue-100">Cognitive Behavioral Therapy (CBT)</span>
+              <span class="px-4 py-2 bg-blue-50 text-[#173A7A] rounded-lg text-sm font-bold border border-blue-100">Gestalt Psychotherapy</span>
+              <span class="px-4 py-2 bg-blue-50 text-[#173A7A] rounded-lg text-sm font-bold border border-blue-100">Clinical Hypnotherapy</span>
+              <span class="px-4 py-2 bg-blue-50 text-[#173A7A] rounded-lg text-sm font-bold border border-blue-100">Psychosocial Counseling</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

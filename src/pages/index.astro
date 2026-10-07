@@ -57,29 +57,6 @@ const faqSchema = {
     acceptedAnswer: { '@type': 'Answer', text: f.a },
   })),
 };
-
-const videos = [];
-const ytKey = import.meta.env.YOUTUBE_API_KEY;
-if (ytKey) {
-  try {
-    const apiUrl =
-      `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet` +
-      `&playlistId=${site.youtubeUploadsPlaylistId}&maxResults=12&key=${ytKey}`;
-    const res = await fetch(apiUrl);
-    if (res.ok) {
-      const data = await res.json();
-      for (const item of data.items ?? []) {
-        const title = item.snippet?.title ?? '';
-        const id = item.snippet?.resourceId?.videoId;
-        if (!id || title === 'Private video' || title === 'Deleted video') continue;
-        videos.push({ id, title });
-        if (videos.length === 6) break;
-      }
-    }
-  } catch (err) {
-    console.warn('[index] YouTube fetch failed:', err);
-  }
-}
 ---
 
 <BaseLayout 
@@ -89,19 +66,15 @@ if (ytKey) {
 
   <section class="relative bg-gradient-to-b from-[#F5F1EA] to-[#FAF8F5] pt-10 pb-12">
     <div class="container-nh max-w-4xl mx-auto text-center px-4">
-      
       <span class="text-[11px] font-extrabold tracking-[0.2em] text-[#D84315] uppercase">
         CONFIDENTIAL PSYCHOTHERAPY & COUNSELLING
       </span>
-
       <h1 class="mt-4 font-[Poppins] text-4xl font-extrabold leading-[1.15] tracking-tight text-[#173A7A] sm:text-5xl lg:text-6xl text-balance">
         You don't have to carry everything alone.
       </h1>
-      
       <p class="mt-3 text-lg font-bold text-[#385BAA] sm:text-xl">
         Psychotherapy & counselling in Kathmandu.
       </p>
-
       <p class="mt-4 text-base text-[#475569] sm:text-lg max-w-2xl mx-auto leading-relaxed">
         When something feels overwhelming, persistent, or difficult to understand, therapy provides a safe space to explore what is happening and find a way forward.
       </p>
@@ -130,7 +103,7 @@ if (ytKey) {
         </a>
       </div>
 
-      <!-- RESTORED: HORIZONTAL GRAPHIC BANNER -->
+      <!-- HORIZONTAL GRAPHIC BANNER RESTORED -->
       <div class="mt-10 relative overflow-hidden rounded-2xl border border-[#e2e8f0] shadow-sm max-w-3xl mx-auto h-[120px] sm:h-[150px]">
         <img src="/images/therapy_session.jpg" alt="Nepal Hypnosis Therapy Environment" width="768" height="150" class="w-full h-full object-cover object-top" />
         <div class="absolute inset-0 bg-gradient-to-r from-[#173A7A]/80 via-transparent to-[#173A7A]/60 flex items-center justify-between px-6 text-white">
@@ -336,6 +309,7 @@ if (ytKey) {
     </div>
   </section>
 
+  <!-- NEW CLINICAL INSIGHTS SECTION -->
   <section id="insights" class="py-16 bg-white border-y border-[#e2e8f0]">
     <div class="container-nh px-4 max-w-5xl">
       <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10">
@@ -369,7 +343,7 @@ if (ytKey) {
         <a href="/insights/psychology-in-nepal/" class="group flex flex-col justify-between rounded-2xl border border-[#e2e8f0] bg-[#FAF8F5] p-6 shadow-sm hover:shadow-md hover:border-[#173A7A] transition sm:col-span-2 lg:col-span-1">
           <div>
             <div class="text-[10px] font-bold uppercase tracking-widest text-[#D84315] mb-2">Academic Perspectives</div>
-            <h3 class="text-lg font-bold text-[#173A7A] leading-tight mb-3 group-hover:text-[#D84315] transition">Psychology in Nepal: History &amp; Future</h3>
+            <h3 class="text-lg font-bold text-[#173A7A] leading-tight mb-3 group-hover:text-[#D84315] transition">Psychology in Nepal: History & Future</h3>
             <p class="text-sm text-[#475569] line-clamp-3">The history, academic development, and future challenges of psychology as an academic and professional discipline in Nepal.</p>
           </div>
           <div class="mt-5 text-xs font-bold text-[#64748b]">By Prof. Dr. Shishir Subba</div>
@@ -493,51 +467,93 @@ if (ytKey) {
           <span class="text-xs font-extrabold uppercase tracking-widest text-[#D84315]">Video Gallery</span>
           <h2 class="text-3xl font-extrabold text-[#173A7A]">Featured Media &amp; Videos</h2>
         </div>
-        {videos.length > 1 && (
-          <div class="flex gap-2">
-            <button id="slideLeft" type="button" class="w-10 h-10 rounded-full border border-[#cbd5e1] bg-white flex items-center justify-center text-[#173A7A] hover:bg-[#FAF8F5] transition shadow-sm cursor-pointer" aria-label="Scroll left">
-              &larr;
-            </button>
-            <button id="slideRight" type="button" class="w-10 h-10 rounded-full border border-[#cbd5e1] bg-white flex items-center justify-center text-[#173A7A] hover:bg-[#FAF8F5] transition shadow-sm cursor-pointer" aria-label="Scroll right">
-              &rarr;
-            </button>
-          </div>
-        )}
+        <div class="flex gap-2">
+          <button id="slideLeft" type="button" class="w-10 h-10 rounded-full border border-[#cbd5e1] bg-white flex items-center justify-center text-[#173A7A] hover:bg-[#FAF8F5] transition shadow-sm cursor-pointer" aria-label="Scroll left">
+            &larr;
+          </button>
+          <button id="slideRight" type="button" class="w-10 h-10 rounded-full border border-[#cbd5e1] bg-white flex items-center justify-center text-[#173A7A] hover:bg-[#FAF8F5] transition shadow-sm cursor-pointer" aria-label="Scroll right">
+            &rarr;
+          </button>
+        </div>
       </div>
 
       <div id="videoContainer" class="flex gap-6 overflow-x-auto scroll-smooth pb-4 no-scrollbar min-h-[220px] items-center">
-        {videos.length > 0 ? (
-          videos.map((v) => (
-            <div class="min-w-[300px] sm:min-w-[360px] max-w-[360px] rounded-2xl border border-[#e2e8f0] bg-white overflow-hidden shadow-sm flex flex-col shrink-0">
-              <div class="aspect-video w-full relative bg-black">
-                <lite-youtube videoid={v.id} playlabel={v.title} class="w-full h-full"></lite-youtube>
-              </div>
-              <div class="p-4 flex-1 flex flex-col justify-between">
-                <h3 class="font-bold text-[#173A7A] text-sm line-clamp-2">{v.title}</h3>
-                <span class="mt-2 text-xs text-[#64748b]">Nepal Hypnosis</span>
-              </div>
-            </div>
-          ))
-        ) : (
-          <div class="w-full rounded-2xl border border-[#e2e8f0] bg-white p-8 text-center">
-            <p class="text-base text-[#475569]">Watch talks and short videos from Nepal Hypnosis on our YouTube channel.</p>
-            <a href={site.youtubeChannelUrl} target="_blank" rel="noopener noreferrer" class="mt-4 inline-flex rounded-lg bg-[#173A7A] px-5 py-2.5 text-[13px] font-bold text-white shadow-sm hover:bg-[#102f64] transition">
-              Visit our YouTube channel &rarr;
-            </a>
-          </div>
-        )}
+        <p class="text-sm text-[#64748b] animate-pulse">
+          Loading latest videos from our YouTube channel...
+        </p>
       </div>
     </div>
   </section>
 
   <script>
     const container = document.getElementById('videoContainer');
-    document.getElementById('slideLeft')?.addEventListener('click', () => {
+    const btnLeft = document.getElementById('slideLeft');
+    const btnRight = document.getElementById('slideRight');
+
+    btnLeft?.addEventListener('click', () => {
       container?.scrollBy({ left: -380, behavior: 'smooth' });
     });
-    document.getElementById('slideRight')?.addEventListener('click', () => {
+
+    btnRight?.addEventListener('click', () => {
       container?.scrollBy({ left: 380, behavior: 'smooth' });
     });
+
+    function escapeHtml(str) {
+      const div = document.createElement('div');
+      div.innerText = str;
+      return div.innerHTML;
+    }
+
+    async function loadYouTubeChannelVideos() {
+      if (!container) return;
+
+      const apiKey = 'AIzaSyDs_uVXUMbewqsCD-zoInrmDOE0DXgwQ40';
+      const playlistId = 'UUifKne_f3_7iydVqF91fkQA';
+      const apiUrl = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=${playlistId}&maxResults=6&key=${apiKey}`;
+
+      try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+
+        if (data.items && data.items.length > 0) {
+          container.innerHTML = '';
+
+          data.items.forEach(item => {
+            const rawTitle = item.snippet?.title || '';
+            const videoId = item.snippet?.resourceId?.videoId;
+
+            if (!videoId || rawTitle === 'Private video' || rawTitle === 'Deleted video') return;
+
+            const title = escapeHtml(rawTitle);
+            const card = document.createElement('div');
+
+            card.className = "min-w-[300px] sm:min-w-[360px] max-w-[360px] rounded-2xl border border-[#e2e8f0] bg-white overflow-hidden shadow-sm flex flex-col shrink-0";
+
+            card.innerHTML = `
+              <div class="aspect-video w-full bg-black relative">
+                <iframe class="w-full h-full" src="https://www.youtube-nocookie.com/embed/${videoId}" title="${title}" loading="lazy" allowfullscreen></iframe>
+              </div>
+
+              <div class="p-4 flex-1 flex flex-col justify-between">
+                <h3 class="font-bold text-[#173A7A] text-sm line-clamp-2">${title}</h3>
+                <span class="mt-2 text-xs text-[#64748b]">Nepal Hypnosis</span>
+              </div>
+            `;
+
+            container.appendChild(card);
+          });
+
+        } else {
+          container.innerHTML = '<p class="text-sm text-[#64748b]">No videos found on this channel.</p>';
+        }
+
+      } catch (error) {
+        console.error('Error fetching YouTube API:', error);
+        container.innerHTML = '<p class="text-sm text-red-500">Failed to load videos. Please try again later.</p>';
+      }
+    }
+
+    loadYouTubeChannelVideos();
   </script>
 
   <script type="application/ld+json" is:inline set:html={JSON.stringify(faqSchema)} />
