@@ -39,7 +39,7 @@ const labels = {
     team: 'Team',
     services: 'Services',
     training: 'Academy',
-    insights: 'Insights',
+    insights: 'Insights & Articles',
     media: 'Media',
     faq: 'FAQ',
     appointment: 'Request a Consultation',
@@ -241,13 +241,14 @@ const activeSchema = pageSchema || defaultSchema;
           </div>
         </a>
 
+        <!-- Desktop Navigation without Insights link -->
         <nav class="hidden items-center gap-5 lg:flex">
           <a href={lang === 'np' ? '/np/#how-it-works' : '/#how-it-works'} class="text-[13px] font-semibold text-[#475569] hover:text-[#D84315]">{t.howItWorks}</a>
           <a href={lang === 'np' ? '/np/#services' : '/#services'} class="text-[13px] font-semibold text-[#475569] hover:text-[#D84315]">{t.services}</a>
           <a href={lang === 'np' ? '/np/team' : '/team'} class="text-[13px] font-semibold text-[#475569] hover:text-[#D84315]">{t.team}</a>
-          <a href={lang === 'np' ? '/np/insights/' : '/insights/'} class="text-[13px] font-semibold text-[#475569] hover:text-[#D84315]">{t.insights}</a>
           <a href={lang === 'np' ? '/np/#training' : '/#training'} class="text-[13px] font-semibold text-[#475569] hover:text-[#D84315]">{t.training}</a>
           <a href={lang === 'np' ? '/np/#media' : '/#media'} class="text-[13px] font-semibold text-[#475569] hover:text-[#D84315]">{t.media}</a>
+          <a href={lang === 'np' ? '/np/#faq' : '/#faq'} class="text-[13px] font-semibold text-[#475569] hover:text-[#D84315]">{t.faq}</a>
         </nav>
 
         <div class="flex items-center gap-3">
@@ -264,6 +265,7 @@ const activeSchema = pageSchema || defaultSchema;
       </div>
     </header>
 
+    <!-- Mobile Menu Overlay without Insights link -->
     <div id="mobile-menu" class="fixed inset-0 z-[100] bg-white transform translate-x-full transition-transform duration-300 lg:hidden flex flex-col" hidden>
       <div class="flex items-center justify-between p-5 border-b border-[#e2e8f0]">
         <span class="font-[Poppins] text-[15px] font-extrabold text-[#173A7A]">{t.menu}</span>
@@ -275,8 +277,8 @@ const activeSchema = pageSchema || defaultSchema;
         <a href={lang === 'np' ? '/np/#how-it-works' : '/#how-it-works'} class="mobile-link block">{t.howItWorks}</a>
         <a href={lang === 'np' ? '/np/#services' : '/#services'} class="mobile-link block">{t.services}</a>
         <a href={lang === 'np' ? '/np/team' : '/team'} class="mobile-link block">{t.team}</a>
-        <a href={lang === 'np' ? '/np/insights/' : '/insights/'} class="mobile-link block">{t.insights}</a>
         <a href={lang === 'np' ? '/np/#training' : '/#training'} class="mobile-link block">{t.training}</a>
+        <a href={lang === 'np' ? '/np/#media' : '/#media'} class="mobile-link block">{t.media}</a>
         <a href={lang === 'np' ? '/np/#faq' : '/#faq'} class="mobile-link block">{t.faq}</a>
         <a href={languagePath} class="block mt-4 text-center rounded-lg bg-[#FAF8F5] p-3 text-[#D84315]">🌐 {lang === 'en' ? 'नेपालीमा हेर्नुहोस्' : 'View in English'}</a>
       </nav>
@@ -328,6 +330,7 @@ const activeSchema = pageSchema || defaultSchema;
                 <li><a href="/np/insights/how-to-guide-children/" class="hover:text-white transition">बालबालिकालाई मार्गदर्शन</a></li>
                 <li><a href="/np/insights/victory-over-lower-self-esteem/" class="hover:text-white transition">न्यून आत्मसम्मानमाथिको विजय</a></li>
                 <li><a href="/np/insights/decreasing-generation-gap/" class="hover:text-white transition">पुस्तैनी दूरी कसरी घटाउने?</a></li>
+                <li><a href="/np/insights/" class="hover:text-white transition font-bold text-amber-300">📚 सबै लेखहरू हेर्नुहोस् (All Articles) →</a></li>
                 <li><a href="/np/clinical-standards" class="hover:text-white transition">नैतिक मापदण्ड</a></li>
               </>
             ) : (
@@ -337,6 +340,7 @@ const activeSchema = pageSchema || defaultSchema;
                 <li><a href="/insights/cognitive-behavioral-therapy/" class="hover:text-white transition">Cognitive Behavioral Therapy (CBT)</a></li>
                 <li><a href="/insights/psychological-first-aid/" class="hover:text-white transition">Psychological First Aid (PFA)</a></li>
                 <li><a href="/insights/importance-of-mental-health-interventions-in-nepal/" class="hover:text-white transition">Mental Health in Nepal</a></li>
+                <li><a href="/insights/" class="hover:text-white transition font-bold text-amber-300">📚 View All Insights & Articles →</a></li>
                 <li><a href="/clinical-standards" class="hover:text-white transition">Clinical Standards & Ethics</a></li>
               </>
             )}

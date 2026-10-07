@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Importance of Mental Health Interventions in Nepal",
+  "description": "An in-depth perspective on overcoming stigma, developing community resilience, and delivering evidence-informed psychotherapy in Nepal.",
+  "author": {
+    "@type": "Person",
+    "name": "Archana Bibhor",
+    "jobTitle": "Founder & Senior Psychotherapist"
+  },
+  "publisher": {
+    "@type": "MedicalClinic",
+    "name": "Nepal Hypnosis",
+    "logo": "https://nepalhypnosis.com/images/logo.jpg"
+  },
+  "inLanguage": "en"
+};
+---
+
+<BaseLayout 
+  title="Importance of Mental Health Interventions in Nepal"
+  description="Understanding the landscape of mental health, psychotherapeutic interventions, and stigma reduction in Nepal. Written by Archana Bibhor."
+  pageSchema={articleSchema}
+>
+
+  <article class="py-16 bg-white">
+    <div class="container-nh max-w-3xl mx-auto px-4">
+      
+      <!-- Article Header -->
+      <header class="mb-10 pb-8 border-b border-[#e2e8f0]">
+        <div class="flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-[#D84315] mb-3">
+          <span>Insights & Clinical Perspectives</span>
+          <span>•</span>
+          <span>Mental Health Nepal</span>
+        </div>
+        <h1 class="font-[Poppins] text-3xl sm:text-4xl font-extrabold text-[#173A7A] leading-tight">
+          The Importance of Mental Health Interventions in Nepal
+        </h1>
+        <div class="mt-4 flex items-center gap-4 text-sm text-[#64748b] font-medium">
+          <span>By <strong>Archana Bibhor</strong> (PsyD Candidate)</span>
+          <span>•</span>
+          <span>Nepal Hypnosis Practice Insights</span>
+        </div>
+      </header>
+
+      <!-- Content Section -->
+      <div class="prose prose-slate max-w-none text-[#475569] text-base leading-relaxed space-y-6 font-normal">
+        <p class="text-lg font-medium text-[#173A7A] leading-relaxed">
+          Mental health awareness in Nepal has evolved significantly over the past decade. However, structural challenges, lingering social stigma, and limited access to professional psychotherapeutic care mean that many individuals continue to suffer in silence.
+        </p>
+
+        <h2 class="text-2xl font-bold text-[#173A7A] mt-8 mb-4">1. Breaking the Stigma Around Seeking Help</h2>
+        <p>
+          Historically, psychological distress in Nepal has often been misinterpreted through purely somatised symptoms or spiritual distress. While traditional support systems remain culturally vital, clinical interventions provide structured, confidential spaces to process deep emotional trauma, chronic anxiety, and relational conflict without fear of judgment.
+        </p>
+
+        <h2 class="text-2xl font-bold text-[#173A7A] mt-8 mb-4">2. The Role of Eclectic Psychotherapy</h2>
+        <p>
+          There is no one-size-fits-all solution for human psychological suffering. Effective intervention in Nepal requires an <em>eclectic approach</em>—combining evidence-based practices such as Cognitive Behavioral Therapy (CBT), Gestalt therapy, somatic practices, and clinical hypnotherapy tailored to an individual’s personal and socio-cultural reality.
+        </p>
+
+        <h2 class="text-2xl font-bold text-[#173A7A] mt-8 mb-4">3. Building Capacity & Professional Training</h2>
+        <p>
+          Beyond individual clinical consultations, long-term well-being in Nepal depends on training competent psychosocial counsellors and psychotherapists. Through the Nepal Hypnosis Academy, we remain committed to elevating practice standards, ethical accountability, and continuous clinical supervision across the country.
+        </p>
+
+        <div class="my-10 bg-[#FAF8F5] p-6 sm:p-8 rounded-2xl border-l-4 border-[#D84315] border-y border-r border-[#e2e8f0]">
+          <h3 class="text-lg font-bold text-[#173A7A] mb-2">Need Confidential Professional Support?</h3>
+          <p class="text-sm text-[#475569] mb-4">
+            If you or a loved one are experiencing persistent distress, anxiety, or life transitions, professional support is available.
+          </p>
+          <a href="https://portal.nepalhypnosis.com/form/consultation-request" target="_blank" rel="noopener noreferrer" class="inline-flex rounded-xl bg-[#D84315] px-6 py-2.5 text-xs font-bold text-white shadow-md hover:bg-[#b93812] transition">
+            Request a Consultation →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </article>
+
+</BaseLayout>
